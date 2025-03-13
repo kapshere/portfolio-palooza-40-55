@@ -1,3 +1,4 @@
+
 import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
@@ -6,10 +7,10 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-4xl sm:text-6xl font-bold mb-6 animate-fade-up">
-            Hi, I'm <span className="text-primary">John Doe</span>
+            Hi, I'm <span className="text-primary">Kapil Jain</span>
           </h1>
           <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            A passionate full-stack developer crafting beautiful and functional web experiences
+            A passionate Technology and Architecture consultant
           </p>
           <div className="animate-fade-up" style={{ animationDelay: "0.4s" }}>
             <a

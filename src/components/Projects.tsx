@@ -1,28 +1,29 @@
+
 import ProjectCard from './ProjectCard';
 
 const Projects = () => {
   const projects = [
     {
-      title: "E-commerce Platform",
-      description: "A full-stack e-commerce platform with real-time inventory management and secure payment processing.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      title: "Digital Transformation Initiative",
+      description: "Led a major digital transformation program for a global financial institution, modernizing legacy systems and implementing cloud-native architecture.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+      technologies: ["AWS", "Microservices", "API Gateway", "Event-driven Architecture"],
       githubUrl: "#",
       liveUrl: "#",
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates and team functionality.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      technologies: ["React", "Firebase", "Tailwind CSS"],
+      title: "Enterprise Architecture Framework",
+      description: "Developed and implemented an enterprise architecture framework for a Fortune 500 company, enabling strategic technology decisions aligned with business goals.",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
+      technologies: ["TOGAF", "Cloud Architecture", "Integration Patterns", "Governance"],
       githubUrl: "#",
       liveUrl: "#",
     },
     {
-      title: "Weather Dashboard",
-      description: "A weather dashboard that provides real-time weather data and forecasts for multiple locations.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      technologies: ["React", "Weather API", "Chart.js"],
+      title: "Cloud Migration Strategy",
+      description: "Designed and executed a comprehensive cloud migration strategy for a large healthcare provider, resulting in improved scalability and significant cost savings.",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+      technologies: ["AWS", "Azure", "Containerization", "Infrastructure as Code"],
       githubUrl: "#",
       liveUrl: "#",
     },
@@ -32,7 +33,7 @@ const Projects = () => {
     <section id="projects" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl font-bold text-secondary mb-12 text-center">
-          Featured Projects
+          Key Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
