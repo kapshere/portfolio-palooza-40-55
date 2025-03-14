@@ -1,5 +1,5 @@
 
-import { BookText } from 'lucide-react';
+import { BookText, FileText } from 'lucide-react';
 import { Button } from './ui/button';
 
 const Publications = () => {
@@ -9,7 +9,9 @@ const Publications = () => {
         <h2 className="text-3xl sm:text-4xl font-bold text-secondary mb-12 text-center">
           Publications
         </h2>
-        <div className="flex flex-col lg:flex-row gap-8 items-center justify-center animate-fade-up">
+        
+        {/* First publication - Book */}
+        <div className="flex flex-col lg:flex-row gap-8 items-center justify-center animate-fade-up mb-16">
           <div className="lg:w-1/3">
             <img 
               src="/lovable-uploads/32a123f1-bbb1-4fdb-9649-1108cd654387.png" 
@@ -39,6 +41,40 @@ const Publications = () => {
               >
                 <BookText className="mr-2" />
                 View on Amazon
+              </a>
+            </Button>
+          </div>
+        </div>
+        
+        {/* Second publication - Protocol Documentation */}
+        <div className="flex flex-col lg:flex-row gap-8 items-center justify-center animate-fade-up">
+          <div className="lg:w-1/3 order-1 lg:order-2">
+            <div className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200 max-w-xs mx-auto h-full flex items-center justify-center">
+              <FileText size={120} className="text-primary opacity-70" />
+            </div>
+          </div>
+          <div className="lg:w-2/3 max-w-2xl order-2 lg:order-1">
+            <h3 className="text-2xl font-bold text-secondary mb-3">Bitcoin Protocol Documentation</h3>
+            <p className="text-gray-700 mb-4">
+              Authored and published comprehensive technical documentation for the Bitcoin protocol as part of work at nChain. 
+              This documentation serves as a definitive resource for developers and enterprises looking to build on the Bitcoin SV blockchain, 
+              covering protocol specifications, implementation details, and best practices.
+            </p>
+            <div className="flex flex-wrap gap-3 mb-6">
+              <span className="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full">Protocol Specification</span>
+              <span className="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full">Technical Writing</span>
+              <span className="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full">Bitcoin SV</span>
+              <span className="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full">Blockchain</span>
+            </div>
+            <Button asChild>
+              <a 
+                href="https://docs.bsvblockchain.org/protocol/introduction" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center"
+              >
+                <FileText className="mr-2" />
+                View Documentation
               </a>
             </Button>
           </div>
