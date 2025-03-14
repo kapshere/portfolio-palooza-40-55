@@ -4,8 +4,8 @@ import ProjectCard from './ProjectCard';
 const Projects = () => {
   const projects = [
     {
-      title: "Digital Transformation Initiative",
-      description: "Led a major digital transformation program for a global financial institution, modernizing legacy systems and implementing cloud-native architecture.",
+      title: "Digital Transformation Initiative for Corporate Payments",
+      description: "Led India chapter for a major digital transformation program working at a global financial institution, modernizing legacy systems and implementing cloud-native architecture.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
       technologies: ["AWS", "Microservices", "API Gateway", "Event-driven Architecture"],
       githubUrl: "#",

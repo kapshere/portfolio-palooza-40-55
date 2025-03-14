@@ -10,7 +10,7 @@ const Hero = () => {
             Hi, I'm <span className="text-primary">Kapil Jain</span>
           </h1>
           <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            A passionate Technology and Architecture consultant
+            A Senior Technology Professional and Architecture consultant
           </p>
           <div className="flex flex-wrap justify-center gap-4 animate-fade-up" style={{ animationDelay: "0.4s" }}>
             <a

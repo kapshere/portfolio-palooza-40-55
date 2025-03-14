@@ -13,6 +13,7 @@ const Index = () => {
       <WorkExperience />
       <Publications />
       <Skills />
+      <Contact />
     </div>
   );
 };
