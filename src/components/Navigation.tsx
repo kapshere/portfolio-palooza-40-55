@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -28,8 +29,8 @@ const Navigation = () => {
               <a href="#home" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 Home
               </a>
-              <a href="#projects" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                Projects
+              <a href="#workexperience" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                Work Experiences
               </a>
               <a href="#skills" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 Skills
@@ -50,11 +51,11 @@ const Navigation = () => {
                 Home
               </a>
               <a
-                href="#projects"
+                href="#workexperience"
                 className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 onClick={() => setIsOpen(false)}
               >
-                Projects
+                Work Experiences
               </a>
               <a
                 href="#skills"
