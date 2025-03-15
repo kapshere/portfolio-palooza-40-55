@@ -3,7 +3,14 @@ const Skills = () => {
   const skills = [
     { 
       category: "Technology Expertise", 
-      items: ["Cloud Architecture", "AWS", "Azure", "Enterprise Architecture", "Digital Transformation"] 
+      items: [
+        "Cloud Architecture", 
+        "AWS", 
+        "Enterprise Architecture", 
+        "Digital Transformation", 
+        "Blockchain Technologies: Bitcoin, Ethereum, Hyperledger",
+        "AI/ML - LLMs, AI Agents"
+      ] 
     },
     { 
       category: "Architecture", 
