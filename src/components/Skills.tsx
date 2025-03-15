@@ -12,6 +12,18 @@ const Skills = () => {
         "APIs and Microservices",
         "Data Analytics & Automation"
       ] 
+    },
+    {
+      category: "Management Skills",
+      items: [
+        "Product and Program deliveries with Local & Virtual agile teams",
+        "Agile transformation (including Scaling agile)",
+        "Building high-performance teams",
+        "Business development, P&L, CBA, success KPI definition & tracking",
+        "Agile Product Management using JIRA and SAFe framework",
+        "APIs and Microservices",
+        "Data Analytics & Automation"
+      ]
     }
   ];
 
