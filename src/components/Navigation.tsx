@@ -35,6 +35,9 @@ const Navigation = () => {
               <a href="#skills" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 Skills
               </a>
+              <a href="#contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                Contact
+              </a>
             </div>
           </div>
         </div>
@@ -63,6 +66,13 @@ const Navigation = () => {
                 onClick={() => setIsOpen(false)}
               >
                 Skills
+              </a>
+              <a
+                href="#contact"
+                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                onClick={() => setIsOpen(false)}
+              >
+                Contact
               </a>
             </div>
           </div>

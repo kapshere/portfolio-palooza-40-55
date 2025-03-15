@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import WorkExperience from "@/components/WorkExperience";
 import Skills from "@/components/Skills";
 import Publications from "@/components/Publications";
+import Contact from "@/components/Contact";
 
 const Index = () => {
   return (
