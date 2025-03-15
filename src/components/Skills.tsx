@@ -14,7 +14,7 @@ const Skills = () => {
     },
     { 
       category: "Architecture", 
-      items: ["Microservices", "API Design", "Event-driven Architecture", "System Integration", "Serverless"] 
+      items: ["Microservices", "API Design", "Event-driven Architecture", "System Integration", "Serverless", "P2P Archicture"] 
     },
     { 
       category: "Leadership", 
@@ -27,9 +27,20 @@ const Skills = () => {
         "Agile transformation (including Scaling agile)",
         "Building high-performance teams",
         "Business development, P&L, CBA, success KPI definition & tracking",
-        "Agile Product Management using JIRA and SAFe framework",
-        "APIs and Microservices",
-        "Data Analytics & Automation"
+        "Agile Product Management using JIRA and SAFe framework"
+      ] 
+    },
+    { 
+      category: "Domain Skills", 
+      items: [
+        "Transaction Banking",
+        "Cash Management products ",
+        "Corporate Payments (Domestic,SEPA and Cross Border)",
+        "Mutual Funds Transfer Agent system", 
+        "Brokerage Platform",
+        "BLockchain : Payments and Smart Contracts",
+        "Digital Identity, Managed, Custodial and Self-Sovergien",
+        "Supply Chain Finance, Trade Finance and DeFi",
       ] 
     },
   ];
