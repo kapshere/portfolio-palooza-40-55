@@ -31,7 +31,7 @@ const Work = () => {
             </CardContent>
             <CardFooter>
               <Button className="w-full">
-                <span>Coming Soon</span>
+                <span>Emerging Technology and Architecture Consultant</span>
               </Button>
             </CardFooter>
           </Card>
