@@ -1,5 +1,5 @@
 
-import { Briefcase, Calendar, ChevronDown } from 'lucide-react';
+import { Briefcase, Calendar, ChevronDown, Book, Monitor, Code } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { useState } from 'react';
 
@@ -7,6 +7,11 @@ const WorkExperience = () => {
   const [isInfosysOpen, setIsInfosysOpen] = useState(true);
   const [isITCOpen, setIsITCOpen] = useState(true);
   const [isDanskeOpen, setIsDanskeOpen] = useState(true);
+  const [isZorangOpen, setIsZorangOpen] = useState(true);
+  const [isSocGenOpen, setIsSocGenOpen] = useState(true);
+  const [isBSVOpen, setIsBSVOpen] = useState(true);
+  const [isNChainOpen, setIsNChainOpen] = useState(true);
+  const [isBookOpen, setIsBookOpen] = useState(true);
 
   return (
     <section id="workexperience" className="py-20 bg-gray-50">
@@ -28,6 +33,246 @@ const WorkExperience = () => {
             </div>
           </div>
         </div>
+        
+        {/* nChain Collapsible Timeline */}
+        <Collapsible 
+          open={isNChainOpen} 
+          onOpenChange={setIsNChainOpen}
+          className="max-w-3xl mx-auto mb-10"
+        >
+          <CollapsibleTrigger className="flex items-center justify-between w-full bg-white p-4 rounded-lg shadow-md mb-6 cursor-pointer">
+            <div className="flex items-center">
+              <Briefcase className="text-primary mr-3" size={24} />
+              <h3 className="text-2xl font-bold text-secondary">nChain</h3>
+            </div>
+            <ChevronDown className={`text-primary transition-transform duration-200 ${isNChainOpen ? 'rotate-180' : ''}`} />
+          </CollapsibleTrigger>
+          
+          <CollapsibleContent>
+            <div className="relative border-l-4 border-primary ml-6 md:ml-0 md:mx-auto pl-8 pb-6">
+              {/* nChain - Solutions Architect */}
+              <div className="relative animate-fade-up">
+                <div className="absolute -left-12 p-2 bg-white rounded-full border-4 border-primary">
+                  <Code className="text-primary" size={24} />
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                    <h3 className="text-xl font-bold text-secondary">Solutions Architect</h3>
+                    <div className="flex items-center text-gray-600 mt-2 md:mt-0">
+                      <Calendar size={16} className="mr-1" />
+                      <span>Feb 2021 - Sep 2023 · 2 yrs 8 mos</span>
+                    </div>
+                  </div>
+                  <div className="mb-4">
+                    <span className="font-semibold text-primary">nChain</span> • <span className="text-gray-600">London, England, United Kingdom</span>
+                  </div>
+                  <p className="text-gray-700 mb-4">
+                    Solutions Architect for various projects related to blockchain infrastructure development, digital identity (SSI) and p2p payments with light clients for blockchain.
+                  </p>
+                  <p className="text-gray-700 mb-4">
+                    Worked for an year with pre-sales customer engagements and consultation enabling blockchain use cases. Integration of customer systems with nChain blockchain product suite. Creating RFPs and creating bespoke solutions for specific customer needs.
+                  </p>
+                  <p className="text-gray-700 mb-4">
+                    I have also developed large amount of blockchain education material that exists for BSV blockchain.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    <span className="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full">Bitcoin</span>
+                    <span className="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full">Blockchain</span>
+                    <span className="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full">Smart Contracts</span>
+                    <span className="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full">Digital Identity</span>
+                    <span className="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full">Payment Systems</span>
+                    <span className="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full">PKI</span>
+                    <span className="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full">Analytical Skills</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </CollapsibleContent>
+        </Collapsible>
+        
+        {/* BSV Association Collapsible Timeline */}
+        <Collapsible 
+          open={isBSVOpen} 
+          onOpenChange={setIsBSVOpen}
+          className="max-w-3xl mx-auto mb-10"
+        >
+          <CollapsibleTrigger className="flex items-center justify-between w-full bg-white p-4 rounded-lg shadow-md mb-6 cursor-pointer">
+            <div className="flex items-center">
+              <Briefcase className="text-primary mr-3" size={24} />
+              <h3 className="text-2xl font-bold text-secondary">BSV Association</h3>
+            </div>
+            <ChevronDown className={`text-primary transition-transform duration-200 ${isBSVOpen ? 'rotate-180' : ''}`} />
+          </CollapsibleTrigger>
+          
+          <CollapsibleContent>
+            <div className="relative border-l-4 border-primary ml-6 md:ml-0 md:mx-auto pl-8 pb-6">
+              {/* BSV Association - Curriculum Writer */}
+              <div className="relative animate-fade-up">
+                <div className="absolute -left-12 p-2 bg-white rounded-full border-4 border-primary">
+                  <Book className="text-primary" size={24} />
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                    <h3 className="text-xl font-bold text-secondary">Curriculum Writer</h3>
+                    <div className="flex items-center text-gray-600 mt-2 md:mt-0">
+                      <Calendar size={16} className="mr-1" />
+                      <span>Sep 2020 - Sep 2021 · 1 yr 1 mo</span>
+                    </div>
+                  </div>
+                  <div className="mb-4">
+                    <span className="font-semibold text-primary">BSV Association</span> • <span className="text-gray-600">Bengaluru, Karnataka, India</span>
+                  </div>
+                  <p className="text-gray-700 mb-4">
+                    Conceived and created the first developer course for academy, 
+                    <a href="https://academy.bsvblockchain.org/course/bitcoin-development" className="text-primary hover:underline"> https://academy.bsvblockchain.org/course/bitcoin-development</a>.
+                  </p>
+                  <p className="text-gray-700 mb-4">
+                    Contributed to content reviews and webinars, teaching sessions etc.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </CollapsibleContent>
+        </Collapsible>
+        
+        {/* Book Author Collapsible Timeline */}
+        <Collapsible 
+          open={isBookOpen} 
+          onOpenChange={setIsBookOpen}
+          className="max-w-3xl mx-auto mb-10"
+        >
+          <CollapsibleTrigger className="flex items-center justify-between w-full bg-white p-4 rounded-lg shadow-md mb-6 cursor-pointer">
+            <div className="flex items-center">
+              <Book className="text-primary mr-3" size={24} />
+              <h3 className="text-2xl font-bold text-secondary">Bitcoin Blockchain: Protocol for Micropayment</h3>
+            </div>
+            <ChevronDown className={`text-primary transition-transform duration-200 ${isBookOpen ? 'rotate-180' : ''}`} />
+          </CollapsibleTrigger>
+          
+          <CollapsibleContent>
+            <div className="relative border-l-4 border-primary ml-6 md:ml-0 md:mx-auto pl-8 pb-6">
+              {/* Book Author */}
+              <div className="relative animate-fade-up">
+                <div className="absolute -left-12 p-2 bg-white rounded-full border-4 border-primary">
+                  <Book className="text-primary" size={24} />
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                    <h3 className="text-xl font-bold text-secondary">Author</h3>
+                    <div className="flex items-center text-gray-600 mt-2 md:mt-0">
+                      <Calendar size={16} className="mr-1" />
+                      <span>Oct 2019 - Aug 2020 · 11 mos</span>
+                    </div>
+                  </div>
+                  <div className="mb-4">
+                    <span className="font-semibold text-primary">Bitcoin Blockchain: Protocol for Micropayment</span> • <span className="text-gray-600">Bengaluru, Karnataka, India</span>
+                  </div>
+                  <p className="text-gray-700 mb-4">
+                    Bitcoin Blockchain: Protocol for Micropayments (English Edition)
+                    <a href="https://www.amazon.com/dp/B08F6SPC5T/ref=cm_sw_r_awdo_JTCZ44KZZCJRT81ES2BR" className="text-primary hover:underline"> https://www.amazon.com/dp/B08F6SPC5T/ref=cm_sw_r_awdo_JTCZ44KZZCJRT81ES2BR</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </CollapsibleContent>
+        </Collapsible>
+        
+        {/* Societe Generale Collapsible Timeline */}
+        <Collapsible 
+          open={isSocGenOpen} 
+          onOpenChange={setIsSocGenOpen}
+          className="max-w-3xl mx-auto mb-10"
+        >
+          <CollapsibleTrigger className="flex items-center justify-between w-full bg-white p-4 rounded-lg shadow-md mb-6 cursor-pointer">
+            <div className="flex items-center">
+              <Briefcase className="text-primary mr-3" size={24} />
+              <h3 className="text-2xl font-bold text-secondary">Société Générale</h3>
+            </div>
+            <ChevronDown className={`text-primary transition-transform duration-200 ${isSocGenOpen ? 'rotate-180' : ''}`} />
+          </CollapsibleTrigger>
+          
+          <CollapsibleContent>
+            <div className="relative border-l-4 border-primary ml-6 md:ml-0 md:mx-auto pl-8 pb-6">
+              {/* Societe Generale - Program Manager */}
+              <div className="relative animate-fade-up">
+                <div className="absolute -left-12 p-2 bg-white rounded-full border-4 border-primary">
+                  <Briefcase className="text-primary" size={24} />
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                    <h3 className="text-xl font-bold text-secondary">Program Manager</h3>
+                    <div className="flex items-center text-gray-600 mt-2 md:mt-0">
+                      <Calendar size={16} className="mr-1" />
+                      <span>Jan 2020 - Jan 2021 · 1 yr 1 mo</span>
+                    </div>
+                  </div>
+                  <div className="mb-4">
+                    <span className="font-semibold text-primary">Société Générale</span> • <span className="text-gray-600">Bengaluru Area, India</span>
+                  </div>
+                  <p className="text-gray-700 mb-4">
+                    Program Manager for banks transaction banking department heading the program for the migration of Bank's core corporate payment infrastructure from existing to a new Payment engine, Account and liquidity management solutions.
+                  </p>
+                  <p className="text-gray-700 mb-4">
+                    Building team from scratch, in one year I created full portfolio of teams to address various projects in the larger program which was at the level of about 50 in headcount.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    <span className="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full">Analytical Skills</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </CollapsibleContent>
+        </Collapsible>
+        
+        {/* Zorang Collapsible Timeline */}
+        <Collapsible 
+          open={isZorangOpen} 
+          onOpenChange={setIsZorangOpen}
+          className="max-w-3xl mx-auto mb-10"
+        >
+          <CollapsibleTrigger className="flex items-center justify-between w-full bg-white p-4 rounded-lg shadow-md mb-6 cursor-pointer">
+            <div className="flex items-center">
+              <Briefcase className="text-primary mr-3" size={24} />
+              <h3 className="text-2xl font-bold text-secondary">Zorang, Inc</h3>
+            </div>
+            <ChevronDown className={`text-primary transition-transform duration-200 ${isZorangOpen ? 'rotate-180' : ''}`} />
+          </CollapsibleTrigger>
+          
+          <CollapsibleContent>
+            <div className="relative border-l-4 border-primary ml-6 md:ml-0 md:mx-auto pl-8 pb-6">
+              {/* Zorang - Technical Director */}
+              <div className="relative animate-fade-up">
+                <div className="absolute -left-12 p-2 bg-white rounded-full border-4 border-primary">
+                  <Monitor className="text-primary" size={24} />
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                    <h3 className="text-xl font-bold text-secondary">Technical Director</h3>
+                    <div className="flex items-center text-gray-600 mt-2 md:mt-0">
+                      <Calendar size={16} className="mr-1" />
+                      <span>Dec 2018 - Dec 2019 · 1 yr 1 mo</span>
+                    </div>
+                  </div>
+                  <div className="mb-4">
+                    <span className="font-semibold text-primary">Zorang, Inc</span> • <span className="text-gray-600">Gurgaon, Haryana, India</span>
+                  </div>
+                  <p className="text-gray-700 mb-4">
+                    Technology director for various verticals for Zorang Inc heading their India operations.
+                  </p>
+                  <p className="text-gray-700 mb-4">
+                    I managed the SFCC/Demandware/Salesforce unit, the In-House Product development unit and a QA Testing and Automation unit among other engineering teams operating at Gurgaon, Bangalore and Pune locations.
+                  </p>
+                  <p className="text-gray-700 mb-4">
+                    I manage multiple client engagements, and closely involved with an In-House AI/ML based Product developed with Zorang.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    <span className="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full">Analytical Skills</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </CollapsibleContent>
+        </Collapsible>
         
         {/* Danske IT Collapsible Timeline */}
         <Collapsible 
