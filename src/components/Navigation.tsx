@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,18 +27,18 @@ const Navigation = () => {
           {/* Desktop menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <a href="#home" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              <Link to="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 Home
-              </a>
-              <a href="#workexperience" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                Work Experiences
-              </a>
-              <a href="#skills" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              </Link>
+              <Link to="/work" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                Work
+              </Link>
+              <Link to="/#skills" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 Skills
-              </a>
-              <a href="#contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              </Link>
+              <Link to="/#contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -46,34 +47,34 @@ const Navigation = () => {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <a
-                href="#home"
+              <Link
+                to="/"
                 className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 Home
-              </a>
-              <a
-                href="#workexperience"
+              </Link>
+              <Link
+                to="/work"
                 className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 onClick={() => setIsOpen(false)}
               >
-                Work Experiences
-              </a>
-              <a
-                href="#skills"
+                Work
+              </Link>
+              <Link
+                to="/#skills"
                 className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 Skills
-              </a>
-              <a
-                href="#contact"
+              </Link>
+              <Link
+                to="/#contact"
                 className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
         )}
