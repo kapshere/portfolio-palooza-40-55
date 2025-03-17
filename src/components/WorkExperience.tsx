@@ -17,21 +17,7 @@ const WorkExperience = () => {
         <h2 className="text-3xl sm:text-4xl font-bold text-secondary mb-12 text-center">
           Work Experiences
         </h2>
-        
-        {/* Client and Service Provider Box */}
-        <div className="bg-white rounded-lg shadow-md p-6 mb-10 max-w-3xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800">Client</h3>
-              <p className="text-xl font-bold text-primary">Ameriprise Financial</p>
-            </div>
-            <div className="mt-4 md:mt-0">
-              <h3 className="text-lg font-semibold text-gray-800">Service Provider</h3>
-              <p className="text-xl font-bold text-primary">Infosys</p>
-            </div>
-          </div>
-        </div>
-        
+         
         {/* nChain */}
         <JobExperienceItem companyName="nChain" icon={<Briefcase className="text-primary" size={24} />}>
           <NChainExperience />
@@ -67,7 +53,19 @@ const WorkExperience = () => {
           <ITCInfotechExperience />
         </JobExperienceItem>
         
-        {/* Infosys */}
+        {/* Client and Service Provider Box */}
+        <div className="bg-white rounded-lg shadow-md p-6 mb-10 max-w-3xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-800">Client</h3>
+              <p className="text-xl font-bold text-primary">Ameriprise Financial</p>
+            </div>
+            <div className="mt-4 md:mt-0">
+              <h3 className="text-lg font-semibold text-gray-800">Service Provider</h3>
+              <p className="text-xl font-bold text-primary">Infosys</p>
+            </div>
+          </div>
+        </div>
         <JobExperienceItem companyName="Infosys">
           <InfosysExperience />
         </JobExperienceItem>
