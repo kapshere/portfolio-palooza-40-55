@@ -11,7 +11,7 @@ const ITCInfotechExperience = () => {
         location="India and Denmark"
         duration="Jan 2013 - Jul 2015 · 2 yrs 7 mos"
         icon={<Briefcase className="text-primary" size={24} />}
-        skills={["Analytical Skills", "Scrum Master", "Project Management"]}
+        skills={["Stakeholder Management", "Team & People Management", "Scrum Master", "Project Management"]}
         description={
           <>
             <p className="text-gray-700 mb-4">
@@ -25,10 +25,6 @@ const ITCInfotechExperience = () => {
                 project charter, business case development and cost benefit analysis, reporting and CMMI 
                 compliance in documentation and tracking, monitoring and change management, HR management etc.
               </p>
-            </div>
-            <div className="mb-4">
-              <h4 className="font-semibold text-gray-800 mb-1">Client:</h4>
-              <p className="text-gray-700">Danske Bank</p>
             </div>
           </>
         }
@@ -50,10 +46,7 @@ const ITCInfotechExperience = () => {
               took out of my own interest and the need for the hour for my department. We built a wholesome test 
               suite for doing both Manual and Automation testing during this project. (Tools: Quality center, QTP etc.)
             </p>
-            <div className="mb-4">
-              <h4 className="font-semibold text-gray-800 mb-1">Client:</h4>
-              <p className="text-gray-700">Danske Bank</p>
-            </div>
+            
           </>
         }
       />
@@ -64,7 +57,7 @@ const ITCInfotechExperience = () => {
         location="Bangalore"
         duration="Sep 2008 - Dec 2011 · 3 yrs 4 mos"
         icon={<Briefcase className="text-primary" size={24} />}
-        skills={["Analytical Skills", "Solutions Architecture", "SOA"]}
+        skills={["TOGAF", "Solutions Architecture", "SOA"]}
         animationDelay="0.4s"
         description={
           <>
@@ -91,10 +84,7 @@ const ITCInfotechExperience = () => {
                 CMMI, SCRUM, Agile, Waterfall, RUP, SOA, layered architecture, function points, 4DX etc.
               </p>
             </div>
-            <div className="mb-4">
-              <h4 className="font-semibold text-gray-800 mb-1">Client:</h4>
-              <p className="text-gray-700">Danske Bank</p>
-            </div>
+            
           </>
         }
       />

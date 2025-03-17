@@ -45,8 +45,13 @@ const WorkExperience = () => {
         
         {/* Danske IT */}
         <JobExperienceItem companyName="Danske IT">
-                {/* Client and Service Provider Box */}
-                <div className="bg-white rounded-lg shadow-md p-6 mb-10 max-w-3xl mx-auto">
+          <DanskeITExperience />
+        </JobExperienceItem>
+        
+        {/* ITC Infotech */}
+        <JobExperienceItem companyName="ITC Infotech">
+        {/* Client and Service Provider Box */}
+          <div className="bg-white rounded-lg shadow-md p-6 mb-10 max-w-3xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
             <div>
               <h3 className="text-lg font-semibold text-gray-800">Client</h3>
@@ -62,11 +67,6 @@ const WorkExperience = () => {
             </div>
           </div>
         </div>
-          <DanskeITExperience />
-        </JobExperienceItem>
-        
-        {/* ITC Infotech */}
-        <JobExperienceItem companyName="ITC Infotech">
           <ITCInfotechExperience />
         </JobExperienceItem>
         

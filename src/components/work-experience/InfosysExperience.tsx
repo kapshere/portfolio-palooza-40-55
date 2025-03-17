@@ -15,7 +15,7 @@ const InfosysExperience = () => {
         description={
           <>
             <p className="text-gray-700 mb-4">
-              Worked as Application and Technical Architect in the Brokerage Services Department for client, Ameriprise Financial.
+              Worked as Application and Technical Architect in the Brokerage Services Department.
             </p>
             <div className="mb-4">
               <h4 className="font-semibold text-gray-800 mb-1">Tech Stack:</h4>
@@ -45,7 +45,7 @@ const InfosysExperience = () => {
             </p>
             <div className="mb-4">
               <h4 className="font-semibold text-gray-800 mb-1">Key Contributions:</h4>
-              <p className="text-gray-700">A whole lot of coding, testing and reviews. Client: Ameriprise Financial</p>
+              <p className="text-gray-700">Application designing, coding, testing and reviews. </p>
             </div>
           </>
         }
@@ -67,7 +67,7 @@ const InfosysExperience = () => {
             </p>
             <div className="mb-4">
               <h4 className="font-semibold text-gray-800 mb-1">Key Contributions:</h4>
-              <p className="text-gray-700">A whole lot of coding, testing and reviews. Client: Ameriprise Financial</p>
+              <p className="text-gray-700">Coding, testing and reviews. </p>
             </div>
           </>
         }

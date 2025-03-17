@@ -10,7 +10,7 @@ const DanskeITExperience = () => {
       location="Bangalore"
       duration="Aug 2015 - Nov 2018 · 3 yrs 4 mos"
       icon={<Briefcase className="text-primary" size={24} />}
-      skills={["Analytical Skills", "Product Ownership", "Cash Management"]}
+      skills={["Program Management", "Product Ownership", "Team and People Management", "Agile, Scrum and Kanban"]}
       description={
         <>
           <p className="text-gray-700 mb-4">
