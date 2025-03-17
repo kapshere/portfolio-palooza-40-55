@@ -5,27 +5,27 @@ const Projects = () => {
   const projects = [
     {
       title: "Digital Transformation Initiative for Corporate Payments",
-      description: "Led India chapter for a major digital transformation program working at a global financial institution, modernizing legacy systems and implementing cloud-native architecture.",
+      description: "Led India chapter for a major digital transformation program for Core banking and Payments system working at a global financial institution, modernizing legacy systems and implementing cloud-native architecture.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
-      technologies: ["AWS", "Microservices", "API Gateway", "Event-driven Architecture"],
-      githubUrl: "#",
-      liveUrl: "#",
+      technologies: ["FIS Clear to Pay", "Microservices", "API Gateway", "Event-driven Architecture"]
     },
     {
-      title: "Enterprise Architecture Framework",
-      description: "Developed and implemented an enterprise architecture framework for a Fortune 500 company, enabling strategic technology decisions aligned with business goals.",
+      title: "Pre-Sales Solution Architecture for Enterprise Blockchain",
+      description: "Actively engaged with neumorous customers in consulting and advisory for Enterprise blockchain solutions using the product platform nChain developed",
       image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
-      technologies: ["TOGAF", "Cloud Architecture", "Integration Patterns", "Governance"],
-      githubUrl: "#",
-      liveUrl: "#",
+      technologies: ["Blockchain", "Cloud Architecture", "Decentralised Applications", "Triple-Entry Accounting"]
     },
     {
-      title: "Cloud Migration Strategy",
-      description: "Designed and executed a comprehensive cloud migration strategy for a large healthcare provider, resulting in improved scalability and significant cost savings.",
+      title: "P2P Payments Protocol and Infrastructure",
+      description: "Designed and executed a comprehensive Implementation of a light-client to Blockchain aka user node supporting a P2P Payment protocol aided by Paymail (Payment to email) finctionality",
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
-      technologies: ["AWS", "Azure", "Containerization", "Infrastructure as Code"],
-      githubUrl: "#",
-      liveUrl: "#",
+      technologies: ["BSV Blockchain", "Azure", "Containerization", "Infrastructure as Code"],
+    },
+    {
+      title: "Digital Identity using W3C specifications",
+      description: "Designed and Implemented a Digital Identity and Document signing product using Blockchain for trusted and open implementation ",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+      technologies: ["BSV Blockchain", "Azure", "Containerization", "Infrastructure as Code"],
     },
   ];
 
