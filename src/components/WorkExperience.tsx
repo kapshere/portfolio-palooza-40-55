@@ -45,6 +45,23 @@ const WorkExperience = () => {
         
         {/* Danske IT */}
         <JobExperienceItem companyName="Danske IT">
+                {/* Client and Service Provider Box */}
+                <div className="bg-white rounded-lg shadow-md p-6 mb-10 max-w-3xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-800">Client</h3>
+              <p className="text-xl font-bold text-primary">Danske Bank</p>
+            </div>
+            <div className="mt-4 md:mt-0">
+              <h3 className="text-lg font-semibold text-gray-800">Service Provider</h3>
+              <p className="text-xl font-bold text-primary">ITC Infotech</p>
+            </div>
+            <div className="mt-4 md:mt-0">
+              <h3 className="text-lg font-semibold text-gray-800">Location</h3>
+              <p className="text-xl font-bold text-primary">Bangalore, Copenhagen & Aarhus</p>
+            </div>
+          </div>
+        </div>
           <DanskeITExperience />
         </JobExperienceItem>
         
@@ -65,6 +82,10 @@ const WorkExperience = () => {
             <div className="mt-4 md:mt-0">
               <h3 className="text-lg font-semibold text-gray-800">Service Provider</h3>
               <p className="text-xl font-bold text-primary">Infosys</p>
+            </div>
+            <div className="mt-4 md:mt-0">
+              <h3 className="text-lg font-semibold text-gray-800">Location</h3>
+              <p className="text-xl font-bold text-primary">Bangalore & Minneapolis</p>
             </div>
           </div>
         </div>
