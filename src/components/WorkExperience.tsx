@@ -54,7 +54,20 @@ const WorkExperience = () => {
         </JobExperienceItem>
         
         {/* Infosys */}
-        <JobExperienceItem companyName="Infosys : working for client Ameriprise Financial">
+        <JobExperienceItem companyName="Infosys">
+        {/* Client and Service Provider Box */}
+        <div className="bg-white rounded-lg shadow-md p-6 mb-10 max-w-3xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-800">Client</h3>
+              <p className="text-xl font-bold text-primary">Ameriprise Financial</p>
+            </div>
+            <div className="mt-4 md:mt-0">
+              <h3 className="text-lg font-semibold text-gray-800">Service Provider</h3>
+              <p className="text-xl font-bold text-primary">Infosys</p>
+            </div>
+          </div>
+        </div>
           <InfosysExperience />
         </JobExperienceItem>
       </div>
