@@ -6,6 +6,7 @@ import { useState } from 'react';
 const WorkExperience = () => {
   const [isInfosysOpen, setIsInfosysOpen] = useState(true);
   const [isITCOpen, setIsITCOpen] = useState(true);
+  const [isDanskeOpen, setIsDanskeOpen] = useState(true);
 
   return (
     <section id="workexperience" className="py-20 bg-gray-50">
@@ -27,6 +28,89 @@ const WorkExperience = () => {
             </div>
           </div>
         </div>
+        
+        {/* Danske IT Collapsible Timeline */}
+        <Collapsible 
+          open={isDanskeOpen} 
+          onOpenChange={setIsDanskeOpen}
+          className="max-w-3xl mx-auto mb-10"
+        >
+          <CollapsibleTrigger className="flex items-center justify-between w-full bg-white p-4 rounded-lg shadow-md mb-6 cursor-pointer">
+            <div className="flex items-center">
+              <Briefcase className="text-primary mr-3" size={24} />
+              <h3 className="text-2xl font-bold text-secondary">Danske IT</h3>
+            </div>
+            <ChevronDown className={`text-primary transition-transform duration-200 ${isDanskeOpen ? 'rotate-180' : ''}`} />
+          </CollapsibleTrigger>
+          
+          <CollapsibleContent>
+            <div className="relative border-l-4 border-primary ml-6 md:ml-0 md:mx-auto pl-8 pb-6">
+              {/* Danske IT - Senior Manager */}
+              <div className="relative animate-fade-up">
+                <div className="absolute -left-12 p-2 bg-white rounded-full border-4 border-primary">
+                  <Briefcase className="text-primary" size={24} />
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                    <h3 className="text-xl font-bold text-secondary">Senior Manager</h3>
+                    <div className="flex items-center text-gray-600 mt-2 md:mt-0">
+                      <Calendar size={16} className="mr-1" />
+                      <span>Aug 2015 - Nov 2018 · 3 yrs 4 mos</span>
+                    </div>
+                  </div>
+                  <div className="mb-4">
+                    <span className="font-semibold text-primary">Danske IT and Support Services India Pvt Ltd</span> • <span className="text-gray-600">Bangalore</span>
+                  </div>
+                  <p className="text-gray-700 mb-4">
+                    Product Owner and Manager for various Cash Management and Supply Chain Financing products for 
+                    Business, Corporate and Institutional customers.
+                  </p>
+                  <p className="text-gray-700 mb-4">
+                    Owner of a portfolio of systems and in day to day, develop, maintain and innovate along as equal 
+                    partners with Business and Cash Managers to stay ahead in quality, user experience and customer 
+                    satisfaction for the Bank.
+                  </p>
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-800 mb-1">Domain:</h4>
+                    <p className="text-gray-700">
+                      Cash management and transaction banking, Domestic, SEPA and cross border payments, local and swift 
+                      file formats, mobile payments, Liquidity management products, Supply chain financing products like 
+                      reverse factoring, factoring. E-invoices and Creditor and debtor management systems.
+                    </p>
+                  </div>
+                  <p className="text-gray-700 mb-4">
+                    Implementation experience of analytics and data visualization for payments, cross selling of products 
+                    to customers.
+                  </p>
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-800 mb-1">Tech Stack:</h4>
+                    <p className="text-gray-700">
+                      PL1, Cobol, CICS, MQ, C#, SAS, R, js, Rest & Soap APIs, Microservices. Microsoft stack for Application development, 
+                      angular 2&4, datapower, kafka, html, js., DB2, Cassandra, BFF etc.
+                    </p>
+                  </div>
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-800 mb-1">Tools:</h4>
+                    <p className="text-gray-700">
+                      Jira, confluence, rational tools, sas studio, Slack
+                    </p>
+                  </div>
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-800 mb-1">Process:</h4>
+                    <p className="text-gray-700">
+                      agile/scrum, agile @ scale, kanban
+                    </p>
+                  </div>
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    <span className="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full">Analytical Skills</span>
+                    <span className="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full">Product Ownership</span>
+                    <span className="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full">Cash Management</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </CollapsibleContent>
+        </Collapsible>
         
         {/* ITC Infotech Collapsible Timeline */}
         <Collapsible 
