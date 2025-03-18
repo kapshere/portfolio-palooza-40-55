@@ -37,6 +37,9 @@ const Navigation = () => {
               <Link to="/work" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 Work
               </Link>
+              <Link to="/blog" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                Blog
+              </Link>
               <Link 
                 to="/skills" 
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -70,6 +73,13 @@ const Navigation = () => {
                 onClick={closeMenu}
               >
                 Work
+              </Link>
+              <Link
+                to="/blog"
+                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                onClick={closeMenu}
+              >
+                Blog
               </Link>
               <Link
                 to="/skills"
