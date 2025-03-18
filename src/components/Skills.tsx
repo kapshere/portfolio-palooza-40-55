@@ -8,10 +8,32 @@ const Skills = () => {
         "AWS", 
         "Enterprise Architecture", 
         "Digital Transformation", 
-        "Blockchain Technologies",
-        "AI/ML - LLMs, AI Agents"
+        "High Performance Engineering Teams",
+        "Agile and Scrum"
       ],
       bgColor: "bg-blue-100/20" 
+    },
+    { 
+      category: "Blockchain and P2P Systems", 
+      items: [
+        "DAO : Decentralised Autonomous Organisations",
+        "Smart Contracts : Script, Solidity",
+        "Tokens and Tokenomics",
+        "P2P Payments",
+        "KYC/AML and SSI",
+        "Lightweight SPV/User Nodes",
+        "Blockchain Core Infrastructure and Economics"
+      ],
+      bgColor: "bg-rose-100/20"
+    },
+    { 
+      category: "AI & ML", 
+      items: [
+        "AI Agents",
+        "LLMs and Small Models",
+        "Usages for AI/ML And AI Agents"
+      ],
+      bgColor: "bg-rose-100/20"
     },
     { 
       category: "Architecture", 
@@ -60,6 +82,7 @@ const Skills = () => {
       ],
       bgColor: "bg-rose-100/20"
     },
+    
   ];
 
   return (
