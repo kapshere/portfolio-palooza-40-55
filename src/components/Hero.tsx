@@ -14,7 +14,7 @@ const Hero = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4 animate-fade-up" style={{ animationDelay: "0.4s" }}>
             <a
-              href="#projects"
+              href="/work"
               className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-primary/90 transition-colors"
             >
               View My Work
