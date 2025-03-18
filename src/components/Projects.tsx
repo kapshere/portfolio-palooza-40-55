@@ -17,14 +17,14 @@ const Projects = () => {
     },
     {
       title: "P2P Payments Protocol and Infrastructure",
-      description: "Designed and executed a comprehensive Implementation of a light-client to Blockchain aka user node supporting a P2P Payment protocol aided by Paymail (Payment to email) finctionality",
+      description: "Designed and executed a comprehensive Implementation of a light-client to Blockchain aka user node supporting a P2P Payment protocol aided by Paymail (Payment to email) finctionality URL : https://www.prnewswire.com/news-releases/bitcoin-association-launches-liteclient-toolbox-to-enable-efficient-scaling-301539742.html",
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
       technologies: ["BSV Blockchain", "Azure", "Containerization", "Infrastructure as Code"],
     },
     {
       title: "Digital Identity using W3C specifications",
-      description: "Designed and Implemented a Digital Identity and Document signing product using Blockchain for trusted and open implementation ",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+      description: "Designed and Implemented a Digital Identity and Document signing product using Blockchain for trusted and open implementation URL : https://nchain.com/nchain-identity/ & https://nchain.com/nchain-sign/",
+      image: "https://unsplash.com/photos/a-picture-of-a-fingerprint-on-a-wall-wQZC_ohsrwo",
       technologies: ["BSV Blockchain", "Azure", "Containerization", "Infrastructure as Code"],
     },
   ];
