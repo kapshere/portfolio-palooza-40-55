@@ -9,17 +9,17 @@ const EntrepreneurshipTimeline = () => {
     {
       id: 1,
       title: "Stealth Startup - Super App",
-      role: "Founder & Chief Architect",
-      period: "2023 - Present",
+      role: "India CTO & Chief Architect",
+      period: "March 2025 - Present",
       description: "Leading a stealth startup building a super app to change the way we use mobile and day to day functionality. Responsible for technology strategy, architecture design, and product development roadmap.",
-      skills: ["Mobile Architecture", "Super App", "Product Strategy", "User Experience"],
+      skills: ["Mobile Architecture", "Super App", "Blockchain", "LLMs, AI&ML, AI Agents", "Engineering Head"],
       icon: <Cpu className="h-5 w-5 text-primary" />
     },
     {
       id: 2,
       title: "Alan Scott Ominis",
       role: "Architecture Consultant",
-      period: "2022 - Present",
+      period: "Feb 2025 - Present",
       description: "Architecture Consultant to Alan Scott Ominis – A funded AI agent and startup studio. Providing strategic guidance on AI integration, scalable system design, and technical implementation.",
       skills: ["AI Architecture", "LLM Integration", "Agent Systems", "Technical Strategy"],
       icon: <Briefcase className="h-5 w-5 text-primary" />
@@ -28,7 +28,7 @@ const EntrepreneurshipTimeline = () => {
       id: 3,
       title: "Verusa",
       role: "Director & Chief Architect",
-      period: "2021 - 2023",
+      period: "Jan 2025 - Present",
       description: "Served as Director and Chief Architect for Verusa (https://verusa.ai/), an incubated startup. Led the technical team in designing and implementing innovative solutions, establishing technical direction, and ensuring architectural integrity.",
       skills: ["AI/ML", "Technical Leadership", "Architecture Design", "Strategic Planning"],
       icon: <Briefcase className="h-5 w-5 text-primary" />
@@ -37,7 +37,7 @@ const EntrepreneurshipTimeline = () => {
       id: 4,
       title: "DAO Governance for Cooperatives",
       role: "Research Author",
-      period: "2020 - 2021",
+      period: "April 2024 - June 2024 ",
       description: "Published a comprehensive paper on implementing a DAO (Decentralized Autonomous Organization) as a governance system for cooperatives. The research explored how blockchain-based governance could enhance transparency and efficiency in cooperative organizations.",
       skills: ["Blockchain", "DAO", "Governance", "Research"],
       icon: <FileText className="h-5 w-5 text-primary" />
@@ -46,7 +46,7 @@ const EntrepreneurshipTimeline = () => {
       id: 5,
       title: "Digital Degree System for Universities",
       role: "Lead Architect & Proposal Lead",
-      period: "2019 - 2020",
+      period: "June - August 2024",
       description: "Worked on a client proposal for building a system for all Indian government universities to issue digital degrees to their students using blockchain technology. The proposed solution aimed to address certificate forgery issues while providing verifiable credentials.",
       skills: ["Blockchain", "Digital Credentials", "Education Technology", "Government Projects"],
       icon: <Lightbulb className="h-5 w-5 text-primary" />
