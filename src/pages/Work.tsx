@@ -36,8 +36,10 @@ const Work = () => {
               </p>
             </CardContent>
             <CardFooter className="relative z-10">
-              <Button className="w-full">
-                <span>Emerging Technology and Architecture Consultant</span>
+              <Button asChild className="w-full">
+                <Link to="/entrepreneurship">
+                  View Entrepreneurial Journey
+                </Link>
               </Button>
             </CardFooter>
           </Card>
@@ -97,7 +99,7 @@ const Work = () => {
             </CardContent>
             <CardFooter className="relative z-10">
               <Button asChild className="w-full">
-                <Link to="#projects">
+                <Link to="/#projects">
                   Browse Projects
                 </Link>
               </Button>

@@ -1,17 +1,24 @@
 
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  // Helper function to close mobile menu when navigating
+  const closeMenu = () => setIsOpen(false);
+  
+  // Helper to determine if we should use hash navigation
+  const isHomePage = location.pathname === '/';
 
   return (
     <nav className="fixed w-full bg-secondary/95 backdrop-blur-sm z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <span className="text-2xl font-bold text-primary">Portfolio</span>
+            <Link to="/" className="text-2xl font-bold text-primary">Portfolio</Link>
           </div>
           
           {/* Mobile menu button */}
@@ -33,10 +40,16 @@ const Navigation = () => {
               <Link to="/work" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 Work
               </Link>
-              <Link to="/#skills" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              <Link 
+                to={isHomePage ? "/#skills" : "/skills"} 
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              >
                 Skills
               </Link>
-              <Link to="/#contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              <Link 
+                to={isHomePage ? "/#contact" : "/contact"} 
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              >
                 Contact
               </Link>
             </div>
@@ -50,28 +63,28 @@ const Navigation = () => {
               <Link
                 to="/"
                 className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setIsOpen(false)}
+                onClick={closeMenu}
               >
                 Home
               </Link>
               <Link
                 to="/work"
                 className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setIsOpen(false)}
+                onClick={closeMenu}
               >
                 Work
               </Link>
               <Link
-                to="/#skills"
+                to={isHomePage ? "/#skills" : "/skills"}
                 className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setIsOpen(false)}
+                onClick={closeMenu}
               >
                 Skills
               </Link>
               <Link
-                to="/#contact"
+                to={isHomePage ? "/#contact" : "/contact"}
                 className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setIsOpen(false)}
+                onClick={closeMenu}
               >
                 Contact
               </Link>

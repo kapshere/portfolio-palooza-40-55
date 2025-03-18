@@ -1,5 +1,6 @@
 
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -13,13 +14,13 @@ const Hero = () => {
             A Senior Technology Professional and Architecture consultant
           </p>
           <div className="flex flex-wrap justify-center gap-4 animate-fade-up" style={{ animationDelay: "0.4s" }}>
-            <a
-              href="/work"
+            <Link
+              to="/work"
               className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-primary/90 transition-colors"
             >
               View My Work
               <ArrowRight size={20} />
-            </a>
+            </Link>
             <a
               href="#publications"
               className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-white/20 transition-colors"
