@@ -99,7 +99,7 @@ const Work = () => {
             </CardContent>
             <CardFooter className="relative z-10">
               <Button asChild className="w-full">
-                <Link to="/#projects">
+                <Link to="/projects">
                   Browse Projects
                 </Link>
               </Button>

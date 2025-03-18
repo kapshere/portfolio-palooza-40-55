@@ -10,6 +10,7 @@ import CorporateExperience from "./pages/CorporateExperience";
 import Entrepreneurship from "./pages/Entrepreneurship";
 import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
+import Projects from "./pages/Projects";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/entrepreneurship" element={<Entrepreneurship />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
