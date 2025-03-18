@@ -9,16 +9,13 @@ const Navigation = () => {
 
   // Helper function to close mobile menu when navigating
   const closeMenu = () => setIsOpen(false);
-  
-  // Helper to determine if we should use hash navigation
-  const isHomePage = location.pathname === '/';
 
   return (
     <nav className="fixed w-full bg-secondary/95 backdrop-blur-sm z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-bold text-primary">Portfolio</Link>
+            <Link to="/" className="text-2xl font-bold text-primary">Management & Architecture Consultancy</Link>
           </div>
           
           {/* Mobile menu button */}
@@ -41,13 +38,13 @@ const Navigation = () => {
                 Work
               </Link>
               <Link 
-                to={isHomePage ? "/#skills" : "/skills"} 
+                to="/skills" 
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 Skills
               </Link>
               <Link 
-                to={isHomePage ? "/#contact" : "/contact"} 
+                to="/contact" 
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 Contact
@@ -75,14 +72,14 @@ const Navigation = () => {
                 Work
               </Link>
               <Link
-                to={isHomePage ? "/#skills" : "/skills"}
+                to="/skills"
                 className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 onClick={closeMenu}
               >
                 Skills
               </Link>
               <Link
-                to={isHomePage ? "/#contact" : "/contact"}
+                to="/contact"
                 className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 onClick={closeMenu}
               >

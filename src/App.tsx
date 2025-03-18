@@ -8,6 +8,8 @@ import Index from "./pages/Index";
 import Work from "./pages/Work";
 import CorporateExperience from "./pages/CorporateExperience";
 import Entrepreneurship from "./pages/Entrepreneurship";
+import Skills from "./pages/Skills";
+import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +24,8 @@ const App = () => (
           <Route path="/work" element={<Work />} />
           <Route path="/corporate-experience" element={<CorporateExperience />} />
           <Route path="/entrepreneurship" element={<Entrepreneurship />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

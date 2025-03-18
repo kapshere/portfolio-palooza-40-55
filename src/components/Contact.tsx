@@ -30,7 +30,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-16 bg-secondary/50">
+    <section id="contact" className="py-16 bg-gradient-to-b from-secondary/80 to-secondary/70">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white">
           Get In Touch
@@ -38,7 +38,7 @@ const Contact = () => {
         
         {/* Contact Information */}
         <div className="max-w-2xl mx-auto mb-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-secondary-foreground/10 p-4 rounded-lg flex items-center">
+          <div className="bg-blue-100/10 backdrop-blur-sm p-4 rounded-lg flex items-center border border-white/10 shadow-md">
             <Phone className="text-primary h-6 w-6 mr-3" />
             <div>
               <h3 className="text-white font-medium">Phone</h3>
@@ -46,7 +46,7 @@ const Contact = () => {
             </div>
           </div>
           
-          <div className="bg-secondary-foreground/10 p-4 rounded-lg flex items-center">
+          <div className="bg-green-100/10 backdrop-blur-sm p-4 rounded-lg flex items-center border border-white/10 shadow-md">
             <Mail className="text-primary h-6 w-6 mr-3" />
             <div>
               <h3 className="text-white font-medium">Email</h3>
@@ -56,7 +56,7 @@ const Contact = () => {
             </div>
           </div>
           
-          <div className="bg-secondary-foreground/10 p-4 rounded-lg flex items-center">
+          <div className="bg-purple-100/10 backdrop-blur-sm p-4 rounded-lg flex items-center border border-white/10 shadow-md">
             <Linkedin className="text-primary h-6 w-6 mr-3" />
             <div>
               <h3 className="text-white font-medium">LinkedIn</h3>
@@ -71,7 +71,7 @@ const Contact = () => {
             </div>
           </div>
           
-          <div className="bg-secondary-foreground/10 p-4 rounded-lg flex items-center">
+          <div className="bg-amber-100/10 backdrop-blur-sm p-4 rounded-lg flex items-center border border-white/10 shadow-md">
             <Twitter className="text-primary h-6 w-6 mr-3" />
             <div>
               <h3 className="text-white font-medium">Twitter</h3>
@@ -88,7 +88,7 @@ const Contact = () => {
         </div>
         
         <div className="max-w-2xl mx-auto">
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4 bg-rose-100/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 shadow-lg">
             <div>
               <Input
                 type="email"
@@ -110,7 +110,7 @@ const Contact = () => {
             </div>
             <Button 
               type="submit" 
-              className="w-full"
+              className="w-full bg-primary hover:bg-primary/90"
               disabled={isSubmitting}
             >
               {isSubmitting ? (
