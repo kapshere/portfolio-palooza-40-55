@@ -1,8 +1,14 @@
+![ONDC Network Architecture](/public/Images/Blog/1.jpeg)
 
 # ONDC: Peer to Peer E-Commerce Network
 
 ONDC, or the Open Network for Digital Commerce, is revolutionizing e-commerce in India by creating an open, interoperable network that decouples buyers from sellers and platforms from products.
 
+<<<<<<< HEAD
+![ONDC Network Architecture](/public/Images/Blog/2.jpeg)
+
+=======
+>>>>>>> d1a4d9ba4c2535d2455b48c8cae7a4842173b93f
 ## What is ONDC?
 
 ONDC is a government-backed initiative that aims to democratize digital commerce by creating an open network that allows buyers and sellers to transact regardless of the apps they use. This is a paradigm shift from the current platform-centric model where buyers and sellers must use the same platform to transact.
@@ -26,6 +32,11 @@ The ONDC architecture follows a peer-to-peer design where buyer and seller apps 
 
 When a user searches for a product on a buyer app, the app sends a discovery request to the ONDC gateway. The gateway broadcasts this request to all relevant seller apps, which respond with matching products. The buyer app aggregates these responses and presents them to the user.
 
+<<<<<<< HEAD
+![ONDC Transaction Flow](/public/Images/Blog/3.jpeg)
+
+=======
+>>>>>>> d1a4d9ba4c2535d2455b48c8cae7a4842173b93f
 ## Benefits of ONDC
 
 ONDC offers several advantages over the current platform-centric model:
@@ -47,6 +58,11 @@ ONDC's architecture shares similarities with blockchain networks in several ways
 
 While ONDC doesn't use blockchain technology directly, its peer-to-peer architecture and open protocol approach reflect similar principles of decentralization and interoperability.
 
+<<<<<<< HEAD
+![Decentralized Network Comparison](/public/Images/Blog/4.jpeg)
+
+=======
+>>>>>>> d1a4d9ba4c2535d2455b48c8cae7a4842173b93f
 ## Challenges and Future Directions
 
 Despite its promising vision, ONDC faces several challenges:
