@@ -1,5 +1,5 @@
 
-# Public Blockchain Network May Have a Use Case for the SME Segment
+# Public Blockchain Network are perfect for SME Segment
 
 In the recent past we can see that there is a lot of interest in the public blockchain networks like Bitcoin, Ethereum and others. There has been a gradual increase in the institutional adoption of digital assets. The use case of store of value is slowly getting attraction from wealthy people, retail and institutional investors.
 

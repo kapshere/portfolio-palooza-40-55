@@ -2,7 +2,7 @@
 
 ONDC, or the Open Network for Digital Commerce, is revolutionizing e-commerce in India by creating an open, interoperable network that decouples buyers from sellers and platforms from products.
 
-![ONDC Network Architecture](/public/Images/Blog/1.jpeg)
+![ONDC Network Architecture](/Images/Blog/1.jepg)
 
 ## What is ONDC?
 
@@ -21,10 +21,10 @@ Before we move further, it is important to understand two main underlaying ideas
 ## P2P Networks
 
 Since the inception of internet, there are many attempts on establishing p2p networks where individuals talk to each other directly for communication, sharing data, files and even money. In fact the first big application that popularised internet to masses was p2p sharing of music files via Napster. Napster was a centralised p2p network, in general below diagram shows taxonomy to explain various possible configurations
-![P2P Network](/public/Images/Blog/2.jpeg)
+![P2P Network](/Images/Blog/2.jepg)
 
 The core function that contributes to define centralised or decentralised network is the function of search/discovery and registration of participating nodes in the network. In case of centralised, a central server functions as a registry and stores the details of identity and capability of a participating node. Looking at the two extremes, fully centralised and decentralised, most networks will fall somewhere in the middle so that they are able to reliable and still not centrally controlled. 
-![P2P Network](/public/Images/Blog/3.jpeg)
+![P2P Network](/Images/Blog/3.jepg)
 
 
 ## Beckn Protocol
@@ -33,7 +33,7 @@ Beckn is a protocol to define rules to be followed for a new network that will w
 
 This is shown in the below diagram, demonstrating various layers in the overall architecture of the Beckn network. 
 
-![Beckn Network](/public/Images/Blog/4.jpeg)
+![Beckn Network](/Images/Blog/4.jepg)
 
 ## How ONDC Works
 
@@ -46,7 +46,7 @@ The ONDC architecture follows a peer-to-peer design where buyer and seller apps 
 
 When a user searches for a product on a buyer app, the app sends a discovery request to the ONDC gateway. The gateway broadcasts this request to all relevant seller apps, which respond with matching products. The buyer app aggregates these responses and presents them to the user.
 
-![ONDC Transaction Flow](/public/Images/Blog/5.jpeg)
+![ONDC Transaction Flow](/Images/Blog/5.jepg)
 
 ## Benefits of ONDC
 
@@ -81,7 +81,7 @@ Despite its promising vision, ONDC faces several challenges:
 
 As ONDC continues to evolve, it has the potential to fundamentally transform e-commerce not just in India, but globally. By creating an inclusive, open network for digital commerce, ONDC may establish a new paradigm for how we think about online marketplaces and digital trade.
 
-![Decentralized Network Comparison](/public/Images/Blog/6.jpeg)
+![Decentralized Network Comparison](/Images/Blog/6.jepg)
 
 ## Conclusion
 
