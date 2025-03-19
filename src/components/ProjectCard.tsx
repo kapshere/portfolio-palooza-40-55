@@ -1,3 +1,4 @@
+
 import { ExternalLink, Github } from 'lucide-react';
 
 interface ProjectCardProps {
@@ -24,7 +25,17 @@ const ProjectCard = ({
       className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow animate-fade-up"
       style={{ animationDelay: `${delay}s` }}
     >
-      <img src={image} alt={title} className="w-full h-48 object-cover" />
+      <div className="h-48 overflow-hidden">
+        <img 
+          src={image} 
+          alt={title} 
+          className="w-full h-full object-cover"
+          onError={(e) => {
+            console.error(`Failed to load image: ${image}`);
+            e.currentTarget.src = "/placeholder.svg";
+          }}
+        />
+      </div>
       <div className="p-6">
         <h3 className="text-xl font-bold text-secondary mb-2">{title}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
@@ -44,7 +55,7 @@ const ProjectCard = ({
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-600 hover:text-secondary"
+              className="flex items-center gap-2 text-gray-600 hover:text-secondary transition-colors"
             >
               <Github size={20} />
               <span>Code</span>
@@ -55,7 +66,7 @@ const ProjectCard = ({
               href={liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-600 hover:text-secondary"
+              className="flex items-center gap-2 text-gray-600 hover:text-secondary transition-colors"
             >
               <ExternalLink size={20} />
               <span>Live Demo</span>

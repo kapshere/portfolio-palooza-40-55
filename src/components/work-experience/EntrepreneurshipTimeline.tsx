@@ -2,7 +2,8 @@
 import React from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { CalendarClock, Lightbulb, Briefcase, FileText, Cpu } from 'lucide-react';
+import { CalendarClock, Lightbulb, Briefcase, FileText, Cpu, ExternalLink } from 'lucide-react';
+import { Button } from "@/components/ui/button";
 
 const EntrepreneurshipTimeline = () => {
   const experiences = [
@@ -29,9 +30,13 @@ const EntrepreneurshipTimeline = () => {
       title: "Verusa",
       role: "Director & Chief Architect",
       period: "Jan 2025 - Present",
-      description: "Served as Director and Chief Architect for Verusa (https://verusa.ai/), an incubated startup. Led the technical team in designing and implementing innovative solutions, establishing technical direction, and ensuring architectural integrity.",
+      description: "Served as Director and Chief Architect for Verusa, an incubated startup. Led the technical team in designing and implementing innovative solutions, establishing technical direction, and ensuring architectural integrity.",
       skills: ["AI/ML", "Technical Leadership", "Architecture Design", "Strategic Planning"],
-      icon: <Briefcase className="h-5 w-5 text-primary" />
+      icon: <Briefcase className="h-5 w-5 text-primary" />,
+      externalLink: {
+        url: "https://verusa.ai/",
+        label: "Visit Verusa.AI"
+      }
     },
     {
       id: 4,
@@ -40,7 +45,11 @@ const EntrepreneurshipTimeline = () => {
       period: "April 2024 - June 2024 ",
       description: "Published a comprehensive paper on implementing a DAO (Decentralized Autonomous Organization) as a governance system for cooperatives. The research explored how blockchain-based governance could enhance transparency and efficiency in cooperative organizations.",
       skills: ["Blockchain", "DAO", "Governance", "Research"],
-      icon: <FileText className="h-5 w-5 text-primary" />
+      icon: <FileText className="h-5 w-5 text-primary" />,
+      documentLink: {
+        url: "/Digital Transformation of Co-Operatives using DAO.pdf",
+        label: "View Research Paper"
+      }
     },
     {
       id: 5,
@@ -54,7 +63,7 @@ const EntrepreneurshipTimeline = () => {
   ];
 
   return (
-    <div className="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div className="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto pt-20">
       <h2 className="text-3xl font-bold text-primary mb-8">Entrepreneurial Journey & Recent Work</h2>
       
       <div className="relative">
@@ -84,6 +93,37 @@ const EntrepreneurshipTimeline = () => {
                   </div>
                   <p className="text-primary font-medium mb-3">{experience.role}</p>
                   <p className="text-gray-700 mb-4">{experience.description}</p>
+                  
+                  {experience.externalLink && (
+                    <div className="mb-4">
+                      <a 
+                        href={experience.externalLink.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
+                      >
+                        <ExternalLink size={16} className="mr-1" />
+                        {experience.externalLink.label}
+                      </a>
+                    </div>
+                  )}
+                  
+                  {experience.documentLink && (
+                    <div className="mb-4">
+                      <Button asChild variant="outline" size="sm">
+                        <a 
+                          href={experience.documentLink.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center"
+                        >
+                          <FileText size={16} className="mr-1" />
+                          {experience.documentLink.label}
+                        </a>
+                      </Button>
+                    </div>
+                  )}
+                  
                   <div className="flex flex-wrap gap-2">
                     {experience.skills.map((skill) => (
                       <Badge key={skill} variant="secondary">{skill}</Badge>

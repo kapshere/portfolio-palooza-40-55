@@ -32,6 +32,7 @@ const BlogContent = ({ slug }: BlogContentProps) => {
         }
         
         const text = await response.text();
+        // Fix image paths in the markdown content if needed
         setContent(text);
         setIsLoading(false);
       } catch (err) {
@@ -73,7 +74,7 @@ const BlogContent = ({ slug }: BlogContentProps) => {
   }
   
   return (
-    <article className="py-12 bg-gradient-to-b from-secondary/90 to-secondary/80">
+    <article className="py-12 bg-gradient-to-b from-secondary/90 to-secondary/80 pt-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <Button asChild variant="ghost" className="mb-6 text-primary">
           <Link to="/blog" className="flex items-center gap-2">
@@ -95,7 +96,22 @@ const BlogContent = ({ slug }: BlogContentProps) => {
         </div>
         
         <div className="prose prose-lg prose-invert max-w-none">
-          <ReactMarkdown>{content}</ReactMarkdown>
+          <ReactMarkdown 
+            components={{
+              img: ({ node, ...props }) => (
+                <img
+                  {...props}
+                  className="mx-auto rounded-lg my-8 max-w-full"
+                  onError={(e) => {
+                    console.error(`Failed to load image: ${props.src}`);
+                    e.currentTarget.src = "/placeholder.svg";
+                  }}
+                />
+              )
+            }}
+          >
+            {content}
+          </ReactMarkdown>
         </div>
       </div>
     </article>

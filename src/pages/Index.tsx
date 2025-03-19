@@ -1,22 +1,12 @@
 
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import WorkExperience from "@/components/WorkExperience";
-import Skills from "@/components/Skills";
-import Publications from "@/components/Publications";
-import Contact from "@/components/Contact";
-import Projects from "@/components/Projects";
 
 const Index = () => {
   return (
-    <div className="bg-secondary">
+    <div className="bg-secondary min-h-screen">
       <Navigation />
       <Hero />
-      <WorkExperience />
-      <Projects />
-      <Publications />
-      <Skills />
-      <Contact />
     </div>
   );
 };

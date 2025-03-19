@@ -10,6 +10,9 @@ const Navigation = () => {
   // Helper function to close mobile menu when navigating
   const closeMenu = () => setIsOpen(false);
 
+  // Helper function to determine if link is active
+  const isActive = (path: string) => location.pathname === path;
+
   return (
     <nav className="fixed w-full bg-secondary/95 backdrop-blur-sm z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,27 +34,43 @@ const Navigation = () => {
           {/* Desktop menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <Link to="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              <Link 
+                to="/" 
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  isActive('/') ? 'bg-primary/20 text-white' : 'text-gray-300 hover:text-white'
+                }`}
+              >
                 Home
               </Link>
-              <Link to="/work" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              <Link 
+                to="/work" 
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  isActive('/work') ? 'bg-primary/20 text-white' : 'text-gray-300 hover:text-white'
+                }`}
+              >
                 Work
               </Link>
               <Link 
                 to="/skills" 
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  isActive('/skills') ? 'bg-primary/20 text-white' : 'text-gray-300 hover:text-white'
+                }`}
               >
                 Skills
               </Link>
               <Link 
                 to="/blog" 
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  isActive('/blog') ? 'bg-primary/20 text-white' : 'text-gray-300 hover:text-white'
+                }`}
               >
                 Blog
               </Link>
               <Link 
                 to="/contact" 
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  isActive('/contact') ? 'bg-primary/20 text-white' : 'text-gray-300 hover:text-white'
+                }`}
               >
                 Contact
               </Link>
@@ -65,35 +84,45 @@ const Navigation = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <Link
                 to="/"
-                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  isActive('/') ? 'bg-primary/20 text-white' : 'text-gray-300 hover:text-white'
+                }`}
                 onClick={closeMenu}
               >
                 Home
               </Link>
               <Link
                 to="/work"
-                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  isActive('/work') ? 'bg-primary/20 text-white' : 'text-gray-300 hover:text-white'
+                }`}
                 onClick={closeMenu}
               >
                 Work
               </Link>
               <Link
                 to="/skills"
-                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  isActive('/skills') ? 'bg-primary/20 text-white' : 'text-gray-300 hover:text-white'
+                }`}
                 onClick={closeMenu}
               >
                 Skills
               </Link>
               <Link
                 to="/blog"
-                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  isActive('/blog') ? 'bg-primary/20 text-white' : 'text-gray-300 hover:text-white'
+                }`}
                 onClick={closeMenu}
               >
                 Blog
               </Link>
               <Link
                 to="/contact"
-                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  isActive('/contact') ? 'bg-primary/20 text-white' : 'text-gray-300 hover:text-white'
+                }`}
                 onClick={closeMenu}
               >
                 Contact
