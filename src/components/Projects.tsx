@@ -6,7 +6,7 @@ const Projects = () => {
     {
       title: "Digital Transformation Initiative for Corporate Payments",
       description: "Led India chapter for a major digital transformation program for Core banking and Payments system working at a global financial institution, modernizing legacy systems and implementing cloud-native architecture.",
-      image: "/Images/Solution Architecture.PNG",
+      image: "/Images/Digital Transformation.jpg",
       technologies: ["FIS Clear to Pay", "Microservices", "API Gateway", "Event-driven Architecture"]
     },
     {
