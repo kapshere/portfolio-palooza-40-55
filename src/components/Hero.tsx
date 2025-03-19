@@ -22,7 +22,7 @@ const Hero = () => {
               <ArrowRight size={20} />
             </Link>
             <a
-              href="#publications"
+              href="/publications"
               className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-white/20 transition-colors"
             >
               Publications
