@@ -10,6 +10,16 @@ interface BlogContentProps {
   slug: string;
 }
 
+// Custom renderer for images to use the correct path
+const ImageRenderer = ({ src, alt }: { src: string; alt?: string }) => {
+  // Check if the image path is already absolute or external
+  const imageSrc = src.startsWith('http') || src.startsWith('/') 
+    ? src 
+    : `/Images/Blog/${src}`;
+  
+  return <img src={imageSrc} alt={alt || ''} className="rounded-lg my-6 max-w-full" />;
+};
+
 const BlogContent = ({ slug }: BlogContentProps) => {
   const [content, setContent] = useState<string>('');
   const [isLoading, setIsLoading] = useState(true);
@@ -95,7 +105,13 @@ const BlogContent = ({ slug }: BlogContentProps) => {
         </div>
         
         <div className="prose prose-lg prose-invert max-w-none">
-          <ReactMarkdown>{content}</ReactMarkdown>
+          <ReactMarkdown 
+            components={{
+              img: ImageRenderer as any
+            }}
+          >
+            {content}
+          </ReactMarkdown>
         </div>
       </div>
     </article>
