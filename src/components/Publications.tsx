@@ -14,7 +14,7 @@ const Publications = () => {
         <div className="flex flex-col lg:flex-row gap-8 items-center justify-center animate-fade-up mb-16">
           <div className="lg:w-1/3">
             <img 
-              src="/lovable-uploads/32a123f1-bbb1-4fdb-9649-1108cd654387.png" 
+              src="/Images/Bitcoin Blockchain.png" 
               alt="Learning Bitcoin SV book cover" 
               className="w-full max-w-xs mx-auto shadow-lg rounded-lg"
             />
