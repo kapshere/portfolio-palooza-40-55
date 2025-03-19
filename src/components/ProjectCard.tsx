@@ -58,7 +58,7 @@ const ProjectCard = ({
               className="flex items-center gap-2 text-gray-600 hover:text-secondary"
             >
               <ExternalLink size={20} />
-              <span>Resource Link</span>
+              <span>Live Demo</span>
             </a>
           )}
         </div>
