@@ -19,7 +19,7 @@ const Projects = () => {
       title: "P2P Payments Protocol and Infrastructure",
       description: "Designed and executed a comprehensive Implementation of a light-client to Blockchain aka user node supporting a P2P Payment protocol aided by Paymail (Payment to email) finctionality",
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
-      liveUrl: "https://www.prnewswire.com/news-releases/bitcoin-association-launches-liteclient-toolbox-to-enable-efficient-scaling-301539742.html",
+      liveUrl: "https://coingeek.com/spv-liteclient-toolbox-release-makes-scalable-bitcoin-easy-cheap-useful-for-everyone/",
       githubUrl: "https://github.com/bitcoin-sv/spv-wallet.git",
       technologies: ["BSV Blockchain", "SPV Wallet", "User Node", "P2P Payment BIP70 Protocol"],
     },
