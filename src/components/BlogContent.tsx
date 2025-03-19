@@ -32,8 +32,9 @@ const BlogContent = ({ slug }: BlogContentProps) => {
         }
         
         const text = await response.text();
-        // Fix image paths in the markdown content if needed
-        setContent(text);
+        // Fix image paths in the markdown content
+        const fixedContent = text.replace(/!\[(.*?)\]\(\/public\/Images\/Blog\/(.*?)\)/g, '![$1](/Images/Blog/$2)');
+        setContent(fixedContent);
         setIsLoading(false);
       } catch (err) {
         setError('Failed to load blog post');

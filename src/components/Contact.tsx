@@ -6,27 +6,42 @@ import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { saveMessage } from "@/utils/messageStorage";
 
 const Contact = () => {
   const { toast } = useToast();
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate sending the message
-    setTimeout(() => {
+    try {
+      // Save the message to a file
+      await saveMessage({ name, email, message, date: new Date().toISOString() });
+      
       toast({
         title: "Message sent!",
         description: "Thanks for reaching out. I'll get back to you soon.",
       });
+      
+      // Reset form
+      setName("");
       setEmail("");
       setMessage("");
+    } catch (error) {
+      console.error("Failed to send message:", error);
+      toast({
+        title: "Failed to send message",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -89,6 +104,16 @@ const Contact = () => {
         
         <div className="max-w-2xl mx-auto">
           <form onSubmit={handleSubmit} className="space-y-4 bg-rose-100/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 shadow-lg">
+            <div>
+              <Input
+                type="text"
+                placeholder="Your Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+                className="bg-secondary-foreground/10 text-white placeholder:text-gray-400 border-gray-700"
+              />
+            </div>
             <div>
               <Input
                 type="email"
