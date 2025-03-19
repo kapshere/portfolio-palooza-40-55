@@ -1,14 +1,9 @@
-![ONDC Network Architecture](/public/Images/Blog/1.jpeg)
-
 # ONDC: Peer to Peer E-Commerce Network
 
 ONDC, or the Open Network for Digital Commerce, is revolutionizing e-commerce in India by creating an open, interoperable network that decouples buyers from sellers and platforms from products.
 
-<<<<<<< HEAD
-![ONDC Network Architecture](/public/Images/Blog/2.jpeg)
+![ONDC Network Architecture](/public/Images/Blog/1.jpeg)
 
-=======
->>>>>>> d1a4d9ba4c2535d2455b48c8cae7a4842173b93f
 ## What is ONDC?
 
 ONDC is a government-backed initiative that aims to democratize digital commerce by creating an open network that allows buyers and sellers to transact regardless of the apps they use. This is a paradigm shift from the current platform-centric model where buyers and sellers must use the same platform to transact.
@@ -21,6 +16,25 @@ ONDC addresses these concerns by creating a network-centric model where:
 - Sellers can use any seller-side app to make their products and services visible to all interested buyers
 - The network itself is built on open protocols and specifications, not controlled by any single entity
 
+Before we move further, it is important to understand two main underlaying ideas 
+
+## P2P Networks
+
+Since the inception of internet, there are many attempts on establishing p2p networks where individuals talk to each other directly for communication, sharing data, files and even money. In fact the first big application that popularised internet to masses was p2p sharing of music files via Napster. Napster was a centralised p2p network, in general below diagram shows taxonomy to explain various possible configurations
+![P2P Network](/public/Images/Blog/2.jpeg)
+
+The core function that contributes to define centralised or decentralised network is the function of search/discovery and registration of participating nodes in the network. In case of centralised, a central server functions as a registry and stores the details of identity and capability of a participating node. Looking at the two extremes, fully centralised and decentralised, most networks will fall somewhere in the middle so that they are able to reliable and still not centrally controlled. 
+![P2P Network](/public/Images/Blog/3.jpeg)
+
+
+## Beckn Protocol
+
+Beckn is a protocol to define rules to be followed for a new network that will work on top of Internet and have standardised message and scheme for exchanging information, specifically designed and optimised for e-commerce and trade. The network allows for P2P communication and follows an Open registry model, which means, it allows for anyone to join the network who follows the rulebook and it also allows for various entities marinating the registration of participants of the network. These registries work together by verifying each other (using an existing technology called chain of trust used heavily in Certification Authorities for issuing X509 certificates, SSL etc.) Once the infrastructure setup is done for these registries, they can start accepting participants who will be performing commerce. But there is still one key function that needs to be performed, which is the function of searching and routing requests from buyers and sellers in a commerce transaction. This is done by gateways which are generally these registries or could be other entities. Once we have these functions setup, then we can start having commerce messages exchanged between transacting entities enabling direct (p2p) message exchange between buyers and sellers without the need of a platform. 
+
+This is shown in the below diagram, demonstrating various layers in the overall architecture of the Beckn network. 
+
+![Beckn Network](/public/Images/Blog/4.jpeg)
+
 ## How ONDC Works
 
 The ONDC architecture follows a peer-to-peer design where buyer and seller apps can communicate through standardized protocols. The key components include:
@@ -32,11 +46,8 @@ The ONDC architecture follows a peer-to-peer design where buyer and seller apps 
 
 When a user searches for a product on a buyer app, the app sends a discovery request to the ONDC gateway. The gateway broadcasts this request to all relevant seller apps, which respond with matching products. The buyer app aggregates these responses and presents them to the user.
 
-<<<<<<< HEAD
-![ONDC Transaction Flow](/public/Images/Blog/3.jpeg)
+![ONDC Transaction Flow](/public/Images/Blog/5.jpeg)
 
-=======
->>>>>>> d1a4d9ba4c2535d2455b48c8cae7a4842173b93f
 ## Benefits of ONDC
 
 ONDC offers several advantages over the current platform-centric model:
@@ -56,13 +67,9 @@ ONDC's architecture shares similarities with blockchain networks in several ways
 - **Network Effects**: Value increases as more participants join the network
 - **Trust Mechanisms**: Built-in verification and reputation systems
 
-While ONDC doesn't use blockchain technology directly, its peer-to-peer architecture and open protocol approach reflect similar principles of decentralization and interoperability.
+While ONDC doesn't use blockchain technology directly, its peer-to-peer architecture and open protocol (BECKN) approach reflect similar principles of decentralization and interoperability.
 
-<<<<<<< HEAD
-![Decentralized Network Comparison](/public/Images/Blog/4.jpeg)
 
-=======
->>>>>>> d1a4d9ba4c2535d2455b48c8cae7a4842173b93f
 ## Challenges and Future Directions
 
 Despite its promising vision, ONDC faces several challenges:
@@ -73,6 +80,8 @@ Despite its promising vision, ONDC faces several challenges:
 - **Governance**: Balancing oversight with innovation
 
 As ONDC continues to evolve, it has the potential to fundamentally transform e-commerce not just in India, but globally. By creating an inclusive, open network for digital commerce, ONDC may establish a new paradigm for how we think about online marketplaces and digital trade.
+
+![Decentralized Network Comparison](/public/Images/Blog/6.jpeg)
 
 ## Conclusion
 
