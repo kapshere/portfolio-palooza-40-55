@@ -4,7 +4,7 @@ import WorkExperience from '@/components/WorkExperience';
 
 const CorporateExperience = () => {
   return (
-    <div className="bg-secondary min-h-screen">
+    <div className="bg-white min-h-screen">
       <Navigation />
       <div className="pt-16">
         <WorkExperience />

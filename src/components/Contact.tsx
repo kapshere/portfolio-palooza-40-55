@@ -3,6 +3,11 @@ import { Phone, Mail, Linkedin, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Contact = () => {
+  const handleEmailClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.location.href = 'mailto:jain.kapil@outlook.com';
+  };
+
   return (
     <section id="contact" className="py-16 bg-gradient-to-b from-secondary/80 to-secondary/70">
       <div className="container mx-auto px-4">
@@ -64,7 +69,7 @@ const Contact = () => {
         <div className="max-w-2xl mx-auto text-center">
           <Button 
             className="bg-primary hover:bg-primary/90 px-8 py-6 text-lg h-auto"
-            onClick={() => window.location.href = 'mailto:jain.kapil@outlook.com'}
+            onClick={handleEmailClick}
           >
             <Mail className="mr-2 h-5 w-5" />
             Send me an email

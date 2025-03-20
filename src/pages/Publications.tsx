@@ -1,16 +1,16 @@
 
 import Navigation from "@/components/Navigation";
-import BlogList from "@/components/BlogList";
+import Publications from "@/components/Publications";
 
-const BlogPage = () => {
+const PublicationsPage = () => {
   return (
     <div className="bg-white min-h-screen">
       <Navigation />
       <div className="pt-20">
-        <BlogList />
+        <Publications />
       </div>
     </div>
   );
 };
 
-export default BlogPage;
+export default PublicationsPage;
