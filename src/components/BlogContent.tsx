@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -33,7 +32,18 @@ const BlogContent = ({ slug }: BlogContentProps) => {
         
         const text = await response.text();
         // Fix image paths in the markdown content
-        const fixedContent = text.replace(/!\[(.*?)\]\(\/public\/Images\/Blog\/(.*?)\)/g, '![$1](/Images/Blog/$2)');
+        const fixedContent = text.replace(/!\[(.*?)\]\((.*?)\)/g, (match, alt, path) => {
+          // If the path starts with http or https, leave it as is
+          if (path.startsWith('http')) {
+            return `![${alt}](${path})`;
+          }
+          // If the path is a relative path to the Images/Blog directory
+          if (path.includes('Images/Blog')) {
+            return `![${alt}](/${path})`;
+          }
+          // Otherwise assume it's in the Images/Blog directory
+          return `![${alt}](/Images/Blog/${path})`;
+        });
         setContent(fixedContent);
         setIsLoading(false);
       } catch (err) {
@@ -50,12 +60,12 @@ const BlogContent = ({ slug }: BlogContentProps) => {
     return (
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="animate-pulse space-y-4">
-          <div className="h-8 bg-white/20 rounded w-3/4 mx-auto"></div>
-          <div className="h-4 bg-white/20 rounded w-1/2 mx-auto"></div>
+          <div className="h-8 bg-gray-200 rounded w-3/4 mx-auto"></div>
+          <div className="h-4 bg-gray-200 rounded w-1/2 mx-auto"></div>
           <div className="space-y-2 pt-6">
-            <div className="h-4 bg-white/20 rounded"></div>
-            <div className="h-4 bg-white/20 rounded"></div>
-            <div className="h-4 bg-white/20 rounded w-5/6"></div>
+            <div className="h-4 bg-gray-200 rounded"></div>
+            <div className="h-4 bg-gray-200 rounded"></div>
+            <div className="h-4 bg-gray-200 rounded w-5/6"></div>
           </div>
         </div>
       </div>
@@ -66,7 +76,7 @@ const BlogContent = ({ slug }: BlogContentProps) => {
     return (
       <div className="max-w-4xl mx-auto px-4 py-8 text-center">
         <h2 className="text-2xl font-bold text-primary mb-4">Error</h2>
-        <p className="text-white mb-6">{error || 'Blog post not found'}</p>
+        <p className="text-secondary mb-6">{error || 'Blog post not found'}</p>
         <Button asChild variant="secondary">
           <Link to="/blog">Back to Blog</Link>
         </Button>
@@ -75,7 +85,7 @@ const BlogContent = ({ slug }: BlogContentProps) => {
   }
   
   return (
-    <article className="py-12 bg-gradient-to-b from-secondary/90 to-secondary/80 pt-24">
+    <article className="py-12 bg-white pt-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <Button asChild variant="ghost" className="mb-6 text-primary">
           <Link to="/blog" className="flex items-center gap-2">
@@ -86,7 +96,7 @@ const BlogContent = ({ slug }: BlogContentProps) => {
         
         <h1 className="text-4xl font-bold text-primary mb-4">{post.title}</h1>
         
-        <div className="flex items-center text-white/70 mb-8">
+        <div className="flex items-center text-gray-600 mb-8">
           <span>{new Date(post.date).toLocaleDateString('en-US', { 
             year: 'numeric', 
             month: 'long', 
@@ -96,7 +106,7 @@ const BlogContent = ({ slug }: BlogContentProps) => {
           <span>{post.author}</span>
         </div>
         
-        <div className="prose prose-lg prose-invert max-w-none">
+        <div className="prose prose-lg max-w-none text-gray-800">
           <ReactMarkdown 
             components={{
               img: ({ node, ...props }) => (
