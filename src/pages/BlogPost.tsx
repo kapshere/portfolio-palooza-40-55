@@ -9,9 +9,7 @@ const BlogPostPage = () => {
   return (
     <div className="bg-white min-h-screen">
       <Navigation />
-      <div className="pt-20">
-        <BlogContent slug={slug || ""} />
-      </div>
+      <BlogContent slug={slug || ""} />
     </div>
   );
 };

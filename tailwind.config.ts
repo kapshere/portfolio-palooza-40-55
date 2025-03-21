@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -29,7 +30,7 @@ export default {
           foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#0f172a",
+          DEFAULT: "#0f172a", // Navy blue
           foreground: "#ffffff",
         },
       },

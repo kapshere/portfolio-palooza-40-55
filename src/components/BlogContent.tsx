@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -31,20 +32,7 @@ const BlogContent = ({ slug }: BlogContentProps) => {
         }
         
         const text = await response.text();
-        // Fix image paths in the markdown content
-        const fixedContent = text.replace(/!\[(.*?)\]\((.*?)\)/g, (match, alt, path) => {
-          // If the path starts with http or https, leave it as is
-          if (path.startsWith('http')) {
-            return `![${alt}](${path})`;
-          }
-          // If the path is a relative path to the Images/Blog directory
-          if (path.includes('Images/Blog')) {
-            return `![${alt}](/${path})`;
-          }
-          // Otherwise assume it's in the Images/Blog directory
-          return `![${alt}](/Images/Blog/${path})`;
-        });
-        setContent(fixedContent);
+        setContent(text);
         setIsLoading(false);
       } catch (err) {
         setError('Failed to load blog post');
@@ -109,16 +97,29 @@ const BlogContent = ({ slug }: BlogContentProps) => {
         <div className="prose prose-lg max-w-none text-gray-800">
           <ReactMarkdown 
             components={{
-              img: ({ node, ...props }) => (
-                <img
-                  {...props}
-                  className="mx-auto rounded-lg my-8 max-w-full"
-                  onError={(e) => {
-                    console.error(`Failed to load image: ${props.src}`);
-                    e.currentTarget.src = "/placeholder.svg";
-                  }}
-                />
-              )
+              img: ({ node, alt, src, ...props }) => {
+                let imgSrc = src || '';
+                
+                // Handle relative paths that don't start with /
+                if (imgSrc && !imgSrc.startsWith('/') && !imgSrc.startsWith('http')) {
+                  imgSrc = `/${imgSrc}`;
+                }
+                
+                return (
+                  <div className="my-8 flex justify-center">
+                    <img
+                      src={imgSrc}
+                      alt={alt || ''}
+                      className="rounded-lg max-w-full h-auto"
+                      onError={(e) => {
+                        console.error(`Failed to load image: ${imgSrc}`);
+                        e.currentTarget.src = "/placeholder.svg";
+                      }}
+                      {...props}
+                    />
+                  </div>
+                );
+              }
             }}
           >
             {content}
