@@ -11,9 +11,7 @@ const Skills = () => {
         "High Performance Engineering Teams",
         "Agile and Scrum"
       ],
-      bgColor: "bg-gradient-to-br from-blue-800 to-blue-900",
-      textColor: "text-blue-100",
-      headerColor: "text-white" 
+      bgColor: "bg-blue-100/80" 
     },
     { 
       category: "Blockchain and P2P Systems", 
@@ -26,9 +24,7 @@ const Skills = () => {
         "Lightweight SPV/User Nodes",
         "Blockchain Core Infrastructure and Economics"
       ],
-      bgColor: "bg-gradient-to-br from-green-800 to-green-900",
-      textColor: "text-green-100",
-      headerColor: "text-white"
+      bgColor: "bg-rose-100/80"
     },
     { 
       category: "AI & ML", 
@@ -37,9 +33,7 @@ const Skills = () => {
         "LLMs and Small Models",
         "Usages for AI/ML And AI Agents"
       ],
-      bgColor: "bg-gradient-to-br from-blue-800 to-blue-900",
-      textColor: "text-blue-100",
-      headerColor: "text-white"
+      bgColor: "bg-rose-100/80"
     },
     { 
       category: "Architecture", 
@@ -51,9 +45,7 @@ const Skills = () => {
         "Serverless", 
         "P2P Architecture"
       ],
-      bgColor: "bg-gradient-to-br from-green-800 to-green-900",
-      textColor: "text-green-100",
-      headerColor: "text-white"
+      bgColor: "bg-green-100/80"
     },
     { 
       category: "Leadership", 
@@ -64,9 +56,7 @@ const Skills = () => {
         "Stakeholder Management", 
         "Mentoring"
       ],
-      bgColor: "bg-gradient-to-br from-blue-800 to-blue-900",
-      textColor: "text-blue-100",
-      headerColor: "text-white"
+      bgColor: "bg-purple-100/80"
     },
     { 
       category: "Management Skills", 
@@ -77,9 +67,7 @@ const Skills = () => {
         "Business development & P&L",
         "KPI definition & tracking"
       ],
-      bgColor: "bg-gradient-to-br from-green-800 to-green-900",
-      textColor: "text-green-100",
-      headerColor: "text-white"
+      bgColor: "bg-amber-100/80"
     },
     { 
       category: "Domain Expertise", 
@@ -92,9 +80,7 @@ const Skills = () => {
         "Digital Identity",
         "Supply Chain & Trade Finance"
       ],
-      bgColor: "bg-gradient-to-br from-blue-800 to-blue-900",
-      textColor: "text-blue-100",
-      headerColor: "text-white"
+      bgColor: "bg-rose-100/80"
     },
     
   ];
@@ -108,19 +94,19 @@ const Skills = () => {
           {skills.map((skillGroup, index) => (
             <div 
               key={skillGroup.category}
-              className={`p-6 rounded-xl ${skillGroup.bgColor} border-0 animate-fade-up shadow-lg`}
+              className={`p-6 rounded-xl ${skillGroup.bgColor} border border-gray-200 animate-fade-up shadow-lg`}
               style={{ animationDelay: `${0.2 * (index + 1)}s` }}
             >
-              <h3 className={`text-2xl font-semibold mb-4 ${skillGroup.headerColor} pb-2 border-b border-white/30`}>
+              <h3 className="text-2xl font-semibold mb-4 text-secondary pb-2 border-b border-secondary/30">
                 {skillGroup.category}
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {skillGroup.items.map((skill) => (
                   <div
                     key={skill}
-                    className="bg-white/10 rounded-lg px-3 py-2 hover:bg-white/20 transition-colors flex items-center shadow-sm"
+                    className="bg-white/80 rounded-lg px-3 py-2 hover:bg-white/90 transition-colors flex items-center shadow-sm"
                   >
-                    <span className={`text-sm md:text-base ${skillGroup.textColor}`}>{skill}</span>
+                    <span className="text-sm md:text-base">{skill}</span>
                   </div>
                 ))}
               </div>
