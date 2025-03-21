@@ -2,7 +2,7 @@
 
 In the recent past we can see that there is a lot of interest in the public blockchain networks like Bitcoin, Ethereum and others. There has been a gradual increase in the institutional adoption of digital assets. The use case of store of value is slowly getting attraction from wealthy people, retail and institutional investors.
 
-![Blockchain Technology](/Images/Blog/blockchain-sme-1.jpg)
+![Blockchain Technology](/Images/Blog/blockchain-sme-1.jpeg)
 
 ## Why Public Blockchain Networks Matter
 
@@ -25,7 +25,7 @@ Small and medium businesses around the world face numerous challenges:
 - Difficulties establishing trust with larger entities
 - Inefficient supply chain management
 
-![SME Challenges](/Images/Blog/blockchain-sme-2.jpg)
+![SME Challenges](/Images/Blog/blockchain-sme-2.jpeg)
 
 ## Potential Use Cases for SMEs
 
@@ -49,7 +49,7 @@ International payments remain complicated, slow, and expensive, especially for s
 - 24/7 operation (no banking hours)
 - Programmable payments through smart contracts
 
-![Cross-Border Payments](/Images/Blog/blockchain-sme-3.jpg)
+![Cross-Border Payments](/Images/Blog/blockchain-sme-3.jpeg)
 
 ### 3. Alternative Financing Options
 
@@ -82,7 +82,7 @@ Despite the potential benefits, several challenges remain for SME adoption of pu
 4. **Integration with existing systems** - Legacy system compatibility can be difficult
 5. **Energy consumption** - Proof of Work blockchains have high energy requirements
 
-![Adoption Challenges](/Images/Blog/blockchain-sme-4.jpg)
+![Adoption Challenges](/Images/Blog/blockchain-sme-4.jpeg)
 
 ## Looking Forward
 
