@@ -4,6 +4,23 @@ In the recent past we can see that there is a lot of interest in the public bloc
 
 ![Blockchain Technology](/Images/Blog/blockchain-sme-1.jpeg)
 
+Existing infrastructure, in no doubts, worked well, but never could solve the problem of scaling and real time interoperability to be able to be widespread enough to far reaches of the world. For enabling global trade with local systems there is a need for a global inter-connectivity payment rails. The currently running bottom up approach for creating this financial pipeline/payment rail is not yet able to make it real time but at the same time, low fee/cost to process.
+
+With Blockchain solutions, we seemingly can look at an alternative, where there are no centralized router performing legal checkpoints, but a fully transparent but private transaction log in a public ledger. Lets examine this network which currently exists with comparison to the proposed blockchain based network using Proof of Work.
+
+![Network](/Images/Blog/blockchain-sme-2.jpeg)
+
+Picture shows data from Central bank of Australia (Link) and a network representation for their bank network.
+
+A small world network (i.e. small network distance) is a network with the property that the shortest path length is smaller than the logarithm of the network size (i.e. the number of nodes aka "six degrees of separation" ).
+
+This is known as a Mandala network which looks as shown in the picture(Link). If you see in the below picture this small world network provides quicker network routing between all endpoints. This enables the transaction flow in the network really real fast.
+
+![Network structure](/Images/Blog/blockchain-sme-3.jpeg)
+
+In the above diagram, at the center will be the third parties, in a PoW Blockchain, that will be the miners(core of the network), the merchants are the middle layer, and users are the outer layer. This provides a really quick network connectivity (6 or less hops) between any two end points in the network making it a good fit for being used as global financial network which is trustless as well.
+
+
 ## Why Public Blockchain Networks Matter
 
 A public blockchain network is a decentralized ecosystem that:
@@ -24,8 +41,6 @@ Small and medium businesses around the world face numerous challenges:
 - Limited technological resources
 - Difficulties establishing trust with larger entities
 - Inefficient supply chain management
-
-![SME Challenges](/Images/Blog/blockchain-sme-2.jpeg)
 
 ## Potential Use Cases for SMEs
 
@@ -49,7 +64,6 @@ International payments remain complicated, slow, and expensive, especially for s
 - 24/7 operation (no banking hours)
 - Programmable payments through smart contracts
 
-![Cross-Border Payments](/Images/Blog/blockchain-sme-3.jpeg)
 
 ### 3. Alternative Financing Options
 
@@ -81,8 +95,6 @@ Despite the potential benefits, several challenges remain for SME adoption of pu
 3. **Scalability concerns** - Some networks face limitations in transaction throughput
 4. **Integration with existing systems** - Legacy system compatibility can be difficult
 5. **Energy consumption** - Proof of Work blockchains have high energy requirements
-
-![Adoption Challenges](/Images/Blog/blockchain-sme-4.jpeg)
 
 ## Looking Forward
 
