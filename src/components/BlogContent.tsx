@@ -48,12 +48,12 @@ const BlogContent = ({ slug }: BlogContentProps) => {
     return (
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="animate-pulse space-y-4">
-          <div className="h-8 bg-[#172a45] rounded w-3/4 mx-auto"></div>
-          <div className="h-4 bg-[#172a45] rounded w-1/2 mx-auto"></div>
+          <div className="h-8 bg-gray-200 rounded w-3/4 mx-auto"></div>
+          <div className="h-4 bg-gray-200 rounded w-1/2 mx-auto"></div>
           <div className="space-y-2 pt-6">
-            <div className="h-4 bg-[#172a45] rounded"></div>
-            <div className="h-4 bg-[#172a45] rounded"></div>
-            <div className="h-4 bg-[#172a45] rounded w-5/6"></div>
+            <div className="h-4 bg-gray-200 rounded"></div>
+            <div className="h-4 bg-gray-200 rounded"></div>
+            <div className="h-4 bg-gray-200 rounded w-5/6"></div>
           </div>
         </div>
       </div>
@@ -63,13 +63,11 @@ const BlogContent = ({ slug }: BlogContentProps) => {
   if (error || !post) {
     return (
       <div className="max-w-4xl mx-auto px-4 py-8 text-center">
-        <div className="bg-gradient-to-br from-[#0a192f] to-[#112240] p-8 rounded-lg shadow-xl text-white">
-          <h2 className="text-2xl font-bold text-[#64ffda] mb-4">Error</h2>
-          <p className="text-gray-300 mb-6">{error || 'Blog post not found'}</p>
-          <Button asChild variant="outline" className="text-[#64ffda] border-[#64ffda] hover:bg-[#172a45]">
-            <Link to="/blog">Back to Blog</Link>
-          </Button>
-        </div>
+        <h2 className="text-2xl font-bold text-primary mb-4">Error</h2>
+        <p className="text-secondary mb-6">{error || 'Blog post not found'}</p>
+        <Button asChild variant="secondary">
+          <Link to="/blog">Back to Blog</Link>
+        </Button>
       </div>
     );
   }
@@ -77,25 +75,23 @@ const BlogContent = ({ slug }: BlogContentProps) => {
   return (
     <article className="py-12 bg-white pt-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Button asChild variant="ghost" className="mb-6 text-[#0a192f] hover:bg-[#e6f1ff]/20">
+        <Button asChild variant="ghost" className="mb-6 text-primary">
           <Link to="/blog" className="flex items-center gap-2">
             <ArrowLeft size={16} />
             Back to all posts
           </Link>
         </Button>
         
-        <div className="bg-gradient-to-br from-[#0a192f] to-[#112240] p-8 rounded-lg shadow-xl mb-8">
-          <h1 className="text-4xl font-bold text-white mb-4">{post.title}</h1>
-          
-          <div className="flex items-center text-gray-300 mb-2">
-            <span>{new Date(post.date).toLocaleDateString('en-US', { 
-              year: 'numeric', 
-              month: 'long', 
-              day: 'numeric' 
-            })}</span>
-            <span className="mx-2">•</span>
-            <span>{post.author}</span>
-          </div>
+        <h1 className="text-4xl font-bold text-primary mb-4">{post.title}</h1>
+        
+        <div className="flex items-center text-gray-600 mb-8">
+          <span>{new Date(post.date).toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+          })}</span>
+          <span className="mx-2">•</span>
+          <span>{post.author}</span>
         </div>
         
         <div className="prose prose-lg max-w-none text-gray-800">
@@ -109,40 +105,21 @@ const BlogContent = ({ slug }: BlogContentProps) => {
                   imgSrc = `/${imgSrc}`;
                 }
                 
-                console.log('Image source in markdown:', imgSrc);
-                
                 return (
-                  <div className="my-8">
-                    <div className="bg-gradient-to-br from-[#0a192f] to-[#112240] p-4 rounded-lg shadow-xl">
-                      <img
-                        src={imgSrc}
-                        alt={alt || ''}
-                        className="rounded-lg max-w-full h-auto mx-auto"
-                        onError={(e) => {
-                          console.error(`Failed to load image: ${imgSrc}`);
-                          e.currentTarget.src = "/placeholder.svg";
-                        }}
-                        {...props}
-                      />
-                    </div>
+                  <div className="my-8 flex justify-center">
+                    <img
+                      src={imgSrc}
+                      alt={alt || ''}
+                      className="rounded-lg max-w-full h-auto"
+                      onError={(e) => {
+                        console.error(`Failed to load image: ${imgSrc}`);
+                        e.currentTarget.src = "/placeholder.svg";
+                      }}
+                      {...props}
+                    />
                   </div>
                 );
-              },
-              h2: ({node, ...props}) => (
-                <h2 className="text-2xl font-bold text-[#0a192f] mt-8 mb-4" {...props} />
-              ),
-              h3: ({node, ...props}) => (
-                <h3 className="text-xl font-bold text-[#0a192f] mt-6 mb-3" {...props} />
-              ),
-              p: ({node, ...props}) => (
-                <p className="my-4 text-gray-800" {...props} />
-              ),
-              ul: ({node, ...props}) => (
-                <ul className="list-disc pl-6 my-4" {...props} />
-              ),
-              li: ({node, ...props}) => (
-                <li className="mb-2" {...props} />
-              ),
+              }
             }}
           >
             {content}
