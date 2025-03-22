@@ -12,10 +12,10 @@ const BlogList = () => {
         
         <div className="space-y-8">
           {blogPosts.map((post) => (
-            <Card key={post.slug} className="overflow-hidden bg-white shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+            <Card key={post.slug} className="overflow-hidden bg-gradient-to-br from-[#0a192f] to-[#112240] shadow-lg hover:shadow-xl transition-shadow duration-300 border-none">
               <CardHeader>
-                <CardTitle className="text-2xl font-bold text-secondary">{post.title}</CardTitle>
-                <CardDescription className="text-gray-600">
+                <CardTitle className="text-2xl font-bold text-white">{post.title}</CardTitle>
+                <CardDescription className="text-gray-300">
                   {new Date(post.date).toLocaleDateString('en-US', { 
                     year: 'numeric', 
                     month: 'long', 
@@ -24,10 +24,10 @@ const BlogList = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-700">{post.excerpt}</p>
+                <p className="text-gray-200">{post.excerpt}</p>
               </CardContent>
               <CardFooter>
-                <Button asChild variant="outline" className="text-primary border-primary hover:bg-primary/10">
+                <Button asChild variant="outline" className="text-[#64ffda] border-[#64ffda] hover:bg-[#172a45]">
                   <Link to={`/blog/${post.slug}`}>Read More</Link>
                 </Button>
               </CardFooter>
