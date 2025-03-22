@@ -11,7 +11,7 @@ const Skills = () => {
         "High Performance Engineering Teams",
         "Agile and Scrum"
       ],
-      bgColor: "bg-sky-700" 
+      bgColor: "bg-slate-100" 
     },
     { 
       category: "Blockchain and P2P Systems", 
@@ -24,7 +24,7 @@ const Skills = () => {
         "Lightweight SPV/User Nodes",
         "Blockchain Core Infrastructure and Economics"
       ],
-      bgColor: "bg-sky-700"
+      bgColor: "bg-slate-100"
     },
     { 
       category: "AI & ML", 
@@ -33,7 +33,7 @@ const Skills = () => {
         "LLMs and Small Models",
         "Usages for AI/ML And AI Agents"
       ],
-      bgColor: "bg-indigo-600/90"
+      bgColor: "bg-slate-100"
     },
     { 
       category: "Architecture", 
@@ -45,7 +45,7 @@ const Skills = () => {
         "Serverless", 
         "P2P Architecture"
       ],
-      bgColor: "bg-sky-700"
+      bgColor: "bg-orange-100"
     },
     { 
       category: "Leadership", 
@@ -56,7 +56,7 @@ const Skills = () => {
         "Stakeholder Management", 
         "Mentoring"
       ],
-      bgColor: "bg-sky-700"
+      bgColor: "bg-orange-100"
     },
     { 
       category: "Management Skills", 
@@ -67,7 +67,7 @@ const Skills = () => {
         "Business development & P&L",
         "KPI definition & tracking"
       ],
-      bgColor: "bg-sky-700"
+      bgColor: "bg-orange-100"
     },
     { 
       category: "Domain Expertise", 
@@ -80,7 +80,7 @@ const Skills = () => {
         "Digital Identity",
         "Supply Chain & Trade Finance"
       ],
-      bgColor: "bg-sky-700"
+      bgColor: "bg-lime-100"
     },
   ];
 
