@@ -11,7 +11,7 @@ const Skills = () => {
         "High Performance Engineering Teams",
         "Agile and Scrum"
       ],
-      bgColor: "bg-blue-100/80" 
+      bgColor: "bg-blue-600/90" 
     },
     { 
       category: "Blockchain and P2P Systems", 
@@ -24,7 +24,7 @@ const Skills = () => {
         "Lightweight SPV/User Nodes",
         "Blockchain Core Infrastructure and Economics"
       ],
-      bgColor: "bg-rose-100/80"
+      bgColor: "bg-teal-600/90"
     },
     { 
       category: "AI & ML", 
@@ -33,7 +33,7 @@ const Skills = () => {
         "LLMs and Small Models",
         "Usages for AI/ML And AI Agents"
       ],
-      bgColor: "bg-rose-100/80"
+      bgColor: "bg-indigo-600/90"
     },
     { 
       category: "Architecture", 
@@ -45,7 +45,7 @@ const Skills = () => {
         "Serverless", 
         "P2P Architecture"
       ],
-      bgColor: "bg-green-100/80"
+      bgColor: "bg-emerald-600/90"
     },
     { 
       category: "Leadership", 
@@ -56,7 +56,7 @@ const Skills = () => {
         "Stakeholder Management", 
         "Mentoring"
       ],
-      bgColor: "bg-purple-100/80"
+      bgColor: "bg-blue-700/90"
     },
     { 
       category: "Management Skills", 
@@ -67,7 +67,7 @@ const Skills = () => {
         "Business development & P&L",
         "KPI definition & tracking"
       ],
-      bgColor: "bg-amber-100/80"
+      bgColor: "bg-teal-700/90"
     },
     { 
       category: "Domain Expertise", 
@@ -80,31 +80,30 @@ const Skills = () => {
         "Digital Identity",
         "Supply Chain & Trade Finance"
       ],
-      bgColor: "bg-rose-100/80"
+      bgColor: "bg-indigo-700/90"
     },
-    
   ];
 
   return (
-    <section id="skills" className="py-20 bg-white text-gray-800">
+    <section id="skills" className="py-20 bg-white text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-secondary">Skills & Expertise</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map((skillGroup, index) => (
             <div 
               key={skillGroup.category}
-              className={`p-6 rounded-xl ${skillGroup.bgColor} border border-gray-200 animate-fade-up shadow-lg`}
-              style={{ animationDelay: `${0.2 * (index + 1)}s` }}
+              className={`p-6 rounded-xl ${skillGroup.bgColor} shadow-xl transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl`}
+              style={{ animationDelay: `${0.1 * (index + 1)}s` }}
             >
-              <h3 className="text-2xl font-semibold mb-4 text-secondary pb-2 border-b border-secondary/30">
+              <h3 className="text-xl font-semibold mb-4 text-white border-b border-white/30 pb-2">
                 {skillGroup.category}
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 gap-2">
                 {skillGroup.items.map((skill) => (
                   <div
                     key={skill}
-                    className="bg-white/80 rounded-lg px-3 py-2 hover:bg-white/90 transition-colors flex items-center shadow-sm"
+                    className="bg-white/10 rounded-lg px-3 py-2 hover:bg-white/20 transition-colors flex items-center"
                   >
                     <span className="text-sm md:text-base">{skill}</span>
                   </div>
