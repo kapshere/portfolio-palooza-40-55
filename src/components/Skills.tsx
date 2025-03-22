@@ -45,7 +45,7 @@ const Skills = () => {
         "Serverless", 
         "P2P Architecture"
       ],
-      bgColor: "bg-zinc-950"
+      bgColor: "bg-gray-950"
     },
     { 
       category: "Leadership", 
@@ -56,7 +56,7 @@ const Skills = () => {
         "Stakeholder Management", 
         "Mentoring"
       ],
-      bgColor: "bg-zinc-950"
+      bgColor: "bg-gray-950"
     },
     { 
       category: "Management Skills", 
@@ -67,7 +67,7 @@ const Skills = () => {
         "Business development & P&L",
         "KPI definition & tracking"
       ],
-      bgColor: "bg-zinc-950"
+      bgColor: "bg-gray-950"
     },
     { 
       category: "Domain Expertise", 
@@ -80,7 +80,7 @@ const Skills = () => {
         "Digital Identity",
         "Supply Chain & Trade Finance"
       ],
-      bgColor: "bg-blue-900"
+      bgColor: "bg-stone-900"
     },
   ];
 
