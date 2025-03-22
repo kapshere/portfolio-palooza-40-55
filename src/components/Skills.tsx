@@ -1,6 +1,4 @@
 
-import { Badge } from "./ui/badge";
-
 const Skills = () => {
   const skills = [
     { 
@@ -13,7 +11,7 @@ const Skills = () => {
         "High Performance Engineering Teams",
         "Agile and Scrum"
       ],
-      bgColor: "bg-primary/90" 
+      bgColor: "bg-sky-700" 
     },
     { 
       category: "Blockchain and P2P Systems", 
@@ -26,7 +24,7 @@ const Skills = () => {
         "Lightweight SPV/User Nodes",
         "Blockchain Core Infrastructure and Economics"
       ],
-      bgColor: "bg-primary/80"
+      bgColor: "bg-sky-700"
     },
     { 
       category: "AI & ML", 
@@ -35,7 +33,7 @@ const Skills = () => {
         "LLMs and Small Models",
         "Usages for AI/ML And AI Agents"
       ],
-      bgColor: "bg-primary/90"
+      bgColor: "bg-indigo-600/90"
     },
     { 
       category: "Architecture", 
@@ -47,7 +45,7 @@ const Skills = () => {
         "Serverless", 
         "P2P Architecture"
       ],
-      bgColor: "bg-primary/80"
+      bgColor: "bg-sky-700"
     },
     { 
       category: "Leadership", 
@@ -58,7 +56,7 @@ const Skills = () => {
         "Stakeholder Management", 
         "Mentoring"
       ],
-      bgColor: "bg-primary/90"
+      bgColor: "bg-sky-700"
     },
     { 
       category: "Management Skills", 
@@ -69,7 +67,7 @@ const Skills = () => {
         "Business development & P&L",
         "KPI definition & tracking"
       ],
-      bgColor: "bg-primary/80"
+      bgColor: "bg-sky-700"
     },
     { 
       category: "Domain Expertise", 
@@ -82,12 +80,12 @@ const Skills = () => {
         "Digital Identity",
         "Supply Chain & Trade Finance"
       ],
-      bgColor: "bg-primary/90"
+      bgColor: "bg-sky-700"
     },
   ];
 
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-20 bg-white text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-secondary">Skills & Expertise</h2>
         
@@ -95,19 +93,19 @@ const Skills = () => {
           {skills.map((skillGroup, index) => (
             <div 
               key={skillGroup.category}
-              className={`p-6 rounded-xl ${skillGroup.bgColor} shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl`}
+              className={`p-6 rounded-xl ${skillGroup.bgColor} shadow-xl transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl`}
               style={{ animationDelay: `${0.1 * (index + 1)}s` }}
             >
-              <h3 className="text-xl font-semibold mb-4 text-white border-b border-white/40 pb-2">
+              <h3 className="text-xl font-semibold mb-4 text-white border-b border-white/30 pb-2">
                 {skillGroup.category}
               </h3>
               <div className="grid grid-cols-1 gap-2">
                 {skillGroup.items.map((skill) => (
                   <div
                     key={skill}
-                    className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-2 hover:bg-white/30 transition-colors flex items-center"
+                    className="bg-white/10 rounded-lg px-3 py-2 hover:bg-white/20 transition-colors flex items-center"
                   >
-                    <span className="text-sm md:text-base text-white font-medium">{skill}</span>
+                    <span className="text-sm md:text-base">{skill}</span>
                   </div>
                 ))}
               </div>
