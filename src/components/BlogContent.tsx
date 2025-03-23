@@ -115,11 +115,15 @@ const BlogContent = ({ slug }: BlogContentProps) => {
                 <blockquote className="border-l-4 border-primary pl-4 italic my-6 text-gray-600" {...props} />
               ),
               
-              // Improved code blocks
-              code: ({node, inline, ...props}) => 
-                inline ? 
-                  <code className="bg-gray-100 text-primary px-1 py-0.5 rounded text-sm font-mono" {...props} /> : 
-                  <code className="block bg-gray-100 p-4 rounded-md my-4 overflow-x-auto text-sm font-mono" {...props} />,
+              // Improved code blocks - fixed the TypeScript error by properly typing the props
+              code: ({node, className, children, ...props}) => {
+                const match = /language-(\w+)/.exec(className || '');
+                const isInline = !match && children?.toString().split('\n').length === 1;
+                
+                return isInline ? 
+                  <code className="bg-gray-100 text-primary px-1 py-0.5 rounded text-sm font-mono" {...props}>{children}</code> : 
+                  <code className="block bg-gray-100 p-4 rounded-md my-4 overflow-x-auto text-sm font-mono" {...props}>{children}</code>;
+              },
               
               // Improved image styling
               img: ({ node, alt, src, ...props }) => {
