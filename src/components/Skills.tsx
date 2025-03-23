@@ -1,6 +1,20 @@
 
+import React from 'react';
+import { 
+  Lightbulb, 
+  Code, 
+  Rocket, 
+  Shield, 
+  Users, 
+  TrendingUp, 
+  Book 
+} from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { Badge } from './ui/badge';
+import { Card, CardContent } from './ui/card';
+
 const Skills = () => {
-  const skills = [
+  const skillCategories = [
     { 
       category: "Technology Expertise", 
       items: [
@@ -11,7 +25,8 @@ const Skills = () => {
         "High Performance Engineering Teams",
         "Agile and Scrum"
       ],
-      bgColor: "bg-slate-700" 
+      icon: <Lightbulb className="h-6 w-6" />,
+      gradientClass: "from-blue-50 to-blue-100 dark:from-blue-950/40 dark:to-blue-900/30"
     },
     { 
       category: "Blockchain and P2P Systems", 
@@ -24,7 +39,8 @@ const Skills = () => {
         "Lightweight SPV/User Nodes",
         "Blockchain Core Infrastructure and Economics"
       ],
-      bgColor: "bg-slate-700"
+      icon: <Shield className="h-6 w-6" />,
+      gradientClass: "from-purple-50 to-purple-100 dark:from-purple-950/40 dark:to-purple-900/30"
     },
     { 
       category: "AI & ML", 
@@ -33,7 +49,8 @@ const Skills = () => {
         "LLMs and Small Models",
         "Usages for AI/ML And AI Agents"
       ],
-      bgColor: "bg-slate-700"
+      icon: <Rocket className="h-6 w-6" />,
+      gradientClass: "from-green-50 to-green-100 dark:from-green-950/40 dark:to-green-900/30"
     },
     { 
       category: "Architecture", 
@@ -45,7 +62,8 @@ const Skills = () => {
         "Serverless", 
         "P2P Architecture"
       ],
-      bgColor: "bg-gray-700"
+      icon: <Code className="h-6 w-6" />,
+      gradientClass: "from-orange-50 to-orange-100 dark:from-orange-950/40 dark:to-orange-900/30"
     },
     { 
       category: "Leadership", 
@@ -56,7 +74,8 @@ const Skills = () => {
         "Stakeholder Management", 
         "Mentoring"
       ],
-      bgColor: "bg-gray-700"
+      icon: <Users className="h-6 w-6" />,
+      gradientClass: "from-red-50 to-red-100 dark:from-red-950/40 dark:to-red-900/30"
     },
     { 
       category: "Management Skills", 
@@ -67,7 +86,8 @@ const Skills = () => {
         "Business development & P&L",
         "KPI definition & tracking"
       ],
-      bgColor: "bg-gray-700"
+      icon: <TrendingUp className="h-6 w-6" />,
+      gradientClass: "from-cyan-50 to-cyan-100 dark:from-cyan-950/40 dark:to-cyan-900/30"
     },
     { 
       category: "Domain Expertise", 
@@ -80,35 +100,53 @@ const Skills = () => {
         "Digital Identity",
         "Supply Chain & Trade Finance"
       ],
-      bgColor: "bg-stone-700"
+      icon: <Book className="h-6 w-6" />,
+      gradientClass: "from-amber-50 to-amber-100 dark:from-amber-950/40 dark:to-amber-900/30"
     },
   ];
 
   return (
-    <section id="skills" className="py-20 bg-white text-white">
+    <section id="skills" className="py-20 bg-white text-black dark:bg-slate-900 dark:text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-secondary">Skills & Expertise</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold mb-16 text-center text-secondary">
+          <span className="inline-block border-b-2 border-primary pb-2">Skills & Expertise</span>
+        </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skills.map((skillGroup, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+          {skillCategories.map((category, index) => (
             <div 
-              key={skillGroup.category}
-              className={`p-6 rounded-xl ${skillGroup.bgColor} shadow-xl transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl`}
-              style={{ animationDelay: `${0.1 * (index + 1)}s` }}
+              key={category.category}
+              className="animate-fade-up"
+              style={{ 
+                animationDelay: `${index * 100}ms`,
+                opacity: 0 
+              }}
             >
-              <h3 className="text-xl font-semibold mb-4 text-white border-b border-white/30 pb-2">
-                {skillGroup.category}
-              </h3>
-              <div className="grid grid-cols-1 gap-2">
-                {skillGroup.items.map((skill) => (
-                  <div
-                    key={skill}
-                    className="bg-white/10 rounded-lg px-3 py-2 hover:bg-white/20 transition-colors flex items-center"
-                  >
-                    <span className="text-sm md:text-base">{skill}</span>
+              <Card className={cn(
+                "h-full overflow-hidden backdrop-blur-sm bg-gradient-to-br shadow-lg border border-slate-100 dark:border-slate-800",
+                category.gradientClass
+              )}>
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 rounded-full bg-white/80 dark:bg-slate-800/80 text-primary">
+                      {category.icon}
+                    </div>
+                    <h3 className="text-xl font-medium">{category.category}</h3>
                   </div>
-                ))}
-              </div>
+                  
+                  <div className="flex flex-wrap gap-2">
+                    {category.items.map((skill) => (
+                      <Badge 
+                        key={skill} 
+                        variant="outline"
+                        className="bg-white/50 dark:bg-slate-800/50 hover:bg-white/80 dark:hover:bg-slate-700/80 backdrop-blur-sm text-slate-700 dark:text-slate-200 border-slate-200 dark:border-slate-700 px-3 py-1.5 text-xs font-normal"
+                      >
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           ))}
         </div>
