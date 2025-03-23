@@ -30,7 +30,7 @@ export default {
           foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#0f172a", // Navy blue
+          DEFAULT: "#0f172a", 
           foreground: "#ffffff",
         },
       },

@@ -14,7 +14,7 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed w-full bg-secondary/95 backdrop-blur-sm z-50">
+    <nav className="fixed w-full bg-white shadow-sm z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
@@ -25,7 +25,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white"
+              className="text-gray-500 hover:text-primary"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -37,7 +37,7 @@ const Navigation = () => {
               <Link 
                 to="/" 
                 className={`px-3 py-2 rounded-md text-sm font-medium ${
-                  isActive('/') ? 'bg-primary/20 text-white' : 'text-gray-300 hover:text-white'
+                  isActive('/') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
                 }`}
               >
                 Home
@@ -45,7 +45,7 @@ const Navigation = () => {
               <Link 
                 to="/work" 
                 className={`px-3 py-2 rounded-md text-sm font-medium ${
-                  isActive('/work') ? 'bg-primary/20 text-white' : 'text-gray-300 hover:text-white'
+                  isActive('/work') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
                 }`}
               >
                 Work
@@ -53,7 +53,7 @@ const Navigation = () => {
               <Link 
                 to="/skills" 
                 className={`px-3 py-2 rounded-md text-sm font-medium ${
-                  isActive('/skills') ? 'bg-primary/20 text-white' : 'text-gray-300 hover:text-white'
+                  isActive('/skills') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
                 }`}
               >
                 Skills
@@ -61,7 +61,7 @@ const Navigation = () => {
               <Link 
                 to="/blog" 
                 className={`px-3 py-2 rounded-md text-sm font-medium ${
-                  isActive('/blog') ? 'bg-primary/20 text-white' : 'text-gray-300 hover:text-white'
+                  isActive('/blog') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
                 }`}
               >
                 Blog
@@ -69,7 +69,7 @@ const Navigation = () => {
               <Link 
                 to="/contact" 
                 className={`px-3 py-2 rounded-md text-sm font-medium ${
-                  isActive('/contact') ? 'bg-primary/20 text-white' : 'text-gray-300 hover:text-white'
+                  isActive('/contact') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
                 }`}
               >
                 Contact
@@ -85,7 +85,7 @@ const Navigation = () => {
               <Link
                 to="/"
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
-                  isActive('/') ? 'bg-primary/20 text-white' : 'text-gray-300 hover:text-white'
+                  isActive('/') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
                 }`}
                 onClick={closeMenu}
               >
@@ -94,7 +94,7 @@ const Navigation = () => {
               <Link
                 to="/work"
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
-                  isActive('/work') ? 'bg-primary/20 text-white' : 'text-gray-300 hover:text-white'
+                  isActive('/work') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
                 }`}
                 onClick={closeMenu}
               >
@@ -103,7 +103,7 @@ const Navigation = () => {
               <Link
                 to="/skills"
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
-                  isActive('/skills') ? 'bg-primary/20 text-white' : 'text-gray-300 hover:text-white'
+                  isActive('/skills') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
                 }`}
                 onClick={closeMenu}
               >
@@ -112,7 +112,7 @@ const Navigation = () => {
               <Link
                 to="/blog"
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
-                  isActive('/blog') ? 'bg-primary/20 text-white' : 'text-gray-300 hover:text-white'
+                  isActive('/blog') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
                 }`}
                 onClick={closeMenu}
               >
@@ -121,7 +121,7 @@ const Navigation = () => {
               <Link
                 to="/contact"
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
-                  isActive('/contact') ? 'bg-primary/20 text-white' : 'text-gray-300 hover:text-white'
+                  isActive('/contact') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
                 }`}
                 onClick={closeMenu}
               >

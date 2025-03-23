@@ -106,9 +106,9 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-white text-black dark:bg-slate-900 dark:text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-16 text-center text-secondary">
+    <section id="skills" className="py-16 bg-white text-black">
+      <div className="section-container">
+        <h2 className="heading-primary">
           <span className="inline-block border-b-2 border-primary pb-2">Skills & Expertise</span>
         </h2>
         
@@ -123,15 +123,15 @@ const Skills = () => {
               }}
             >
               <Card className={cn(
-                "h-full overflow-hidden backdrop-blur-sm bg-gradient-to-br shadow-lg border border-slate-100 dark:border-slate-800",
+                "h-full overflow-hidden backdrop-blur-sm bg-gradient-to-br shadow-md border border-gray-50",
                 category.gradientClass
               )}>
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 rounded-full bg-white/80 dark:bg-slate-800/80 text-primary">
+                    <div className="p-2 rounded-full bg-white/80 text-primary">
                       {category.icon}
                     </div>
-                    <h3 className="text-xl font-medium">{category.category}</h3>
+                    <h3 className="text-xl font-medium text-primary">{category.category}</h3>
                   </div>
                   
                   <div className="flex flex-wrap gap-2">
@@ -139,7 +139,7 @@ const Skills = () => {
                       <Badge 
                         key={skill} 
                         variant="outline"
-                        className="bg-white/50 dark:bg-slate-800/50 hover:bg-white/80 dark:hover:bg-slate-700/80 backdrop-blur-sm text-slate-700 dark:text-slate-200 border-slate-200 dark:border-slate-700 px-3 py-1.5 text-xs font-normal"
+                        className="bg-white/70 hover:bg-white/90 backdrop-blur-sm text-gray-700 border-gray-100 px-3 py-1.5 text-xs font-normal"
                       >
                         {skill}
                       </Badge>

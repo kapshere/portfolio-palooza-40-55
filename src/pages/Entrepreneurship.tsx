@@ -4,9 +4,9 @@ import EntrepreneurshipTimeline from '@/components/work-experience/Entrepreneurs
 
 const Entrepreneurship = () => {
   return (
-    <div className="bg-secondary min-h-screen">
+    <div className="page-wrapper">
       <Navigation />
-      <div className="pt-20">
+      <div className="content-padding">
         <EntrepreneurshipTimeline />
       </div>
     </div>

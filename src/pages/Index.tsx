@@ -6,7 +6,7 @@ import Contact from "@/components/Contact";
 
 const Index = () => {
   return (
-    <div className="bg-secondary min-h-screen">
+    <div className="bg-white min-h-screen">
       <Navigation />
       <Hero />
       <BlogList />

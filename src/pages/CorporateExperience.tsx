@@ -4,9 +4,9 @@ import WorkExperience from '@/components/WorkExperience';
 
 const CorporateExperience = () => {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="page-wrapper">
       <Navigation />
-      <div className="pt-16">
+      <div className="content-padding">
         <WorkExperience />
       </div>
     </div>

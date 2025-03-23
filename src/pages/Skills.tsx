@@ -5,9 +5,9 @@ import Skills from "@/components/Skills";
 
 const SkillsPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-950">
+    <div className="page-wrapper">
       <Navigation />
-      <div className="pt-20">
+      <div className="content-padding">
         <Skills />
       </div>
     </div>

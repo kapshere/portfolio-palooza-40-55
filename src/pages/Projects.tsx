@@ -4,9 +4,9 @@ import Projects from "@/components/Projects";
 
 const ProjectsPage = () => {
   return (
-    <div className="bg-gradient-to-b from-secondary to-secondary/90 min-h-screen">
+    <div className="page-wrapper">
       <Navigation />
-      <div className="pt-20">
+      <div className="content-padding">
         <Projects />
       </div>
     </div>

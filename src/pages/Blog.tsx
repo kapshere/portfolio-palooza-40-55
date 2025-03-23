@@ -4,9 +4,9 @@ import BlogList from "@/components/BlogList";
 
 const BlogPage = () => {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="page-wrapper">
       <Navigation />
-      <div className="pt-20">
+      <div className="content-padding">
         <BlogList />
       </div>
     </div>

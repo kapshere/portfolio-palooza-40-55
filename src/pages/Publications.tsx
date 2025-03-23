@@ -4,9 +4,9 @@ import Publications from "@/components/Publications";
 
 const PublicationsPage = () => {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="page-wrapper">
       <Navigation />
-      <div className="pt-20">
+      <div className="content-padding">
         <Publications />
       </div>
     </div>
