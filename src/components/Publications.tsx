@@ -106,13 +106,13 @@ const Publications = () => {
             </div>
             <Button asChild>
               <a 
-                href="/Enterprise-blockchain-products-using-the-bsv-blockchain-ebook.pdf" 
+                href="https://drive.google.com/file/d/1euXbRSLy66MJLqNWxi_8xqPaTMloTvgm/view?usp=sharing" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center"
               >
                 <BookText className="mr-2" />
-                Download E-Book
+                View E-Book
               </a>
             </Button>
           </div>

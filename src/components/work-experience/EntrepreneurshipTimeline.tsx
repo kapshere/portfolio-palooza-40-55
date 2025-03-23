@@ -47,7 +47,7 @@ const EntrepreneurshipTimeline = () => {
       skills: ["Blockchain", "DAO", "Governance", "Research"],
       icon: <FileText className="h-5 w-5 text-primary" />,
       documentLink: {
-        url: "/Digital Transformation of Co-Operatives using DAO.pdf",
+        url: "https://drive.google.com/file/d/1CePBG3fKMTNw99k5UTGe0daLZ42G17Bf/view?usp=drive_link",
         label: "View Research Paper"
       }
     },
