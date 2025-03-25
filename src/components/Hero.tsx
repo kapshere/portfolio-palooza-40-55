@@ -22,10 +22,10 @@ const Hero = () => {
               <ArrowRight size={20} />
             </Link>
             <Link
-              to="/social"
+              to="/publications"
               className="inline-flex items-center gap-2 bg-gray-100 text-primary px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition-colors"
             >
-              Social Media
+              Publications
               <ArrowRight size={20} />
             </Link>
           </div>
