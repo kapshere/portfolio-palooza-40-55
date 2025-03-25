@@ -61,6 +61,14 @@ const Navigation = () => {
                 Skills
               </Link>
               <Link 
+                to="/publications" 
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  isActive('/publications') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
+                }`}
+              >
+                Publications
+              </Link>
+              <Link 
                 to="/social" 
                 className={`px-3 py-2 rounded-md text-sm font-medium ${
                   isActive('/social') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
@@ -118,6 +126,15 @@ const Navigation = () => {
                 onClick={closeMenu}
               >
                 Skills
+              </Link>
+              <Link
+                to="/publications"
+                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  isActive('/publications') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
+                }`}
+                onClick={closeMenu}
+              >
+                Publications
               </Link>
               <Link
                 to="/social"
