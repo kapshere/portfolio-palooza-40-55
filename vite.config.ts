@@ -15,7 +15,7 @@ export default defineConfig(({ mode }) => ({
     mode === 'development' &&
     componentTagger(),
   ].filter(Boolean),
-  base: "./", // This ensures assets are loaded correctly on GitHub Pages
+  base: "/", // Use root path for custom domain
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
