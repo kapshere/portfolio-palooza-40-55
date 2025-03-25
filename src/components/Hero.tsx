@@ -11,7 +11,7 @@ const Hero = () => {
             Hi, I'm <span className="text-primary">Kapil Jain</span>
           </h1>
           <p className="text-xl sm:text-2xl text-gray-700 mb-8 max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            A Senior Technology Professional and Architecture consultant
+            A Senior Technology Professional and Technology Consultant
           </p>
           <div className="flex flex-wrap justify-center gap-4 animate-fade-up" style={{ animationDelay: "0.4s" }}>
             <Link
@@ -22,10 +22,10 @@ const Hero = () => {
               <ArrowRight size={20} />
             </Link>
             <Link
-              to="/publications"
+              to="/social"
               className="inline-flex items-center gap-2 bg-gray-100 text-primary px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition-colors"
             >
-              Publications
+              Social Media
               <ArrowRight size={20} />
             </Link>
           </div>

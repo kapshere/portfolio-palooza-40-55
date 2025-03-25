@@ -14,6 +14,7 @@ import Projects from "./pages/Projects";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Publications from "./pages/Publications";
+import Social from "./pages/Social";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/publications" element={<Publications />} />
+          <Route path="/social" element={<Social />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
