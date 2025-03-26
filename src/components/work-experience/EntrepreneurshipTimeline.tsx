@@ -12,7 +12,7 @@ const EntrepreneurshipTimeline = () => {
       title: "Stealth Startup - Super App",
       role: "India CTO & Chief Architect",
       period: "March 2025 - Present",
-      description: "Leading a stealth startup building a super app to change the way we use mobile and day to day functionality. Responsible for technology strategy, architecture design, and product development roadmap.",
+      description: "Heading India team for a stealth startup building a super app to change the way we use mobile and day to day functionality. Responsible for technology strategy, architecture design, and product development roadmap.",
       skills: ["Mobile Architecture", "Super App", "Blockchain", "LLMs, AI&ML, AI Agents", "Engineering Head"],
       icon: <Cpu className="h-5 w-5 text-primary" />
     },
@@ -21,7 +21,7 @@ const EntrepreneurshipTimeline = () => {
       title: "Alan Scott Ominis",
       role: "Architecture Consultant",
       period: "Feb 2025 - Present",
-      description: "Architecture Consultant to Alan Scott Ominis – A funded AI agent and startup studio. Providing strategic guidance on AI integration, scalable system design, and technical implementation.",
+      description: "Architecture Consultant to Alan Scott Ominis – A VC funded AI agent and startup studio. Providing strategic guidance on AI integration, scalable system design, and technical implementation.",
       skills: ["AI Architecture", "LLM Integration", "Agent Systems", "Technical Strategy"],
       icon: <Briefcase className="h-5 w-5 text-primary" />
     },
@@ -30,7 +30,7 @@ const EntrepreneurshipTimeline = () => {
       title: "Verusa",
       role: "Director & Chief Architect",
       period: "Jan 2025 - Present",
-      description: "Served as Director and Chief Architect for Verusa, an incubated startup. Led the technical team in designing and implementing innovative solutions, establishing technical direction, and ensuring architectural integrity.",
+      description: "Serving as a Director and Chief Architect for Verusa, an incubated startup. Led the technical team in designing and implementing innovative solutions, establishing technical direction, and ensuring architectural integrity.",
       skills: ["AI/ML", "Technical Leadership", "Architecture Design", "Strategic Planning"],
       icon: <Briefcase className="h-5 w-5 text-primary" />,
       externalLink: {
