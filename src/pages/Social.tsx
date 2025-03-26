@@ -3,33 +3,44 @@ import React from 'react';
 import Navigation from '@/components/Navigation';
 import { Card, CardContent } from '@/components/ui/card';
 import { Youtube, Users } from 'lucide-react';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 const Social = () => {
-  // Sample conference images and videos
-  const conferenceMedia = [
+  // Conference videos
+  const conferenceVideos = [
     {
-      type: 'video',
       title: 'Blockchain Technology in Enterprise',
       embedUrl: 'https://www.youtube.com/embed/lik8X1aI2RQ',
       description: 'A conference talk on implementing blockchain solutions in enterprise environments.'
     },
     {
-      type: 'image',
-      title: 'Technology Summit 2023',
-      imageUrl: '/placeholder.svg',
-      description: 'Speaking at the annual Technology Summit about digital transformation strategies.'
-    },
-    {
-      type: 'video',
       title: 'Digital Identity Solutions',
       embedUrl: 'https://www.youtube.com/embed/SSo_EIwHSd4',
       description: 'Discussing the future of digital identity and self-sovereign identity systems.'
+    }
+  ];
+
+  // Blockchain conference images based on the LinkedIn post
+  const conferenceImages = [
+    {
+      title: 'Blockchain Conference Panel',
+      imageUrl: 'https://media.licdn.com/dms/image/D5622AQHZnIg1uC9BsA/feedshare-shrink_800/0/1717596646342?e=1724889600&v=beta&t=0QUoLWPOhKzDhjzq5lTrELjCYvTzg-wZz3WvX7rAV0M',
+      description: 'Panel discussion at the Global Blockchain Technology Conference where industry experts shared insights on blockchain innovations and future trends.'
     },
     {
-      type: 'image',
-      title: 'Blockchain Conference',
-      imageUrl: '/placeholder.svg',
-      description: 'Networking with industry leaders at the International Blockchain Conference.'
+      title: 'Networking Session',
+      imageUrl: 'https://media.licdn.com/dms/image/D5622AQGm6T2TP5jc0w/feedshare-shrink_800/0/1717596646368?e=1724889600&v=beta&t=f7bW_UoHkXSQ3l6p27WP1bH8Rx-Cm5YWOB8SRaA33gg',
+      description: 'Networking with blockchain professionals and enthusiasts, discussing real-world applications and collaborative opportunities.'
+    },
+    {
+      title: 'Blockchain Workshop',
+      imageUrl: 'https://media.licdn.com/dms/image/D5622AQGW-QLz7b8SsA/feedshare-shrink_800/0/1717596645858?e=1724889600&v=beta&t=6OWPPnHwTNBMEbXY4V_aSdSXj34s1c5JGVRs5PFwwOA',
+      description: 'Interactive workshop on blockchain implementation strategies for enterprise solutions and productivity enhancements.'
+    },
+    {
+      title: 'Conference Reception',
+      imageUrl: 'https://media.licdn.com/dms/image/D5622AQE4RMSk6s8T_A/feedshare-shrink_800/0/1717596645888?e=1724889600&v=beta&t=HZFEH52cD-3QQnGCZ4L2-qKB_kNkYcxX83v8G62LHIE',
+      description: 'Evening reception where participants continued discussions on blockchain adoption challenges and success stories.'
     }
   ];
 
@@ -51,25 +62,22 @@ const Social = () => {
               </p>
               
               <div className="space-y-6">
-                {conferenceMedia
-                  .filter(item => item.type === 'video')
-                  .map((video, index) => (
-                    <div key={index} className="space-y-3">
-                      <div className="aspect-video rounded-lg overflow-hidden">
-                        <iframe 
-                          src={video.embedUrl} 
-                          title={video.title}
-                          className="w-full h-full"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
-                      </div>
-                      <h3 className="font-semibold text-lg">{video.title}</h3>
-                      <p className="text-gray-600">{video.description}</p>
+                {conferenceVideos.map((video, index) => (
+                  <div key={index} className="space-y-3">
+                    <div className="aspect-video rounded-lg overflow-hidden">
+                      <iframe 
+                        src={video.embedUrl} 
+                        title={video.title}
+                        className="w-full h-full"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
                     </div>
-                  ))
-                }
+                    <h3 className="font-semibold text-lg">{video.title}</h3>
+                    <p className="text-gray-600">{video.description}</p>
+                  </div>
+                ))}
               </div>
             </CardContent>
           </Card>
@@ -77,35 +85,56 @@ const Social = () => {
           <Card className="overflow-hidden">
             <div className="bg-primary/10 p-4 flex items-center gap-2">
               <Users className="text-primary" />
-              <h2 className="text-xl font-semibold">Events & Gatherings</h2>
+              <h2 className="text-xl font-semibold">Global Blockchain Technology Conference</h2>
             </div>
             <CardContent className="p-6">
               <p className="text-gray-700 mb-6">
-                Photos from recent industry events, meetups, and conferences where I've participated as a speaker or panelist.
+                Recently participated in the Global Blockchain Technology Conference, engaging with industry leaders and sharing insights on blockchain applications for productivity and enterprise solutions.
               </p>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {conferenceMedia
-                  .filter(item => item.type === 'image')
-                  .map((image, index) => (
-                    <div key={index} className="space-y-2">
-                      <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
-                        <img 
-                          src={image.imageUrl} 
-                          alt={image.title} 
-                          className="w-full h-full object-cover"
-                          onError={(e) => {
-                            console.error("Failed to load image");
-                            e.currentTarget.src = "/placeholder.svg";
-                          }}
-                        />
-                      </div>
-                      <h3 className="font-semibold">{image.title}</h3>
-                      <p className="text-gray-600 text-sm">{image.description}</p>
-                    </div>
-                  ))
-                }
+              <div className="mb-8">
+                <img 
+                  src={conferenceImages[0].imageUrl} 
+                  alt={conferenceImages[0].title} 
+                  className="w-full h-auto rounded-lg mb-3"
+                  onError={(e) => {
+                    console.error("Failed to load image");
+                    e.currentTarget.src = "/placeholder.svg";
+                  }}
+                />
+                <h3 className="font-semibold">{conferenceImages[0].title}</h3>
+                <p className="text-gray-600 text-sm">{conferenceImages[0].description}</p>
               </div>
+              
+              <h3 className="font-semibold text-lg mb-4">More Conference Highlights</h3>
+              
+              <Carousel className="w-full">
+                <CarouselContent>
+                  {conferenceImages.slice(1).map((image, index) => (
+                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                      <div className="p-1">
+                        <div className="space-y-2">
+                          <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                            <img 
+                              src={image.imageUrl} 
+                              alt={image.title} 
+                              className="w-full h-full object-cover"
+                              onError={(e) => {
+                                console.error("Failed to load image");
+                                e.currentTarget.src = "/placeholder.svg";
+                              }}
+                            />
+                          </div>
+                          <h3 className="font-semibold">{image.title}</h3>
+                          <p className="text-gray-600 text-sm">{image.description}</p>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="hidden md:flex" />
+                <CarouselNext className="hidden md:flex" />
+              </Carousel>
             </CardContent>
           </Card>
         </div>
