@@ -6,16 +6,16 @@ import { Youtube, Users } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 const Social = () => {
-  // Conference videos
+  // Conference videos with corrected embed URLs
   const conferenceVideos = [
     {
       title: 'Use cases of Blockchain Technology in Digital Public Infrastructure',
-      embedUrl: 'https://youtu.be/x3KI_If7b3Y?feature=shared&t=11745',
+      embedUrl: 'https://www.youtube.com/embed/x3KI_If7b3Y?start=11745',
       description: 'International conference on "WEB3: Dcentralised Internet of Ownership by convergance of Blockchain, IoT, IPv6 & AI. by Blockchain for Productivity Forum'
     },
     {
       title: 'Bitcoin SV Hackathon webinar | SPV & mAPI Overview - Jad Wahab and Kapil Jain',
-      embedUrl: 'https://www.youtube.com/watch?v=c_LU7byeCg0',
+      embedUrl: 'https://www.youtube.com/embed/c_LU7byeCg0',
       description: 'With the 4th #BitcoinSV Hackathon underway, the first special webinar for participants was conducted by Jad Wahab, R&D software engineer, nChain and Kapil Jain, curriculum contributor, Bitcoin Association, with a focus on simplified payment verification (SPV) and merchant API (mAPI).'
     }
   ];
@@ -24,12 +24,12 @@ const Social = () => {
   const conferenceImages = [
     {
       title: 'CDAC Hyderabad 4th International Conference on Blockchain on June 14th 2024',
-      imageUrl: '/public/Images/Social/Blockchain conf image 2.jpeg',
+      imageUrl: '/Images/Social/Blockchain conf image 2.jpeg',
       description: 'Panel discussion at the Global Blockchain Technology Conference where industry experts shared insights on blockchain innovations and future trends.'
     },
     {
       title: 'Networking Session',
-      imageUrl: '/public/Images/Social/Group Pic.jpeg',
+      imageUrl: '/Images/Social/Group Pic.jpeg',
       description: 'Networking with blockchain professionals and enthusiasts, discussing real-world applications and collaborative opportunities.'
     }
   ];
