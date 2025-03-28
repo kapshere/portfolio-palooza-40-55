@@ -4,6 +4,7 @@ import { Briefcase, Lightbulb, Code } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Navigation from '@/components/Navigation';
+import Skills from "@/components/Skills";
 
 const Work = () => {
   return (
@@ -105,6 +106,11 @@ const Work = () => {
               </Button>
             </CardFooter>
           </Card>
+        </div>
+        
+        {/* Adding the Skills component below the work experience cards */}
+        <div className="mt-16">
+          <Skills />
         </div>
       </div>
     </div>

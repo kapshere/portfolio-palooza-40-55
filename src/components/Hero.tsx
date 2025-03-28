@@ -7,6 +7,19 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center bg-white text-primary pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
+          {/* Add profile picture */}
+          <div className="mx-auto mb-8 w-40 h-40 rounded-full overflow-hidden border-4 border-primary animate-fade-up">
+            <img 
+              src="/KJ/KJ.jpeg" 
+              alt="Kapil Jain" 
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                console.error("Failed to load profile image");
+                e.currentTarget.src = "/placeholder.svg";
+              }}
+            />
+          </div>
+          
           <h1 className="text-4xl sm:text-6xl font-bold mb-6 animate-fade-up">
             Hi, I'm <span className="text-primary">Kapil Jain</span>
           </h1>

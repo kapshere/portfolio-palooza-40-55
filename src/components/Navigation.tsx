@@ -45,20 +45,20 @@ const Navigation = () => {
                 Home
               </Link>
               <Link 
+                to="/about" 
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  isActive('/about') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
+                }`}
+              >
+                About
+              </Link>
+              <Link 
                 to="/work" 
                 className={`px-3 py-2 rounded-md text-sm font-medium ${
                   isActive('/work') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
                 }`}
               >
                 Work
-              </Link>
-              <Link 
-                to="/skills" 
-                className={`px-3 py-2 rounded-md text-sm font-medium ${
-                  isActive('/skills') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
-                }`}
-              >
-                Skills
               </Link>
               <Link 
                 to="/publications" 
@@ -110,6 +110,15 @@ const Navigation = () => {
                 Home
               </Link>
               <Link
+                to="/about"
+                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  isActive('/about') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
+                }`}
+                onClick={closeMenu}
+              >
+                About
+              </Link>
+              <Link
                 to="/work"
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   isActive('/work') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
@@ -117,15 +126,6 @@ const Navigation = () => {
                 onClick={closeMenu}
               >
                 Work
-              </Link>
-              <Link
-                to="/skills"
-                className={`block px-3 py-2 rounded-md text-base font-medium ${
-                  isActive('/skills') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
-                }`}
-                onClick={closeMenu}
-              >
-                Skills
               </Link>
               <Link
                 to="/publications"

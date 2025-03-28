@@ -9,7 +9,7 @@ const BlogList = () => {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-center text-secondary mb-12">Articles</h1>
+        <h1 className="text-4xl font-bold text-center text-secondary mb-12">Articles and Writings</h1>
         
         {/* Publications Box */}
         <div className="mb-12 bg-gradient-to-r from-blue-700 to-teal-600 rounded-xl p-6 shadow-xl text-white overflow-hidden relative">

@@ -80,7 +80,14 @@ const Social = () => {
             <CardContent className="p-6">
               <p className="text-gray-700 mb-6">
                 Recently participated in the International Blockchain Technology Conference, engaging with industry leaders and sharing insights on blockchain applications for productivity and enterprise solutions.
-                https://www.linkedin.com/posts/blockchainforproductivity_blockchain-techconference-innovation-activity-7209933317758939136-GotN?utm_source=share&utm_medium=member_desktop&rcm=ACoAAADb3vIBczGvQIJDEakO8ehQ9SpYyu1XtEU
+                <a 
+                  href="https://www.linkedin.com/posts/blockchainforproductivity_blockchain-techconference-innovation-activity-7209933317758939136-GotN/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAADb3vIBczGvQIJDEakO8ehQ9SpYyu1XtEU"
+                  className="text-primary hover:underline ml-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Conference Link
+                </a>
               </p>
               
               <div className="mb-8">
