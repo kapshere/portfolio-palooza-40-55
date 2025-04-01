@@ -22,7 +22,7 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <div 
-      className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow animate-fade-up"
+      className="bg-white rounded-xl overflow-hidden shadow-lg hover-glow animate-fade-up"
       style={{ animationDelay: `${delay}s` }}
     >
       <div className="h-48 overflow-hidden">

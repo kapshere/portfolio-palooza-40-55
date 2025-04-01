@@ -28,7 +28,7 @@ const JobPosition = ({
       <div className="absolute -left-12 p-2 bg-white rounded-full border-4 border-primary">
         {icon}
       </div>
-      <div className="bg-white p-6 rounded-lg shadow-md">
+      <div className="bg-white p-6 rounded-lg shadow-md hover-glow">
         <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
           <h3 className="text-xl font-bold text-secondary">{title}</h3>
           <div className="flex items-center text-gray-600 mt-2 md:mt-0">

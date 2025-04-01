@@ -83,7 +83,7 @@ const EntrepreneurshipTimeline = () => {
               
               {/* Content */}
               <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:ml-auto' : 'md:pl-12'}`}>
-                <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div className="bg-white p-6 rounded-lg shadow-md hover-glow">
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="text-xl font-bold text-gray-900">{experience.title}</h3>
                     <Badge variant="outline" className="flex items-center gap-1">
