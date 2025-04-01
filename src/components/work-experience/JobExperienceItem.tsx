@@ -28,7 +28,7 @@ const JobExperienceItem = ({
       onOpenChange={setIsOpen}
       className="max-w-3xl mx-auto mb-10"
     >
-      <CollapsibleTrigger className="flex items-center justify-between w-full bg-white p-4 rounded-lg shadow-md mb-6 cursor-pointer">
+      <CollapsibleTrigger className="flex items-center justify-between w-full bg-white p-4 rounded-lg shadow-md mb-6 cursor-pointer hover-glow">
         <div className="flex items-center">
           <div className="text-primary mr-3">
             {icon}
