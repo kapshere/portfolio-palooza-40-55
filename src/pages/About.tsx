@@ -1,9 +1,9 @@
 
 import React from 'react';
 import Navigation from '@/components/Navigation';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import PersonalWritings from '@/components/PersonalWritings';
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -12,12 +12,9 @@ const About = () => {
       <div className="content-padding section-container">
         <h1 className="heading-primary mb-12">About Kapil Jain</h1>
         
-        {/* Cover Letter Section */}
+        {/* Cover Letter Section (without title) */}
         <Card className="mb-16">
-          <CardHeader>
-            <CardTitle className="text-2xl font-bold text-primary">Cover Letter</CardTitle>
-          </CardHeader>
-          <CardContent className="prose prose-lg max-w-none">
+          <CardContent className="prose prose-lg max-w-none pt-6">
             <p>
               With over 20 years of experience in technology leadership, I specialize in blockchain technology, 
               enterprise architecture, and digital transformation. My career spans across global financial 
@@ -42,16 +39,21 @@ const About = () => {
               approach and clear communication help ensure alignment between technical solutions and 
               organizational objectives.
             </p>
+            <p>
+              I am available as a technology consultant for your startup or organization, specializing in 
+              Blockchain, Digital Transformation, and AI Transformation for your business. Whether you need 
+              guidance on implementing cutting-edge technologies or developing a comprehensive architecture 
+              strategy, I offer both technology and architecture consultancy services tailored to your 
+              specific needs and goals.
+            </p>
+            
+            <div className="mt-10 flex justify-center">
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+                <Link to="/entrepreneurship">Entrepreneurship & Current Work</Link>
+              </Button>
+            </div>
           </CardContent>
         </Card>
-        
-        <Separator className="my-12" />
-        
-        {/* Personal Writings Section */}
-        <section>
-          <h2 className="text-3xl font-bold text-secondary mb-8">Personal Writings on Life and Philosophy</h2>
-          <PersonalWritings />
-        </section>
       </div>
     </div>
   );
