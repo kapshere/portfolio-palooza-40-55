@@ -56,7 +56,9 @@ const About = () => {
                 <Link to="/entrepreneurship">Entrepreneurship & Current Work</Link>
               </Button>
             </div>
-
+            <p>
+                         
+            </p>
             <p>
               I am available as a technology consultant for your startup or organization, specializing in 
               Blockchain, Digital Transformation, and AI Transformation for your business. Whether you need 
