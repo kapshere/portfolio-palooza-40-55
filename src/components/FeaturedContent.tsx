@@ -57,7 +57,7 @@ const FeaturedContent = () => {
             <Card className="h-full shadow-md">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-secondary">Latest Articles</CardTitle>
-                <CardDescription>Recent insights from technology and philosophy</CardDescription>
+                <CardDescription>Recent Writings on technology and philosophy</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-4">
