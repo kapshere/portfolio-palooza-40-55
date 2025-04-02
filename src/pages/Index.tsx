@@ -1,9 +1,9 @@
 
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import BlogList from "@/components/BlogList";
 import Contact from "@/components/Contact";
 import About from "@/components/AboutSection";
+import FeaturedContent from "@/components/FeaturedContent";
 
 const Index = () => {
   return (
@@ -11,7 +11,7 @@ const Index = () => {
       <Navigation />
       <Hero />
       <About />
-      <BlogList />
+      <FeaturedContent />
       <Contact />
     </div>
   );
