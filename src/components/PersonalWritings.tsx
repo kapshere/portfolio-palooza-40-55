@@ -9,7 +9,7 @@ const PersonalWritings = () => {
   return (
     <div className="space-y-8">
       {philosophicalWritings.map((article) => (
-        <Card key={article.slug} className="overflow-hidden bg-white shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+        <Card key={article.slug} className="overflow-hidden bg-white shadow-md hover-glow transition-shadow duration-300 border border-gray-200">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-secondary">{article.title}</CardTitle>
             <CardDescription className="text-gray-600">

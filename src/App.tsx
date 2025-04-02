@@ -1,45 +1,42 @@
 
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import About from "./pages/About";
+import BlogPage from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
+import PhilosophicalPost from "./pages/PhilosophicalPost";
 import Work from "./pages/Work";
+import Contact from "./pages/Contact";
+import Skills from "./pages/Skills";
 import CorporateExperience from "./pages/CorporateExperience";
 import Entrepreneurship from "./pages/Entrepreneurship";
-import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
-import Blog from "./pages/Blog";
-import BlogPost from "./pages/BlogPost";
 import Publications from "./pages/Publications";
 import Social from "./pages/Social";
-import About from "./pages/About";
+import { Toaster } from "@/components/ui/toaster";
+import "./App.css";
 
-const queryClient = new QueryClient();
-
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/philosophy/:slug" element={<PhilosophicalPost />} />
+        <Route path="/work" element={<Work />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/corporate-experience" element={<CorporateExperience />} />
+        <Route path="/entrepreneurship" element={<Entrepreneurship />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/publications" element={<Publications />} />
+        <Route path="/social" element={<Social />} />
+      </Routes>
       <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/work" element={<Work />} />
-          <Route path="/corporate-experience" element={<CorporateExperience />} />
-          <Route path="/entrepreneurship" element={<Entrepreneurship />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/publications" element={<Publications />} />
-          <Route path="/social" element={<Social />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+    </Router>
+  );
+}
 
 export default App;

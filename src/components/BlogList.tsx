@@ -12,7 +12,7 @@ const BlogList = () => {
         <h1 className="text-4xl font-bold text-center text-secondary mb-12">Articles and Writings</h1>
         
         {/* Publications Box */}
-        <div className="mb-12 bg-gradient-to-r from-blue-700 to-teal-600 rounded-xl p-6 shadow-xl text-white overflow-hidden relative">
+        <div className="mb-12 bg-gradient-to-r from-blue-700 to-teal-600 rounded-xl p-6 shadow-xl text-white overflow-hidden relative hover-glow">
           <div className="flex flex-col md:flex-row items-center">
             <div className="mb-4 md:mb-0 md:mr-6">
               <BookText size={60} className="text-white opacity-90" />
@@ -33,7 +33,7 @@ const BlogList = () => {
         
         <div className="space-y-8">
           {blogPosts.map((post) => (
-            <Card key={post.slug} className="overflow-hidden bg-white shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+            <Card key={post.slug} className="overflow-hidden bg-white shadow-md hover-glow transition-shadow duration-300 border border-gray-200">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-secondary">{post.title}</CardTitle>
                 <CardDescription className="text-gray-600">
