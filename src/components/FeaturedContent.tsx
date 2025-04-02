@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ExternalLink, BookText } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { blogPosts } from '@/data/blogPosts';
@@ -32,14 +32,14 @@ const FeaturedContent = () => {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* 21GLabs Box */}
+          {/* 21GLabs Box - Updated with sunrise orange gradient */}
           <a 
             href="https://www.21GLabs.in" 
             target="_blank" 
             rel="noopener noreferrer"
             className="hover-glow group block h-full"
           >
-            <div className="bg-gradient-to-r from-blue-700 to-teal-600 rounded-xl p-8 shadow-xl text-white overflow-hidden relative h-full flex flex-col justify-center">
+            <div className="bg-gradient-to-r from-orange-300 to-amber-400 rounded-xl p-8 shadow-xl text-white overflow-hidden relative h-full flex flex-col justify-center">
               <div className="flex flex-col items-center text-center">
                 <h2 className="text-3xl font-bold mb-3">21GLabs</h2>
                 <p className="text-xl font-semibold mb-6">"Innovation to Reality"</p>
