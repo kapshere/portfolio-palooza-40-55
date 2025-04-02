@@ -39,7 +39,7 @@ const FeaturedContent = () => {
             rel="noopener noreferrer"
             className="hover-glow group block h-full"
           >
-            <div className="bg-gradient-to-r from-orange-300 to-amber-400 rounded-xl p-8 shadow-xl text-white overflow-hidden relative h-full flex flex-col justify-center">
+            <div className="bg-gradient-to-r from-orange-100 to-amber-300 rounded-xl p-8 shadow-xl text-white overflow-hidden relative h-full flex flex-col justify-center">
               <div className="flex flex-col items-center text-center">
                 <h2 className="text-3xl font-bold mb-3">21GLabs</h2>
                 <p className="text-xl font-semibold mb-6">"Innovation to Reality"</p>

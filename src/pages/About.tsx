@@ -16,7 +16,7 @@ const About = () => {
         <Card className="mb-16">
           <CardContent className="prose prose-lg max-w-none pt-6">
             <p>
-              With over 20 years of experience in technology leadership, I specialize in blockchain technology, 
+              With over 21 years of experience in building technology products and leadership, I specialize in blockchain technology, 
               enterprise architecture, and digital transformation. My career spans across global financial 
               institutions, technology companies, and entrepreneurial ventures where I've demonstrated 
               expertise in leading complex technical initiatives and building high-performance teams.
@@ -40,18 +40,31 @@ const About = () => {
               organizational objectives.
             </p>
             <p>
+            I prefer working in an outcome-focused environment, where vision, goal, and quality of execution are 
+            given a similar weightage. I enjoy ownership and accountability with responsibilities and have been 
+            very successful in creating similar self-sufficient teams in the past. My leadership style is to focus 
+            on defining the problem as a starting point so that it can be broken down into achievable milestones. 
+            Creating a positive environment by establishing collaboration and acting with sensitivity towards people, 
+            has been a strong driving force in my career success so far. I am a self-starter and a quick learner, 
+            and I enjoy reading about enterprise architectures and evolving behavioural trends. From time to time, 
+            I have enjoyed assignments that involve discovery, research and provide thought leadership.
+
+            </p>
+             
+            <div className="mt-10 flex justify-center">
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+                <Link to="/entrepreneurship">Entrepreneurship & Current Work</Link>
+              </Button>
+            </div>
+
+            <p>
               I am available as a technology consultant for your startup or organization, specializing in 
               Blockchain, Digital Transformation, and AI Transformation for your business. Whether you need 
               guidance on implementing cutting-edge technologies or developing a comprehensive architecture 
               strategy, I offer both technology and architecture consultancy services tailored to your 
               specific needs and goals.
             </p>
-            
-            <div className="mt-10 flex justify-center">
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-                <Link to="/entrepreneurship">Entrepreneurship & Current Work</Link>
-              </Button>
-            </div>
+           
           </CardContent>
         </Card>
       </div>
