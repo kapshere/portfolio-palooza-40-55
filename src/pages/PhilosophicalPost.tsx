@@ -7,7 +7,7 @@ const PhilosophicalPostPage = () => {
   const { slug } = useParams<{ slug: string }>();
 
   return (
-    <div className="page-wrapper">
+    <div className="page-wrapper min-h-screen bg-gray-50">
       <Navigation />
       <PhilosophicalContent slug={slug || ""} />
     </div>

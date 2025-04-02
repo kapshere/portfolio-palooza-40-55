@@ -26,6 +26,12 @@ const PhilosophicalContent = ({ slug }: PhilosophicalContentProps) => {
           return;
         }
         
+        if (!article.contentPath) {
+          setError('Content path not specified for this article');
+          setIsLoading(false);
+          return;
+        }
+        
         const response = await fetch(article.contentPath);
         if (!response.ok) {
           throw new Error('Failed to load article');
