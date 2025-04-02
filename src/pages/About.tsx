@@ -50,7 +50,15 @@ const About = () => {
             I have enjoyed assignments that involve discovery, research and provide thought leadership.
 
             </p>
-             
+            
+            <p>
+              I am available as a technology consultant for your startup or organization, specializing in 
+              Blockchain, Digital Transformation, and AI Transformation for your business. Whether you need 
+              guidance on implementing cutting-edge technologies or developing a comprehensive architecture 
+              strategy, I offer both technology and architecture consultancy services tailored to your 
+              specific needs and goals.
+            </p>
+           
             <div className="mt-10 flex justify-center">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                 <Link to="/entrepreneurship">Entrepreneurship & Current Work</Link>
@@ -58,13 +66,6 @@ const About = () => {
             </div>
             <p>
                          
-            </p>
-            <p>
-              I am available as a technology consultant for your startup or organization, specializing in 
-              Blockchain, Digital Transformation, and AI Transformation for your business. Whether you need 
-              guidance on implementing cutting-edge technologies or developing a comprehensive architecture 
-              strategy, I offer both technology and architecture consultancy services tailored to your 
-              specific needs and goals.
             </p>
            
           </CardContent>
