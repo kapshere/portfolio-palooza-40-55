@@ -1,5 +1,7 @@
-#The BluSmart Scam: Analysis of Founder Fraud 
+# The BluSmart Scam: Analysis of Founder Fraud 
+
 ![Bluesmart](/Images/Blog/B1.png)
+
 The recent collapse of BluSmart, an Indian electric vehicle (EV) ride-hailing startup once celebrated for its eco-friendly services, has exposed a sophisticated financial fraud orchestrated by its founders. Anmol Singh Jaggi and Puneet Singh Jaggi, who simultaneously managed Gensol Engineering Limited, allegedly misused ₹262 crore ($31 million) of government loans intended for EV procurement, diverting funds through opaque transactions and fabricated contracts. This report dissects the scam’s mechanics, regulatory failures, and societal impact, while proposing IT-driven solutions to prevent similar frauds. By integrating advanced fraud detection systems, robust corporate governance tools, and AI-powered oversight mechanisms, organizations can mitigate risks associated with application fraud, fund misappropriation, and synthetic identity schemes.
 
 # The BluSmart-Gensol Fraud: Anatomy of a Collapse
