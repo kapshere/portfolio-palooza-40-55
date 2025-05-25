@@ -7,7 +7,6 @@ import BlogPost from "./pages/BlogPost";
 import PhilosophicalPost from "./pages/PhilosophicalPost";
 import Work from "./pages/Work";
 import Contact from "./pages/Contact";
-import Skills from "./pages/Skills";
 import CorporateExperience from "./pages/CorporateExperience";
 import Entrepreneurship from "./pages/Entrepreneurship";
 import Projects from "./pages/Projects";
@@ -30,7 +29,6 @@ function App() {
             <Route path="/philosophy/:slug" element={<PhilosophicalPost />} />
             <Route path="/work" element={<Work />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/skills" element={<Skills />} />
             <Route path="/corporate-experience" element={<CorporateExperience />} />
             <Route path="/entrepreneurship" element={<Entrepreneurship />} />
             <Route path="/projects" element={<Projects />} />
