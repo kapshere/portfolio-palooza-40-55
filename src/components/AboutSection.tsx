@@ -13,7 +13,7 @@ const AboutSection = () => {
         <Card className="mb-6">
           <CardContent className="prose prose-lg max-w-none pt-6">
             <p>
-              With over 20 years of experience in technology leadership, I specialize in blockchain technology, 
+              With over 21 years of experience in technology leadership, I specialize in blockchain technology, 
               enterprise architecture, and digital transformation. My career spans across global financial 
               institutions, technology companies, and entrepreneurial ventures where I've demonstrated 
               expertise in leading complex technical initiatives and building high-performance teams.
