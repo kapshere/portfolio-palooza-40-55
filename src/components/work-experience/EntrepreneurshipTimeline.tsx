@@ -64,11 +64,11 @@ const EntrepreneurshipTimeline = () => {
 
   return (
     <div className="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto pt-20">
-      <h2 className="text-3xl font-bold text-primary mb-8">Entrepreneurial Journey & Recent Work</h2>
+      <h2 className="text-3xl font-bold text-primary dark:text-blue-400 mb-8">Entrepreneurial Journey & Recent Work</h2>
       
       <div className="relative">
         {/* Timeline line */}
-        <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-gray-200"></div>
+        <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-gray-200 dark:bg-gray-600"></div>
         
         {/* Timeline entries */}
         <div className="space-y-12">
@@ -83,16 +83,16 @@ const EntrepreneurshipTimeline = () => {
               
               {/* Content */}
               <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:ml-auto' : 'md:pl-12'}`}>
-                <div className="bg-white p-6 rounded-lg shadow-md hover-glow">
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover-glow border border-gray-200 dark:border-gray-700">
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-xl font-bold text-gray-900">{experience.title}</h3>
-                    <Badge variant="outline" className="flex items-center gap-1">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">{experience.title}</h3>
+                    <Badge variant="outline" className="flex items-center gap-1 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 border-gray-300 dark:border-gray-600">
                       <CalendarClock className="h-3 w-3" />
                       {experience.period}
                     </Badge>
                   </div>
-                  <p className="text-primary font-medium mb-3">{experience.role}</p>
-                  <p className="text-gray-700 mb-4">{experience.description}</p>
+                  <p className="text-primary dark:text-blue-400 font-medium mb-3">{experience.role}</p>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">{experience.description}</p>
                   
                   {experience.externalLink && (
                     <div className="mb-4">
@@ -100,7 +100,7 @@ const EntrepreneurshipTimeline = () => {
                         href={experience.externalLink.url} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
+                        className="inline-flex items-center text-primary dark:text-blue-400 hover:text-primary/80 dark:hover:text-blue-300 font-medium"
                       >
                         <ExternalLink size={16} className="mr-1" />
                         {experience.externalLink.label}
@@ -110,7 +110,7 @@ const EntrepreneurshipTimeline = () => {
                   
                   {experience.documentLink && (
                     <div className="mb-4">
-                      <Button asChild variant="outline" size="sm">
+                      <Button asChild variant="outline" size="sm" className="bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-600">
                         <a 
                           href={experience.documentLink.url} 
                           target="_blank" 
@@ -126,7 +126,7 @@ const EntrepreneurshipTimeline = () => {
                   
                   <div className="flex flex-wrap gap-2">
                     {experience.skills.map((skill) => (
-                      <Badge key={skill} variant="secondary">{skill}</Badge>
+                      <Badge key={skill} variant="secondary" className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200">{skill}</Badge>
                     ))}
                   </div>
                 </div>
