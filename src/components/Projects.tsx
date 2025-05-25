@@ -33,9 +33,9 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800 min-h-screen">
+    <section id="projects" className="py-20 bg-gray-50 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
-        <h2 className="text-3xl sm:text-4xl font-bold text-secondary dark:text-white mb-12 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-secondary mb-12 text-center">
           Key Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">

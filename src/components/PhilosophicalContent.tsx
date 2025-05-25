@@ -18,9 +18,6 @@ const PhilosophicalContent = ({ slug }: PhilosophicalContentProps) => {
   const article = philosophicalWritings.find(article => article.slug === slug);
   
   useEffect(() => {
-    // Scroll to top when component mounts
-    window.scrollTo(0, 0);
-    
     const fetchMarkdown = async () => {
       try {
         if (!article) {
@@ -82,18 +79,18 @@ const PhilosophicalContent = ({ slug }: PhilosophicalContentProps) => {
   }
   
   return (
-    <article className="py-12 bg-white dark:bg-gray-900 pt-24">
+    <article className="py-12 bg-white pt-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Button asChild variant="ghost" className="mb-6 text-primary dark:text-primary">
+        <Button asChild variant="ghost" className="mb-6 text-primary">
           <Link to="/blog" className="flex items-center gap-2">
             <ArrowLeft size={16} />
             Back to all posts
           </Link>
         </Button>
         
-        <h1 className="text-4xl font-bold text-primary dark:text-white mb-4 text-left">{article.title}</h1>
+        <h1 className="text-4xl font-bold text-primary mb-4">{article.title}</h1>
         
-        <div className="flex items-center text-gray-600 dark:text-gray-300 mb-8 text-left">
+        <div className="flex items-center text-gray-600 mb-8">
           <span>{new Date(article.date).toLocaleDateString('en-US', { 
             year: 'numeric', 
             month: 'long', 
@@ -101,25 +98,25 @@ const PhilosophicalContent = ({ slug }: PhilosophicalContentProps) => {
           })}</span>
         </div>
         
-        <div className="prose prose-lg max-w-none text-gray-800 dark:text-gray-200 text-left">
+        <div className="prose prose-lg max-w-none text-gray-800">
           <ReactMarkdown 
             components={{
-              // Enhanced styling for headers - left justified
-              h1: ({node, ...props}) => <h1 className="text-3xl font-bold mt-8 mb-4 text-primary dark:text-white text-left" {...props} />,
-              h2: ({node, ...props}) => <h2 className="text-2xl font-bold mt-8 mb-4 text-primary dark:text-white text-left" {...props} />,
-              h3: ({node, ...props}) => <h3 className="text-xl font-bold mt-6 mb-3 text-primary dark:text-white text-left" {...props} />,
+              // Enhanced styling for headers
+              h1: ({node, ...props}) => <h1 className="text-3xl font-bold mt-8 mb-4 text-primary" {...props} />,
+              h2: ({node, ...props}) => <h2 className="text-2xl font-bold mt-8 mb-4 text-primary" {...props} />,
+              h3: ({node, ...props}) => <h3 className="text-xl font-bold mt-6 mb-3 text-primary" {...props} />,
               
-              // Improved paragraph spacing - left justified
-              p: ({node, ...props}) => <p className="my-4 leading-relaxed text-gray-700 dark:text-gray-300 text-left" {...props} />,
+              // Improved paragraph spacing
+              p: ({node, ...props}) => <p className="my-4 leading-relaxed text-gray-700" {...props} />,
               
-              // List styling - left justified
-              ul: ({node, ...props}) => <ul className="list-disc pl-6 my-4 space-y-2 text-left" {...props} />,
-              ol: ({node, ...props}) => <ol className="list-decimal pl-6 my-4 space-y-2 text-left" {...props} />,
-              li: ({node, ...props}) => <li className="pl-2 leading-relaxed text-left" {...props} />,
+              // List styling
+              ul: ({node, ...props}) => <ul className="list-disc pl-6 my-4 space-y-2" {...props} />,
+              ol: ({node, ...props}) => <ol className="list-decimal pl-6 my-4 space-y-2" {...props} />,
+              li: ({node, ...props}) => <li className="pl-2 leading-relaxed" {...props} />,
               
               // Enhanced blockquote styling
               blockquote: ({node, ...props}) => (
-                <blockquote className="border-l-4 border-primary pl-4 italic my-6 text-gray-600 dark:text-gray-400 text-left" {...props} />
+                <blockquote className="border-l-4 border-primary pl-4 italic my-6 text-gray-600" {...props} />
               ),
               
               // Improved code blocks

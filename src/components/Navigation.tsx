@@ -1,83 +1,167 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-import ThemeToggle from './ThemeToggle';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  // Helper function to close mobile menu when navigating
+  const closeMenu = () => setIsOpen(false);
 
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
-
-  const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Work', path: '/work' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Projects', path: '/projects' },
-    { name: 'Publications', path: '/publications' },
-    { name: 'Contact', path: '/contact' },
-  ];
+  // Helper function to determine if link is active
+  const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700">
+    <nav className="w-full bg-white shadow-sm z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-bold text-primary dark:text-white">
-              KJ
-            </Link>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8 items-center">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white px-3 py-2 text-sm font-medium transition-colors"
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+          <div className="flex items-center justify-between h-16">
+            <div className="flex-shrink-0">
+              <Link to="/" className="text-2xl font-bold text-primary">Technology Consultant</Link>
+            </div>
+            
+            {/* Mobile menu button */}
+            <div className="md:hidden">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="text-gray-500 hover:text-primary"
               >
-                {item.name}
-              </Link>
-            ))}
-            <ThemeToggle />
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
           </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-2">
-            <ThemeToggle />
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={toggleMenu}
-              className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </Button>
+          
+          {/* Desktop menu */}
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              <Link 
+                to="/" 
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  isActive('/') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
+                }`}
+              >
+                Home
+              </Link>
+              <Link 
+                to="/about" 
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  isActive('/about') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
+                }`}
+              >
+                About
+              </Link>
+              <Link 
+                to="/work" 
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  isActive('/work') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
+                }`}
+              >
+                Work
+              </Link>
+              <Link 
+                to="/publications" 
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  isActive('/publications') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
+                }`}
+              >
+                Publications
+              </Link>
+              <Link 
+                to="/social" 
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  isActive('/social') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
+                }`}
+              >
+                Social
+              </Link>
+              <Link 
+                to="/blog" 
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  isActive('/blog') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
+                }`}
+              >
+                Blog
+              </Link>
+              <Link 
+                to="/contact" 
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  isActive('/contact') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
+                }`}
+              >
+                Contact
+              </Link>
+            </div>
           </div>
         </div>
-
-        {/* Mobile Navigation */}
+        
+        {/* Mobile menu */}
         {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  onClick={closeMenu}
-                  className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white block px-3 py-2 text-base font-medium transition-colors"
-                >
-                  {item.name}
-                </Link>
-              ))}
+          <div className="md:hidden pb-3">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <Link
+                to="/"
+                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  isActive('/') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
+                }`}
+                onClick={closeMenu}
+              >
+                Home
+              </Link>
+              <Link
+                to="/about"
+                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  isActive('/about') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
+                }`}
+                onClick={closeMenu}
+              >
+                About
+              </Link>
+              <Link
+                to="/work"
+                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  isActive('/work') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
+                }`}
+                onClick={closeMenu}
+              >
+                Work
+              </Link>
+              <Link
+                to="/publications"
+                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  isActive('/publications') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
+                }`}
+                onClick={closeMenu}
+              >
+                Publications
+              </Link>
+              <Link
+                to="/social"
+                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  isActive('/social') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
+                }`}
+                onClick={closeMenu}
+              >
+                Social
+              </Link>
+              <Link
+                to="/blog"
+                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  isActive('/blog') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
+                }`}
+                onClick={closeMenu}
+              >
+                Blog
+              </Link>
+              <Link
+                to="/contact"
+                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  isActive('/contact') ? 'bg-primary/10 text-primary' : 'text-gray-500 hover:text-primary'
+                }`}
+                onClick={closeMenu}
+              >
+                Contact
+              </Link>
             </div>
           </div>
         )}
