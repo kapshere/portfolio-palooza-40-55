@@ -1,5 +1,5 @@
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import BlogPage from "./pages/Blog";
@@ -29,6 +29,7 @@ function App() {
             <Route path="/philosophy/:slug" element={<PhilosophicalPost />} />
             <Route path="/work" element={<Work />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/skills" element={<Navigate to="/work" replace />} />
             <Route path="/corporate-experience" element={<CorporateExperience />} />
             <Route path="/entrepreneurship" element={<Entrepreneurship />} />
             <Route path="/projects" element={<Projects />} />
