@@ -97,7 +97,7 @@
   }
 
   body {
-    @apply bg-white text-foreground;
+    @apply text-foreground;
   }
 }
 
@@ -129,7 +129,7 @@
 }
 
 .page-wrapper {
-  @apply bg-white min-h-screen pb-20;
+  @apply min-h-screen pb-20;
 }
 
 .content-padding {
@@ -187,6 +187,10 @@
 .page-wrapper.work .text-gray-700,
 .page-wrapper.work .text-gray-600 {
   color: #2d2d2d !important;
+}
+
+.page-wrapper.work #skills {
+  background: transparent;
 }
 
 /* Blog page - Beige from Image 2 */
@@ -289,6 +293,12 @@
 .page-wrapper.entrepreneurship .text-gray-700,
 .page-wrapper.entrepreneurship .text-gray-600 {
   color: #2d2d2d !important;
+}
+
+.page-wrapper.projects #skills,
+.page-wrapper.skills #skills,
+.page-wrapper.entrepreneurship #skills {
+  background: transparent;
 }
 
 /* Enhanced card styling for colored backgrounds with matte finish */
