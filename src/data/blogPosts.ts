@@ -11,7 +11,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     title: "The BluSmart Scam: Analysis of Founder Fraud",
-    slug: "The BluSmart Scam: A Comprehensive Analysis of Founder Fraud and IT-Driven Prevention Strategies",
+    slug: "blusmart-scam-analysis-founder-fraud",
     date: "2025-04-18",
     author: "Kapil Jain",
     excerpt: "The recent collapse of BluSmart, an Indian electric vehicle (EV) ride-hailing startup once celebrated for its eco-friendly services, has exposed a sophisticated financial fraud orchestrated by its founders. Anmol Singh Jaggi and Puneet Singh Jaggi, who simultaneously managed Gensol Engineering Limited, allegedly misused ₹262 crore ($31 million) of government loans intended for EV procurement, diverting funds through opaque transactions and fabricated contracts.",
@@ -33,7 +33,6 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Public blockchain networks offer benefits that could particularly benefit small and medium-sized enterprises, providing security, transparency, and access to global markets.",
     contentPath: "/blog-posts/blockchain-for-sme.md"
   },
-
   {
     title: "Instant Payments across the world",
     slug: "public-blockchain-payment-network",
