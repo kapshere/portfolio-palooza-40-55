@@ -37,7 +37,15 @@ const PhilosophicalContent = ({ slug }: PhilosophicalContentProps) => {
           throw new Error('Failed to load article');
         }
         
-        const text = await response.text();
+        let text = await response.text();
+        
+        // Remove the first heading if it matches the article title
+        const firstHeadingRegex = /^#\s+.*\n/;
+        const match = text.match(firstHeadingRegex);
+        if (match && match[0].toLowerCase().includes(article.title.toLowerCase().split(':')[0])) {
+          text = text.replace(firstHeadingRegex, '');
+        }
+        
         setContent(text);
         setIsLoading(false);
       } catch (err) {
@@ -79,7 +87,7 @@ const PhilosophicalContent = ({ slug }: PhilosophicalContentProps) => {
   }
   
   return (
-    <article className="py-12 bg-white pt-24">
+    <article className="py-12 bg-white dark:bg-gray-900 pt-24 min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <Button asChild variant="ghost" className="mb-6 text-primary">
           <Link to="/blog" className="flex items-center gap-2">
@@ -88,87 +96,90 @@ const PhilosophicalContent = ({ slug }: PhilosophicalContentProps) => {
           </Link>
         </Button>
         
-        <h1 className="text-4xl font-bold text-primary mb-4">{article.title}</h1>
+        <header className="mb-8 pb-6 border-b border-gray-200 dark:border-gray-700">
+          <h1 className="text-3xl sm:text-4xl font-bold text-primary dark:text-white mb-4 leading-tight">
+            {article.title}
+          </h1>
+          
+          <div className="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+            <span>{new Date(article.date).toLocaleDateString('en-US', { 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric' 
+            })}</span>
+          </div>
+        </header>
         
-        <div className="flex items-center text-gray-600 mb-8">
-          <span>{new Date(article.date).toLocaleDateString('en-US', { 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
-          })}</span>
-        </div>
-        
-        <div className="prose prose-lg max-w-none text-gray-800">
+        <div className="prose prose-lg max-w-none text-gray-800 dark:text-gray-200">
           <ReactMarkdown 
             components={{
-              // Enhanced styling for headers
-              h1: ({node, ...props}) => <h1 className="text-3xl font-bold mt-8 mb-4 text-primary" {...props} />,
-              h2: ({node, ...props}) => <h2 className="text-2xl font-bold mt-8 mb-4 text-primary" {...props} />,
-              h3: ({node, ...props}) => <h3 className="text-xl font-bold mt-6 mb-3 text-primary" {...props} />,
+              // LinkedIn-style headers - left aligned, clean spacing
+              h1: ({node, ...props}) => <h1 className="text-2xl font-bold mt-8 mb-4 text-left text-primary dark:text-white leading-tight" {...props} />,
+              h2: ({node, ...props}) => <h2 className="text-xl font-bold mt-8 mb-4 text-left text-primary dark:text-white leading-tight" {...props} />,
+              h3: ({node, ...props}) => <h3 className="text-lg font-bold mt-6 mb-3 text-left text-primary dark:text-white leading-tight" {...props} />,
               
-              // Improved paragraph spacing
-              p: ({node, ...props}) => <p className="my-4 leading-relaxed text-gray-700" {...props} />,
+              // LinkedIn-style paragraphs - left aligned, good line height
+              p: ({node, ...props}) => <p className="mb-4 leading-relaxed text-gray-700 dark:text-gray-300 text-left" {...props} />,
               
-              // List styling
-              ul: ({node, ...props}) => <ul className="list-disc pl-6 my-4 space-y-2" {...props} />,
-              ol: ({node, ...props}) => <ol className="list-decimal pl-6 my-4 space-y-2" {...props} />,
-              li: ({node, ...props}) => <li className="pl-2 leading-relaxed" {...props} />,
+              // Clean list styling
+              ul: ({node, ...props}) => <ul className="list-disc pl-6 mb-4 space-y-1 text-left" {...props} />,
+              ol: ({node, ...props}) => <ol className="list-decimal pl-6 mb-4 space-y-1 text-left" {...props} />,
+              li: ({node, ...props}) => <li className="pl-1 leading-relaxed text-gray-700 dark:text-gray-300" {...props} />,
               
-              // Enhanced blockquote styling
+              // LinkedIn-style blockquotes
               blockquote: ({node, ...props}) => (
-                <blockquote className="border-l-4 border-primary pl-4 italic my-6 text-gray-600" {...props} />
+                <blockquote className="border-l-4 border-primary pl-4 italic mb-6 text-gray-600 dark:text-gray-400 bg-gray-50 dark:bg-gray-800 py-3 rounded-r" {...props} />
               ),
               
-              // Improved code blocks
+              // Clean code styling
               code: ({node, className, children, ...props}) => {
                 const match = /language-(\w+)/.exec(className || '');
                 const isInline = !match && children?.toString().split('\n').length === 1;
                 
                 return isInline ? 
-                  <code className="bg-gray-100 text-primary px-1 py-0.5 rounded text-sm font-mono" {...props}>{children}</code> : 
-                  <code className="block bg-gray-100 p-4 rounded-md my-4 overflow-x-auto text-sm font-mono" {...props}>{children}</code>;
+                  <code className="bg-gray-100 dark:bg-gray-800 text-primary dark:text-blue-400 px-2 py-1 rounded text-sm font-mono" {...props}>{children}</code> : 
+                  <code className="block bg-gray-100 dark:bg-gray-800 p-4 rounded-md mb-6 overflow-x-auto text-sm font-mono border" {...props}>{children}</code>;
               },
               
-              // Improved image styling with images from public/Images/Blog
+              // LinkedIn-style image styling
               img: ({ node, alt, src, ...props }) => {
                 let imgSrc = src || '';
                 
-                // If the image doesn't have a full path, add the blog images path
                 if (imgSrc && !imgSrc.startsWith('/') && !imgSrc.startsWith('http')) {
-                  imgSrc = `/Images/Blog/${imgSrc}`;
+                  imgSrc = `/${imgSrc}`;
                 }
                 
                 return (
-                  <div className="my-8">
+                  <div className="mb-8 text-center">
                     <img
                       src={imgSrc}
                       alt={alt || ''}
-                      className="rounded-lg w-full max-w-full h-auto shadow-md mx-auto"
+                      className="rounded-lg w-full max-w-full h-auto shadow-md mx-auto border dark:border-gray-700"
                       onError={(e) => {
                         console.error(`Failed to load image: ${imgSrc}`);
-                        e.currentTarget.src = "/Images/Blog/1.jpeg";
+                        e.currentTarget.src = "/placeholder.svg";
                       }}
                       {...props}
                     />
-                    {alt && <p className="text-center text-sm text-gray-500 mt-2">{alt}</p>}
+                    {alt && <p className="text-center text-sm text-gray-500 dark:text-gray-400 mt-3 italic">{alt}</p>}
                   </div>
                 );
               },
               
-              // Better table styling
+              // Clean table styling
               table: ({node, ...props}) => (
-                <div className="overflow-x-auto my-6">
-                  <table className="min-w-full divide-y divide-gray-300 border border-gray-300 rounded-md" {...props} />
+                <div className="overflow-x-auto mb-6">
+                  <table className="min-w-full divide-y divide-gray-300 dark:divide-gray-600 border border-gray-300 dark:border-gray-600 rounded-md" {...props} />
                 </div>
               ),
-              thead: ({node, ...props}) => <thead className="bg-gray-50" {...props} />,
-              tbody: ({node, ...props}) => <tbody className="divide-y divide-gray-200" {...props} />,
-              tr: ({node, ...props}) => <tr className="hover:bg-gray-50" {...props} />,
-              th: ({node, ...props}) => <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" {...props} />,
-              td: ({node, ...props}) => <td className="px-4 py-3 text-sm" {...props} />,
+              thead: ({node, ...props}) => <thead className="bg-gray-50 dark:bg-gray-800" {...props} />,
+              tbody: ({node, ...props}) => <tbody className="divide-y divide-gray-200 dark:divide-gray-700" {...props} />,
+              tr: ({node, ...props}) => <tr className="hover:bg-gray-50 dark:hover:bg-gray-800" {...props} />,
+              th: ({node, ...props}) => <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider" {...props} />,
+              td: ({node, ...props}) => <td className="px-4 py-3 text-sm text-gray-700 dark:text-gray-300" {...props} />,
               
-              // Better horizontal rule
-              hr: () => <hr className="my-8 border-t border-gray-300" />
+              // Clean horizontal rule
+              hr: () => <hr className="my-8 border-t border-gray-300 dark:border-gray-600" />
             }}
           >
             {content}
