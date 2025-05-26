@@ -5,7 +5,7 @@ import Skills from "@/components/Skills";
 
 const SkillsPage = () => {
   return (
-    <div className="page-wrapper">
+    <div className="page-wrapper skills matte-finish">
       <Navigation />
       <div className="content-padding">
         <Skills />
