@@ -8,16 +8,16 @@ import Skills from "@/components/Skills";
 
 const Work = () => {
   return (
-    <div className="page-wrapper work">
+    <div className="page-wrapper">
       <Navigation />
       <div className="content-padding section-container">
         <h1 className="heading-primary">Work Experience</h1>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Entrepreneurship and Current Work */}
-          <Card className="colored-page-card shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden relative border border-white/30">
+          <Card className="bg-white shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden relative border border-gray-100">
             <div 
-              className="absolute inset-0 opacity-10 bg-cover bg-center z-0" 
+              className="absolute inset-0 opacity-5 bg-cover bg-center z-0" 
               style={{ 
                 backgroundImage: "linear-gradient(59deg, #60a5fa 0%, #0f172a 100%)"
               }}
@@ -32,7 +32,7 @@ const Work = () => {
               </CardDescription>
             </CardHeader>
             <CardContent className="relative z-10">
-              <p className="text-gray-700 dark:text-gray-300 mb-4">
+              <p className="text-gray-700 mb-4">
                 Discover my latest entrepreneurial projects, current professional activities, and ongoing ventures. This section highlights my most recent work and innovative initiatives.
               </p>
             </CardContent>
@@ -46,9 +46,9 @@ const Work = () => {
           </Card>
 
           {/* Corporate Work Experience */}
-          <Card className="colored-page-card shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden relative border border-white/30">
+          <Card className="bg-white shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden relative border border-gray-100">
             <div 
-              className="absolute inset-0 opacity-10 bg-cover bg-center z-0" 
+              className="absolute inset-0 opacity-5 bg-cover bg-center z-0" 
               style={{ 
                 backgroundImage: "linear-gradient(90deg, #60a5fa 0%, #0f172a 100%)"
               }}
@@ -63,7 +63,7 @@ const Work = () => {
               </CardDescription>
             </CardHeader>
             <CardContent className="relative z-10">
-              <p className="text-gray-700 dark:text-gray-300 mb-4">
+              <p className="text-gray-700 mb-4">
                 Explore my professional journey through various corporate roles and positions. This section provides a timeline of my career progression, key achievements, and experiences in different organizations.
               </p>
             </CardContent>
@@ -77,9 +77,9 @@ const Work = () => {
           </Card>
 
           {/* Projects */}
-          <Card className="colored-page-card shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden relative border border-white/30">
+          <Card className="bg-white shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden relative border border-gray-100">
             <div 
-              className="absolute inset-0 opacity-10 bg-cover bg-center z-0" 
+              className="absolute inset-0 opacity-5 bg-cover bg-center z-0" 
               style={{ 
                 backgroundImage: "linear-gradient(90deg, #60a5fa 0%, #0f172a 100%)"
               }}
@@ -94,7 +94,7 @@ const Work = () => {
               </CardDescription>
             </CardHeader>
             <CardContent className="relative z-10">
-              <p className="text-gray-700 dark:text-gray-300 mb-4">
+              <p className="text-gray-700 mb-4">
                 View a collection of my key projects across various domains including blockchain, digital identity, payment systems, and enterprise architecture. Each project showcases problem-solving and technical implementation.
               </p>
             </CardContent>

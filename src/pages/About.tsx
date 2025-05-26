@@ -7,13 +7,13 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
-    <div className="page-wrapper about matte-finish">
+    <div className="page-wrapper">
       <Navigation />
       <div className="content-padding section-container">
         <h1 className="heading-primary mb-12">About Kapil Jain</h1>
         
         {/* Cover Letter Section (without title) */}
-        <Card className="mb-16 colored-page-card">
+        <Card className="mb-16">
           <CardContent className="prose prose-lg max-w-none pt-6">
             <p>
               With over 21 years of experience in building technology products and leadership, I specialize in blockchain technology, 

@@ -4,7 +4,7 @@ import EntrepreneurshipTimeline from '@/components/work-experience/Entrepreneurs
 
 const Entrepreneurship = () => {
   return (
-    <div className="page-wrapper entrepreneurship matte-finish">
+    <div className="page-wrapper">
       <Navigation />
       <div className="content-padding">
         <EntrepreneurshipTimeline />

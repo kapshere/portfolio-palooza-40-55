@@ -8,10 +8,10 @@ const TechnologyArticles = () => {
   return (
     <div className="space-y-8">
       {blogPosts.map((post) => (
-        <Card key={post.slug} className="colored-page-card shadow-lg hover:shadow-xl transition-shadow duration-300 border border-white/20">
+        <Card key={post.slug} className="overflow-hidden bg-white shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-secondary">{post.title}</CardTitle>
-            <CardDescription className="text-gray-600 dark:text-gray-400">
+            <CardDescription className="text-gray-600">
               {new Date(post.date).toLocaleDateString('en-US', { 
                 year: 'numeric', 
                 month: 'long', 
@@ -20,7 +20,7 @@ const TechnologyArticles = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="text-gray-700 dark:text-gray-300">{post.excerpt}</p>
+            <p className="text-gray-700">{post.excerpt}</p>
           </CardContent>
           <CardFooter>
             <Button asChild variant="outline" className="text-primary border-primary hover:bg-primary/10">

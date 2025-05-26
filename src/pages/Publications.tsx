@@ -4,7 +4,7 @@ import Publications from "@/components/Publications";
 
 const PublicationsPage = () => {
   return (
-    <div className="page-wrapper publications">
+    <div className="page-wrapper">
       <Navigation />
       <div className="content-padding">
         <Publications />
