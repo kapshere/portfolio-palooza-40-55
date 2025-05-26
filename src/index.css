@@ -132,6 +132,76 @@
   @apply bg-white min-h-screen pb-20;
 }
 
+/* Colored page backgrounds for all pages except landing */
+.page-wrapper.colored {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
+  min-height: 100vh;
+}
+
+.page-wrapper.colored.dark {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+}
+
+/* About page - soft blue gradient */
+.page-wrapper.about {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%);
+  min-height: 100vh;
+}
+
+.page-wrapper.about.dark {
+  background: linear-gradient(135deg, #0c1426 0%, #1e293b 50%, #0f172a 100%);
+}
+
+/* Work page - professional teal gradient */
+.page-wrapper.work {
+  background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 50%, #99f6e4 100%);
+  min-height: 100vh;
+}
+
+.page-wrapper.work.dark {
+  background: linear-gradient(135deg, #042f2e 0%, #134e4a 50%, #0f766e 100%);
+}
+
+/* Blog page - warm gradient */
+.page-wrapper.blog {
+  background: linear-gradient(135deg, #fefce8 0%, #fef3c7 50%, #fde68a 100%);
+  min-height: 100vh;
+}
+
+.page-wrapper.blog.dark {
+  background: linear-gradient(135deg, #451a03 0%, #78350f 50%, #92400e 100%);
+}
+
+/* Contact page - purple gradient */
+.page-wrapper.contact {
+  background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 50%, #e9d5ff 100%);
+  min-height: 100vh;
+}
+
+.page-wrapper.contact.dark {
+  background: linear-gradient(135deg, #2e1065 0%, #4c1d95 50%, #5b21b6 100%);
+}
+
+/* Publications page - green gradient */
+.page-wrapper.publications {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%);
+  min-height: 100vh;
+}
+
+.page-wrapper.publications.dark {
+  background: linear-gradient(135deg, #052e16 0%, #14532d 50%, #166534 100%);
+}
+
+/* Social page - rose gradient */
+.page-wrapper.social {
+  background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 50%, #fecdd3 100%);
+  min-height: 100vh;
+}
+
+.page-wrapper.social.dark {
+  background: linear-gradient(135deg, #4c0519 0%, #881337 50%, #9f1239 100%);
+}
+
 .content-padding {
   @apply pt-24 pb-16;
 }
@@ -144,4 +214,13 @@
 .hover-glow:hover {
   @apply shadow-[0_0_15px_rgba(96,165,250,0.5)] border-sky-300;
   transform: translateY(-2px);
+}
+
+/* Enhanced card styling for colored backgrounds */
+.colored-page-card {
+  @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-lg;
+}
+
+.dark .colored-page-card {
+  @apply bg-gray-800/80 border-gray-700/30;
 }

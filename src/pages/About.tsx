@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,13 +6,13 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
-    <div className="page-wrapper">
+    <div className="page-wrapper about">
       <Navigation />
       <div className="content-padding section-container">
         <h1 className="heading-primary mb-12">About Kapil Jain</h1>
         
         {/* Cover Letter Section (without title) */}
-        <Card className="mb-16">
+        <Card className="mb-16 colored-page-card">
           <CardContent className="prose prose-lg max-w-none pt-6">
             <p>
               With over 21 years of experience in building technology products and leadership, I specialize in blockchain technology, 
