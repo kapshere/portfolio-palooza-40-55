@@ -4,7 +4,7 @@ import Projects from "@/components/Projects";
 
 const ProjectsPage = () => {
   return (
-    <div className="page-wrapper">
+    <div className="page-wrapper projects matte-finish">
       <Navigation />
       <div className="content-padding">
         <Projects />

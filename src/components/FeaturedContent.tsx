@@ -26,13 +26,13 @@ const FeaturedContent = () => {
       type: 'philosophy'
     }))
   ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-   .slice(0, 3);
+   .slice(0, 3); // Get only the 3 most recent items
 
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* 21GLabs Box - Updated with additional line */}
+          {/* 21GLabs Box - Updated with sunrise orange gradient */}
           <a 
             href="https://www.21GLabs.in" 
             target="_blank" 
@@ -41,10 +41,8 @@ const FeaturedContent = () => {
           >
             <div className="bg-gradient-to-r from-sky-100 to-orange-100 rounded-xl p-8 shadow-xl text-sky overflow-hidden relative h-full flex flex-col justify-center">
               <div className="flex flex-col items-center text-center">
-                <h2 className="text-3xl font-bold mb-3">21GLabs</h2>
-                <p className="text-xl font-semibold mb-6">A 21st century technology Garage</p>
-                <p className="text-xl font-semibold mb-6">A hobby projects </p>
-                <p className="text-xl font-semibold mb-6">A hobby project space </p>
+                <h2 className="text-3xl font-bold mb-3">21 Grams</h2>
+                <p className="text-xl font-semibold mb-6">"Coming Soon"</p>
                 <div className="inline-flex items-center gap-2 bg-white/20 px-6 py-3 rounded-full text-sky group-hover:bg-white/30 transition-all">
                   Visit Website <ExternalLink size={18} />
                 </div>

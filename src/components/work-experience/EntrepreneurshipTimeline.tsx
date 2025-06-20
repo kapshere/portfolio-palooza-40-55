@@ -10,34 +10,32 @@ const EntrepreneurshipTimeline = () => {
     {
       id: 1,
       title: "Stealth Startup",
-      role: "Co-Founder",
+      role: "Founder",
       period: "June 2025 - Present",
-      description: "Exploring some Ideas to change the way we work",
-      skills: ["Architecture", "AI Agents & LLMs", "Blockchain", "Consulting & Training", "Co-Founder"],
+      description: "Exploring an Idea to change the way we work",
+      skills: ["Mobile Architecture", "Super App", "Blockchain", "LLMs, AI&ML, AI Agents", "Engineering Head"],
       icon: <Cpu className="h-5 w-5 text-primary" />
     },
     {
       id: 2,
-      title: "Alan Scott Enterprise",
-      role: "Strategic Advisor",
-      period: "May 2025 - Present",
-      description: "Advising company leadership on their foray into scalable architecture, Blockchain and AI across their line of products. A public company with many subsidiaries which are focused on Agriculture, Retail, Healthcare and Financial Services domain and building solutions with emergigng technologies and innovations that are part of their R&D unit",
-      skills: ["Architecture", "Regulatory Alignment", "AI/Blockchain/IOT", "Product Strategy"],
+      title: "Alan Scott Group",
+      role: "Advisor & Architecture Consultant",
+      period: "Feb 2025 - Present",
+      description: "Architecture Consultant to Alan Scott Group (https://thealanscott.com/) - A public company with many subsidiaries which are focused on building solutions with emergigng technologies and innovations that are part of a R&D unit",
+      skills: ["AI Architecture", "LLM Integration", "Agent Systems", "Technical Strategy"],
       icon: <Briefcase className="h-5 w-5 text-primary" />
-      externalLink: {
-        url: "https://thealanscott.com/"
-      }
     },
     {
       id: 3,
       title: "Verusa",
       role: "Director & Chief Architect",
       period: "Jan 2025 - Present",
-      description: "Advisor and Chief Architect for Verusa, an incubated startup. Led the technical team in designing and implementing innovative solutions, establishing technical direction, and ensuring architectural integrity.",
+      description: "Shareholder and Chief Architect for Verusa, an incubated startup. Led the technical team in designing and implementing innovative solutions, establishing technical direction, and ensuring architectural integrity.",
       skills: ["AI/ML", "Technical Leadership", "Architecture Design", "Strategic Planning"],
       icon: <Briefcase className="h-5 w-5 text-primary" />,
       externalLink: {
-        url: "https://verusa.ai/"
+        url: "https://verusa.ai/",
+        label: "Visit Verusa.AI"
       }
     },
     {

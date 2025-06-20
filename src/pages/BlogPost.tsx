@@ -7,7 +7,7 @@ const BlogPostPage = () => {
   const { slug } = useParams<{ slug: string }>();
 
   return (
-    <div className="page-wrapper">
+    <div className="page-wrapper blog matte-finish">
       <Navigation />
       <BlogContent slug={slug || ""} />
     </div>

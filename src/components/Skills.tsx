@@ -26,7 +26,7 @@ const Skills = () => {
         "Agile and Scrum"
       ],
       icon: <Lightbulb className="h-6 w-6" />,
-      gradientClass: "from-blue-50 to-blue-100"
+      gradientClass: "from-gray-600/20 to-gray-700/20"
     },
     { 
       category: "Blockchain and P2P Systems", 
@@ -40,7 +40,7 @@ const Skills = () => {
         "Blockchain Core Infrastructure and Economics"
       ],
       icon: <Shield className="h-6 w-6" />,
-      gradientClass: "from-purple-50 to-purple-100"
+      gradientClass: "from-gray-600/20 to-gray-700/20"
     },
     { 
       category: "AI & ML", 
@@ -50,7 +50,7 @@ const Skills = () => {
         "Usages for AI/ML And AI Agents"
       ],
       icon: <Rocket className="h-6 w-6" />,
-      gradientClass: "from-green-50 to-green-100"
+      gradientClass: "from-gray-600/20 to-gray-700/20"
     },
     { 
       category: "Architecture", 
@@ -63,7 +63,7 @@ const Skills = () => {
         "P2P Architecture"
       ],
       icon: <Code className="h-6 w-6" />,
-      gradientClass: "from-orange-50 to-orange-100"
+      gradientClass: "from-gray-600/20 to-gray-700/20"
     },
     { 
       category: "Leadership", 
@@ -75,7 +75,7 @@ const Skills = () => {
         "Mentoring"
       ],
       icon: <Users className="h-6 w-6" />,
-      gradientClass: "from-red-50 to-red-100"
+      gradientClass: "from-gray-600/20 to-gray-700/20"
     },
     { 
       category: "Management Skills", 
@@ -87,7 +87,7 @@ const Skills = () => {
         "KPI definition & tracking"
       ],
       icon: <TrendingUp className="h-6 w-6" />,
-      gradientClass: "from-cyan-50 to-cyan-100"
+      gradientClass: "from-gray-600/20 to-gray-700/20"
     },
     { 
       category: "Domain Expertise", 
@@ -101,15 +101,15 @@ const Skills = () => {
         "Supply Chain & Trade Finance"
       ],
       icon: <Book className="h-6 w-6" />,
-      gradientClass: "from-amber-50 to-amber-100"
+      gradientClass: "from-gray-600/20 to-gray-700/20"
     },
   ];
 
   return (
-    <section id="skills" className="py-20 bg-white text-black">
+    <section id="skills" className="py-20">
       <div className="section-container">
         <h2 className="heading-primary mb-16">
-          <span className="inline-block border-b-2 border-primary pb-2">Skills & Expertise</span>
+          <span className="inline-block border-b-2 border-current pb-2">Skills & Expertise</span>
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
@@ -123,15 +123,16 @@ const Skills = () => {
               }}
             >
               <Card className={cn(
-                "h-full overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300",
-                "bg-gradient-to-br", category.gradientClass
+                "h-full overflow-hidden shadow-sm border border-black/10 hover:shadow-md transition-shadow duration-300",
+                "bg-gradient-to-br", category.gradientClass,
+                "colored-page-card"
               )}>
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 rounded-full bg-white text-primary shadow-sm">
+                    <div className="p-2 rounded-full bg-black/10 shadow-sm">
                       {category.icon}
                     </div>
-                    <h3 className="text-xl font-medium text-primary">{category.category}</h3>
+                    <h3 className="text-xl font-medium">{category.category}</h3>
                   </div>
                   
                   <div className="flex flex-wrap gap-2">
@@ -139,7 +140,7 @@ const Skills = () => {
                       <Badge 
                         key={skill} 
                         variant="outline"
-                        className="bg-white hover:bg-gray-50 text-gray-700 border-gray-100 px-3 py-1.5 text-xs font-normal"
+                        className="bg-black/5 hover:bg-black/10 border-black/20 px-3 py-1.5 text-xs font-normal"
                       >
                         {skill}
                       </Badge>
