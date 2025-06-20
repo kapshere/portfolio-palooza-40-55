@@ -97,7 +97,7 @@
   }
 
   body {
-    @apply text-foreground;
+    @apply bg-white text-foreground;
   }
 }
 
@@ -121,225 +121,27 @@
 }
 
 .heading-primary {
-  @apply text-3xl sm:text-4xl font-bold mb-12 text-center;
+  @apply text-3xl sm:text-4xl font-bold mb-12 text-center text-secondary;
 }
 
 .heading-secondary {
-  @apply text-2xl sm:text-3xl font-bold mb-8;
+  @apply text-2xl sm:text-3xl font-bold mb-8 text-primary;
 }
 
 .page-wrapper {
-  @apply min-h-screen pb-20;
+  @apply bg-white min-h-screen pb-20;
 }
 
 .content-padding {
   @apply pt-24 pb-16;
 }
 
-/* Matte finish for all backgrounds */
-.matte-finish {
-  position: relative;
-}
-
-.matte-finish::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.1);
-  pointer-events: none;
-  backdrop-filter: blur(0.5px);
-}
-
-/* About page - Coral Orange from Image 1 */
-.page-wrapper.about {
-  background: #FF6B47;
-  color: #1a1a1a;
-  min-height: 100vh;
-}
-
-.page-wrapper.about .heading-primary,
-.page-wrapper.about .text-primary,
-.page-wrapper.about .text-secondary {
-  color: #1a1a1a !important;
-}
-
-.page-wrapper.about .text-gray-700,
-.page-wrapper.about .text-gray-600 {
-  color: #2d2d2d !important;
-}
-
-/* Work page - Teal from Image 2 */
-.page-wrapper.work {
-  background: #7DB5A6;
-  color: #1a1a1a;
-  min-height: 100vh;
-}
-
-.page-wrapper.work .heading-primary,
-.page-wrapper.work .text-primary,
-.page-wrapper.work .text-secondary {
-  color: #1a1a1a !important;
-}
-
-.page-wrapper.work .text-gray-700,
-.page-wrapper.work .text-gray-600 {
-  color: #2d2d2d !important;
-}
-
-.page-wrapper.work #skills {
-  background: transparent;
-}
-
-/* Blog page - Beige from Image 2 */
-.page-wrapper.blog {
-  background: #F5E6A3;
-  color: #1a1a1a;
-  min-height: 100vh;
-}
-
-.page-wrapper.blog .heading-primary,
-.page-wrapper.blog .text-primary,
-.page-wrapper.blog .text-secondary {
-  color: #1a1a1a !important;
-}
-
-.page-wrapper.blog .text-gray-700,
-.page-wrapper.blog .text-gray-600 {
-  color: #2d2d2d !important;
-}
-
-/* Contact page - Soft Pink from Image 3 */
-.page-wrapper.contact {
-  background: #F4C2C2;
-  color: #1a1a1a;
-  min-height: 100vh;
-}
-
-.page-wrapper.contact .heading-primary,
-.page-wrapper.contact .text-primary,
-.page-wrapper.contact .text-secondary {
-  color: #1a1a1a !important;
-}
-
-.page-wrapper.contact .text-gray-700,
-.page-wrapper.contact .text-gray-600 {
-  color: #2d2d2d !important;
-}
-
-/* Publications page - Teal Green from Image 4 */
-.page-wrapper.publications {
-  background: #4A9B8E;
-  color: #ffffff;
-  min-height: 100vh;
-}
-
-.page-wrapper.publications .heading-primary,
-.page-wrapper.publications .text-primary,
-.page-wrapper.publications .text-secondary {
-  color: #ffffff !important;
-}
-
-.page-wrapper.publications .text-gray-700,
-.page-wrapper.publications .text-gray-600 {
-  color: #e5e5e5 !important;
-}
-
-/* Social page - Purple from Image 6 */
-.page-wrapper.social {
-  background: #B967B7;
-  color: #ffffff;
-  min-height: 100vh;
-}
-
-.page-wrapper.social .heading-primary,
-.page-wrapper.social .text-primary,
-.page-wrapper.social .text-secondary {
-  color: #ffffff !important;
-}
-
-.page-wrapper.social .text-gray-700,
-.page-wrapper.social .text-gray-600 {
-  color: #e5e5e5 !important;
-}
-
-/* Projects/Skills/Entrepreneurship pages - Light Gray from Image 5 */
-.page-wrapper.projects,
-.page-wrapper.skills,
-.page-wrapper.entrepreneurship {
-  background: #B8BCC8;
-  color: #1a1a1a;
-  min-height: 100vh;
-}
-
-.page-wrapper.projects .heading-primary,
-.page-wrapper.projects .text-primary,
-.page-wrapper.projects .text-secondary,
-.page-wrapper.skills .heading-primary,
-.page-wrapper.skills .text-primary,
-.page-wrapper.skills .text-secondary,
-.page-wrapper.entrepreneurship .heading-primary,
-.page-wrapper.entrepreneurship .text-primary,
-.page-wrapper.entrepreneurship .text-secondary {
-  color: #1a1a1a !important;
-}
-
-.page-wrapper.projects .text-gray-700,
-.page-wrapper.projects .text-gray-600,
-.page-wrapper.skills .text-gray-700,
-.page-wrapper.skills .text-gray-600,
-.page-wrapper.entrepreneurship .text-gray-700,
-.page-wrapper.entrepreneurship .text-gray-600 {
-  color: #2d2d2d !important;
-}
-
-.page-wrapper.projects #skills,
-.page-wrapper.skills #skills,
-.page-wrapper.entrepreneurship #skills {
-  background: transparent;
-}
-
-/* Enhanced card styling for colored backgrounds with matte finish */
-.colored-page-card {
-  @apply bg-white/85 backdrop-blur-sm border border-white/30 shadow-lg;
-  backdrop-filter: blur(8px);
-}
-
-/* Dark theme adjustments */
-.dark .colored-page-card {
-  @apply bg-gray-800/85 border-gray-700/40;
-}
-
-/* Hover effects */
+/* New hover effect classes */
 .hover-glow {
   @apply transition-all duration-300 ease-in-out border border-transparent;
 }
 
 .hover-glow:hover {
-  @apply shadow-[0_0_15px_rgba(255,255,255,0.3)] border-white/40;
+  @apply shadow-[0_0_15px_rgba(96,165,250,0.5)] border-sky-300;
   transform: translateY(-2px);
-}
-
-/* Button adjustments for better contrast */
-.page-wrapper.publications .colored-page-card .bg-primary,
-.page-wrapper.social .colored-page-card .bg-primary {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-  color: #1a1a1a !important;
-}
-
-.page-wrapper.publications .colored-page-card .text-primary,
-.page-wrapper.social .colored-page-card .text-primary {
-  color: #1a1a1a !important;
-}
-
-/* Navigation adjustments */
-nav {
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.95) !important;
-}
-
-.dark nav {
-  background: rgba(31, 41, 55, 0.95) !important;
 }

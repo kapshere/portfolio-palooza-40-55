@@ -4,7 +4,7 @@ import Contact from "@/components/Contact";
 
 const ContactPage = () => {
   return (
-    <div className="page-wrapper contact">
+    <div className="page-wrapper">
       <Navigation />
       <div className="content-padding">
         <Contact />
