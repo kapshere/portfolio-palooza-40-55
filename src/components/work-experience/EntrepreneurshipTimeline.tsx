@@ -10,9 +10,9 @@ const EntrepreneurshipTimeline = () => {
     {
       id: 1,
       title: "Stealth Startup",
-      role: "Founder",
+      role: "Co-founder and advisor for a stealth startup",
       period: "June 2025 - Present",
-      description: "Exploring an Idea to change the way we work",
+      description: "building a game changing product for analysis and research on financial data for publicly listed companies.",
       skills: ["Mobile Architecture", "Super App", "Blockchain", "LLMs, AI&ML, AI Agents", "Engineering Head"],
       icon: <Cpu className="h-5 w-5 text-primary" />
     },
