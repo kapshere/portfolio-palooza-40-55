@@ -23,10 +23,10 @@ const Hero = () => {
             Hi, I'm <span className="text-primary">Kapil Jain</span>
           </h1>
           <h2 className="text-2xl sm:text-3xl font-semibold mb-4 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            Director, AI & Data Science
+            Director, Architect, AI & Blockchain Consultant
           </h2>
           <p className="text-xl sm:text-2xl text-gray-700 mb-8 max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.4s" }}>
-            I design and ship AI and data platforms for regulated, enterprise environments — combining LLMs, machine learning, and large-scale transaction systems to reduce risk and unlock new products.
+            I help design and ship AI Agents & applications for regulated, enterprise environments — combining LLMs, machine learning, Blockchain and large-scale transaction systems to reduce risk and unlock new products.
           </p>
           <p className="text-sm text-gray-600 mb-8 max-w-3xl mx-auto animate-fade-up" style={{ animationDelay: "0.5s" }}>
             Co-founder & Chief Architect at VerusAI.ai · Product Head at Stockscore.in · Protocol designer for ZYND (Alan Scott) · Author of "Bitcoin Blockchain: A Protocol for Micropayments"
