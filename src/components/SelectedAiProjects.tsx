@@ -7,14 +7,7 @@ type Project = {
 };
 
 const projects: Project[] = [
-  {
-    name: "LLM-powered Compliance & Policy Assistant",
-    role: "Architect & Player–coach",
-    timeframe: "2023 – 2025",
-    description:
-      "Designed an LLM + RAG assistant for policy, contract, and regulatory questions with custom evaluation suites to measure accuracy, hallucination, and latency.",
-    stack: "Python, vector DB, evaluation harness, Azure/OpenAI APIs",
-  },
+  
   {
     name: "VerusAI – Compliance & Identity Platform",
     role: "Co-founder & Chief Architect",
@@ -34,7 +27,7 @@ const projects: Project[] = [
   {
     name: "Digital Identity & Signing Platform",
     role: "Solutions Architect",
-    timeframe: "2021 – 2023",
+    timeframe: "2022 – 2023",
     description:
       "Led design of DID-compliant digital identity and signing infrastructure for national ID and contract-signing use cases.",
     stack: "W3C DID, blockchain, secure key management, REST APIs",
