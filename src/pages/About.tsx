@@ -16,14 +16,14 @@ const About = () => {
         <Card className="mb-16">
           <CardContent className="prose prose-lg max-w-none pt-6">
             <p>
-              With over 21 years of experience in building technology products and leadership, I specialize in blockchain technology, 
+              With over 21 years of experience in building technology products and leadership, I specialize in blockchain technology, AI Agents and LLM Adoption, 
               enterprise architecture, and digital transformation. My career spans across global financial 
               institutions, technology companies, and entrepreneurial ventures where I've demonstrated 
               expertise in leading complex technical initiatives and building high-performance teams.
             </p>
             <p>
               As a technology consultant, I bridge the gap between emerging technologies and business needs, 
-              helping organizations leverage innovations like blockchain, AI, and cloud architectures to solve 
+              helping organizations leverage innovations like blockchain, AI/ML, and cloud architectures to solve 
               real-world problems. My technical knowledge is complemented by a deep understanding of domains 
               including transaction banking, digital identity, and payment systems.
             </p>
