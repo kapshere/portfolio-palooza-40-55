@@ -27,19 +27,21 @@ const ventures = [
 
 export function Ventures() {
   return (
-    <section className="py-16">
-      <h2 className="text-2xl font-semibold mb-6">Ventures</h2>
-      <div className="grid gap-6 md:grid-cols-2">
-        {ventures.map((v) => (
-          <div
-            key={v.name}
-            className="rounded-lg border border-slate-700 bg-slate-900/40 p-4"
-          >
-            <h3 className="text-lg font-semibold">{v.name}</h3>
-            <p className="text-sm text-slate-400">{v.role}</p>
-            <p className="mt-2 text-sm text-slate-300">{v.blurb}</p>
-          </div>
-        ))}
+    <section className="py-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-2xl font-bold text-primary mb-6">Ventures</h2>
+        <div className="grid gap-6 md:grid-cols-2">
+          {ventures.map((v) => (
+            <div
+              key={v.name}
+              className="rounded-lg border border-border bg-card p-5 shadow-sm hover-glow"
+            >
+              <h3 className="text-lg font-semibold text-primary">{v.name}</h3>
+              <p className="text-sm text-muted-foreground">{v.role}</p>
+              <p className="mt-2 text-sm text-foreground">{v.blurb}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

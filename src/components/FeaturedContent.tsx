@@ -65,7 +65,7 @@ const FeaturedContent = () => {
                   {combinedContent.map((item, index) => (
                     <li key={index} className="border-b pb-3 border-gray-100 last:border-0">
                       <HoverCard>
-                        <HoverCardTrigger>
+                        <HoverCardTrigger asChild>
                           <Link 
                             to={item.type === 'tech' ? `/blog/${item.slug}` : `/philosophy/${item.slug}`}
                             className="group"
