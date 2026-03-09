@@ -9,19 +9,19 @@ const ventures = [
     name: "Stockscore.in",
     role: "Co-founder & Product Head",
     blurb:
-      "Equity analytics platform that scores portfolios and investor behavior to improve decision-making.",
+      "Equity analytics platform that automates stock, sector and market's fundamental analysis, scores portfolios and investor behavior to improve Investment decision-making.",
   },
   {
-    name: "ZYND Protocol",
-    role: "Protocol Co-designer",
+    name: "ZYND Protocol & Alan Scott Enterprises",
+    role: "Emerging Technology (AI Agents, LLM, Blockchain) Consultant",
     blurb:
-      "Protocol and reference architecture for AI-native, on-/off-chain orchestration with Alan Scott's Omnis/ZYND initiative.",
+      "Protocol Co-designer for Zynd. Protocol and reference architecture for AI-native, on-/off-chain orchestration with Alan Scott's Omnis/ZYND initiative.",
   },
   {
     name: "Freedom App",
-    role: "Founder",
+    role: "Solopreneur",
     blurb:
-      "Personal productivity and financial freedom companion (in development), combining AI agents and behavioral insights.",
+      "Personal productivity and financial freedom companion (in development), combining AI agents and behavioral insights. Self developed with AI coding agents", 
   },
 ];
 
