@@ -5,9 +5,9 @@ const items = [
       "Hands-on design of LLM features (RAG, prompt/system design, guardrails) and ML models, from problem framing through deployment and monitoring.",
   },
   {
-    title: "MLOps / LLMOps & Reliability",
+    title: "AI Agents for Enterprises",
     body:
-      "Evaluation frameworks, experiment tracking, CI/CD for models, observability and safeguards for hallucination, latency, and cost.",
+      "Evaluating business domain and desinging AI agents, applications using AI Agents for creating new age AI based teams and applications",
   },
   {
     title: "Compliance, Risk & Identity",
