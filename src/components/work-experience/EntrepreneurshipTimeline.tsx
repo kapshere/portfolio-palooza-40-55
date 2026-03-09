@@ -8,11 +8,11 @@ const EntrepreneurshipTimeline = () => {
   const experiences = [
     {
       id: 1,
-      title: "Stealth Startup",
-      role: "Co-founder and advisor for a stealth startup",
-      period: "June 2025 - Present",
-      description: "Building a game changing product for analysis and research on financial data for publicly listed companies.",
-      skills: ["Mobile Architecture", "Super App", "Blockchain", "LLMs, AI&ML, AI Agents", "Engineering Head"],
+      title: "Freedom",
+      role: "Founder",
+      period: "Dec 2025 - Present",
+      description: "Building a game changing product for personal finance to help people in achieving financial freedom",
+      skills: ["Mobile Architecture", "financial freedom", "Blockchain", "LLMs, AI&ML, AI Agents", "Solopreneur"],
       icon: <Cpu className="h-5 w-5 text-primary-foreground" />
     },
     {
