@@ -23,7 +23,7 @@ const Hero = () => {
             Hi, I'm <span className="text-primary">Kapil Jain</span>
           </h1>
           <h2 className="text-2xl sm:text-3xl font-semibold mb-4 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            Director, Architect, AI & Blockchain Consultant
+            Technology Architect, AI & Blockchain Consultant
           </h2>
           <p className="text-xl sm:text-2xl text-gray-700 mb-8 max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.4s" }}>
             I help design and ship AI Agents & applications for regulated, enterprise environments — combining LLMs, machine learning, Blockchain and large-scale transaction systems to reduce risk and unlock new products.
