@@ -35,21 +35,27 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
-  // Next.js runs from project root, so public folder is accessible
-  const filePath = path.join(process.cwd(), 'public', post.contentPath);
-  
   let content = '';
-  try {
-    content = fs.readFileSync(filePath, 'utf8');
-    
-    // Remove the first heading if it matches the post title
-    const firstHeadingRegex = /^#\s+.*\n/;
-    const match = content.match(firstHeadingRegex);
-    if (match && match[0].toLowerCase().includes(post.title.toLowerCase().split(':')[0])) {
-      content = content.replace(firstHeadingRegex, '');
+  
+  if (post.contentPath) {
+    // Next.js runs from project root, so public folder is accessible
+    const filePath = path.join(process.cwd(), 'public', post.contentPath);
+    try {
+      content = fs.readFileSync(filePath, 'utf8');
+      
+      // Remove the first heading if it matches the post title
+      const firstHeadingRegex = /^#\s+.*\n/;
+      const match = content.match(firstHeadingRegex);
+      if (match && match[0].toLowerCase().includes(post.title.toLowerCase().split(':')[0])) {
+        content = content.replace(firstHeadingRegex, '');
+      }
+    } catch (error) {
+      console.error(`Failed to read markdown file at ${filePath}`, error);
+      content = "Sorry, the content for this post could not be loaded.";
     }
-  } catch (error) {
-    console.error(`Failed to read markdown file at ${filePath}`, error);
+  } else if (post.externalLink) {
+    content = `This article is hosted externally. [Read it here](${post.externalLink}).`;
+  } else {
     content = "Sorry, the content for this post could not be loaded.";
   }
 
