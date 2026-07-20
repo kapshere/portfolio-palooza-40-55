@@ -111,7 +111,7 @@ export default function AdminLogin() {
           <div className="mt-6 pt-6 border-t border-border flex items-start gap-3 text-left">
             <Github className="text-muted-foreground mt-0.5" size={16} />
             <p className="text-xs text-muted-foreground leading-relaxed">
-              Your token is stored purely locally in your browser's LocalStorage and is only used to push commits directly to your repository via the GitHub REST API.
+              Your token is stored purely locally in your browser&apos;s LocalStorage and is only used to push commits directly to your repository via the GitHub REST API.
             </p>
           </div>
         </div>

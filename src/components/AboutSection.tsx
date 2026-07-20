@@ -11,7 +11,7 @@ const AboutSection = () => {
             <p className="text-foreground/90 text-lg leading-relaxed">
               With over 21 years of experience in technology leadership, I specialize in blockchain technology, 
               enterprise architecture, and digital transformation. My career spans across global financial 
-              institutions, technology companies, and entrepreneurial ventures where I've demonstrated 
+              institutions, technology companies, and entrepreneurial ventures where I&apos;ve demonstrated 
               expertise in leading complex technical initiatives and building high-performance teams.
             </p>
             <p className="mt-6 text-foreground/90 text-lg leading-relaxed">

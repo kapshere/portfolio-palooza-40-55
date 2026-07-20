@@ -193,7 +193,7 @@ export default function WorkExperience() {
             icon={<Book size={20} className="text-primary" />}
             description={
               <p className="leading-relaxed">
-                Authored and published "Bitcoin Blockchain: Protocol for Micropayments (English Edition)". Available on Amazon.
+                Authored and published &quot;Bitcoin Blockchain: Protocol for Micropayments (English Edition)&quot;. Available on Amazon.
               </p>
             }
           />
@@ -211,7 +211,7 @@ export default function WorkExperience() {
             description={
               <>
                 <p className="mb-4 leading-relaxed">
-                  Program Manager for banks transaction banking department heading the program for the migration of Bank's core corporate payment infrastructure from existing to a new Payment engine, Account and liquidity management solutions.
+                  Program Manager for banks transaction banking department heading the program for the migration of Bank&apos;s core corporate payment infrastructure from existing to a new Payment engine, Account and liquidity management solutions.
                 </p>
                 <p className="leading-relaxed">
                   Building team from scratch, in one year I created full portfolio of teams to address various projects in the larger program which was at the level of about 50 in headcount.
@@ -395,7 +395,7 @@ export default function WorkExperience() {
             description={
               <>
                 <p className="mb-4 leading-relaxed">
-                  Lead development for a Project from client's location in Minneapolis for Fund Merger and Fund liquidation. 
+                  Lead development for a Project from client&apos;s location in Minneapolis for Fund Merger and Fund liquidation. 
                 </p>
                 <p className="leading-relaxed">
                   Created a new system for average cost reporting of tax for brokerage systems. 

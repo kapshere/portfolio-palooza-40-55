@@ -70,7 +70,7 @@ export default function SocialPage() {
           <div className="bg-card rounded-2xl overflow-hidden shadow-sm border border-border animate-fade-up" style={{ animationDelay: '0.2s' }}>
             <div className="bg-secondary/5 px-6 py-4 flex items-center gap-3 border-b border-border">
               <Users className="text-primary" size={24} />
-              <h2 className="text-xl font-bold text-secondary truncate">"Unlocking the Potential of Blockchain, Metaverse, Web3"</h2>
+              <h2 className="text-xl font-bold text-secondary truncate">&quot;Unlocking the Potential of Blockchain, Metaverse, Web3&quot;</h2>
             </div>
             <div className="p-6">
               <p className="text-muted-foreground mb-8">
@@ -139,7 +139,7 @@ export default function SocialPage() {
               <h3 className="font-bold text-lg text-secondary mb-2">Alliance University Bangalore Blockchain Summit</h3>
               <p className="text-primary text-sm font-medium mb-4">July 27, 2019 • Bangalore</p>
               <p className="text-muted-foreground">
-                Panel discussion on "Who is making the greatest advancements in AI, and what are they doing?"
+                Panel discussion on &quot;Who is making the greatest advancements in AI, and what are they doing?&quot;
               </p>
             </div>
             

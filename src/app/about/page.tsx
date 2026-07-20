@@ -11,7 +11,7 @@ export default function About() {
             <p>
               With over 21 years of experience in building technology products and leadership, I specialize in blockchain technology, AI Agents and LLM Adoption, 
               enterprise architecture, and digital transformation. My career spans across global financial 
-              institutions, technology companies, and entrepreneurial ventures where I've demonstrated 
+              institutions, technology companies, and entrepreneurial ventures where I&apos;ve demonstrated 
               expertise in leading complex technical initiatives and building high-performance teams.
             </p>
             <p>
@@ -21,9 +21,9 @@ export default function About() {
               including transaction banking, digital identity, and payment systems.
             </p>
             <p>
-              Beyond my professional work, I'm an author, speaker, and curriculum developer who has contributed 
+              Beyond my professional work, I&apos;m an author, speaker, and curriculum developer who has contributed 
               to advancing knowledge in the blockchain space through publications, conference presentations, 
-              and educational content development. I'm passionate about mentoring technical talent and 
+              and educational content development. I&apos;m passionate about mentoring technical talent and 
               fostering innovation ecosystems that can drive meaningful industry transformation.
             </p>
             <p>
