@@ -1,0 +1,25 @@
+
+## Instant Payments across the world
+
+the current holy grail of digital economy is converting all financial transactions to be instant or real time but still complying with regulatory needs like AMLD5, KYC and such. Solution which can make these happen instantly can be the winning ticket but what is the best way to do it?
+
+![Blockchain Technology](/Images/Blog/payment.jpeg)
+
+The method of payments become real time is to come up with a solution which can do both, perform the regulatory check and also transfer payment transaction details in real time just as it is currently for emails.
+
+Most of the existing systems are built in quite decentralized way, making the complete financial system across the world quite fragmented. Every country has one central system which does the cleaning and settlement and most often closely associated with central bank or government, and then a large number of banks network who are really doing these transactions for their customers. In fact its not just banks, but also the PSPs and MSBs which add further layers of players involved in money transfer. Each of these entities does their part of KYC but the lack of one central kyc system creates many endpoints which are not wokting together doing the same work multiple times.
+
+Is there an easier way to this process? India and NCPI has created such a payment network which enables real time payments called the UPI system. This is a consortium supported by Indian government which replaces these fragmented systems by providing a centralized network which any of these MSBs can use. The identities in this network are quite user friendly email like names. Every MSB or Bank can provide their own email like name and all of these are identified and maintained as one central kyc complete identity on this network which can then be trusted and used for the financial transactions. Since the identities are kyc done, it enables quick transfer. The AML aspect is done by limiting the maximum value of the transaction on this network.
+
+The reason i described above solution is because this is a system that can be taken as a POC for creating a world wide network for enabling real time transaction which are both AMLD5 and KYC compliant. The properties needed will be that it has to be one central network which is trusted to be secure (by which ever method possible) for storing global identities and also a in built tractability for dispute resolution. If most of the checks of AML is done before the transaction itself is done, and the transaction can happen peer to peer we can have one global system of real time payments which follows law across borders.
+
+This I propose is possible to be solved using a single global public ledger which can scale and is secured for breaches that could be either due to application attack surface or due to network attack surface. If such a network is possible which satisfies both of these properties, we can in theory have a payment system which is like a protocol on the top of internet and works as one central system for global financial transaction needs. This stood as a challenge for computer scientists and software engineers for decades but we may be looking at light at the end of the tunnel with this new emerging industry called blockchain.
+
+The myths of blockchains is that we need to have decentralization which works contrary to this understanding obviously, then how can i propose blockchain as the solution which implements the above solution.
+
+The devil is in details. Decentralization is of the usage but centralization is of the network. Similar to UPI system, any PSP or MSB can spin off a new endpoint of this network making it decentralized for creating a new node/endpoint and making a business or for that matter usage of the network. The network itself however if is decentralized it will break the security model creating the need of same number of checkpoints as it exists in the current financial network. Even interoperability will not be needed when there is one global network being used by someone in Alaska and in a remote corner of India, just like internet is.
+
+I hope to see this solution in the blockchain space, from my research i haven't seen this understanding in most of the blockchain projects currently existing, which is quite disappointing as they are building these systems counterproductive to the possible solution that can work complying with existing regulation and then seeking out new regulations to fit in their broken solution design. This is a classic software solutioning issue existing since decades which continues in the blockchain industry as well.
+
+With the exponentially increasing volume of financial transactions and the fact that we just had first step of smart devices (smartphones) right now becoming mainstream creating this need, think of the future where we want IOT and micro transactions, which could be many many folds higher than the current volume, fintech industry needs to brace themselves if they want to build the systems that can handle that kind of volume.
+
